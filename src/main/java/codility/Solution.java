@@ -12,6 +12,8 @@ import codility.lessons.lesson4.FrogRiverOne;
 import codility.lessons.lesson4.MaxCounters;
 import codility.lessons.lesson4.MissingInteger;
 import codility.lessons.lesson4.PermCheck;
+import codility.lessons.lesson5.GenomicRangeQuery;
+import codility.lessons.lesson5.PassingCars;
 
 class Solution {
     public static void main(String[] arg) {
@@ -43,5 +45,10 @@ class Solution {
         System.out.println(MissingInteger.solution(new int[]{-1, -2, -3}));
         System.out.println(MissingInteger.solution(new int[]{0, 0, 2}));
         System.out.println(MissingInteger.solution(new int[]{10, 30, 60, 40, 10, 20}));
+
+        System.out.println(PassingCars.solution(new int[]{0, 1, 0, 1, 1}));
+
+        System.out.println(Arrays.toString(GenomicRangeQuery.solution("CAGCCTA", new int[]{2, 5, 0}, new int[]{4, 5, 6})));
+        System.out.println(Arrays.toString(GenomicRangeQuery.solution("AC", new int[]{0, 0, 1}, new int[]{0, 1, 1})));
     }
 }
