@@ -13,6 +13,7 @@ import codility.lessons.lesson4.MaxCounters;
 import codility.lessons.lesson4.MissingInteger;
 import codility.lessons.lesson4.PermCheck;
 import codility.lessons.lesson5.GenomicRangeQuery;
+import codility.lessons.lesson5.MinAvgTwoSlice;
 import codility.lessons.lesson5.PassingCars;
 
 class Solution {
@@ -50,5 +51,10 @@ class Solution {
 
         System.out.println(Arrays.toString(GenomicRangeQuery.solution("CAGCCTA", new int[]{2, 5, 0}, new int[]{4, 5, 6})));
         System.out.println(Arrays.toString(GenomicRangeQuery.solution("AC", new int[]{0, 0, 1}, new int[]{0, 1, 1})));
+
+        System.out.println(MinAvgTwoSlice.solution(new int[]{4, 2, 2, 5, 1, 5, 8}));//1
+        System.out.println(MinAvgTwoSlice.solution(new int[]{8, 0, 0, 8}));//1
+        System.out.println(MinAvgTwoSlice.solution(new int[]{4,-10,5,10,-5,8}));//0
+        System.out.println(MinAvgTwoSlice.solution(new int[]{-3, -5, -8, -4, -10}));//2
     }
 }
