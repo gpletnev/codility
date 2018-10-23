@@ -12,6 +12,7 @@ import codility.lessons.lesson4.FrogRiverOne;
 import codility.lessons.lesson4.MaxCounters;
 import codility.lessons.lesson4.MissingInteger;
 import codility.lessons.lesson4.PermCheck;
+import codility.lessons.lesson5.CountDiv;
 import codility.lessons.lesson5.GenomicRangeQuery;
 import codility.lessons.lesson5.MinAvgTwoSlice;
 import codility.lessons.lesson5.PassingCars;
@@ -56,5 +57,13 @@ class Solution {
         System.out.println(MinAvgTwoSlice.solution(new int[]{8, 0, 0, 8}));//1
         System.out.println(MinAvgTwoSlice.solution(new int[]{4,-10,5,10,-5,8}));//0
         System.out.println(MinAvgTwoSlice.solution(new int[]{-3, -5, -8, -4, -10}));//2
+
+        System.out.println(CountDiv.solution(6, 11, 2));//3
+        System.out.println(CountDiv.solution(11, 345, 17));//20
+        System.out.println(CountDiv.solution(0, 0, 11));//0
+        System.out.println(CountDiv.solution(1, 1, 11));//0
+        System.out.println(CountDiv.solution(10, 10, 5));//1
+        System.out.println(CountDiv.solution(10, 10, 7));//0
+        System.out.println(CountDiv.solution(10, 10, 20));//0
     }
 }
