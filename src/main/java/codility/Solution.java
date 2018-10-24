@@ -16,6 +16,9 @@ import codility.lessons.lesson5.CountDiv;
 import codility.lessons.lesson5.GenomicRangeQuery;
 import codility.lessons.lesson5.MinAvgTwoSlice;
 import codility.lessons.lesson5.PassingCars;
+import codility.lessons.lesson6.Distinct;
+import codility.lessons.lesson6.MaxProductOfThree;
+import codility.lessons.lesson6.Triangle;
 
 class Solution {
     public static void main(String[] arg) {
@@ -65,5 +68,14 @@ class Solution {
         System.out.println(CountDiv.solution(10, 10, 5));//1
         System.out.println(CountDiv.solution(10, 10, 7));//0
         System.out.println(CountDiv.solution(10, 10, 20));//0
+
+        System.out.println(Distinct.solution(new int[]{2, 1, 1, 2, 3, 1}));//3
+
+        System.out.println(Triangle.solution(new int[]{10, 2, 5, 1, 8, 20}));//1
+        System.out.println(Triangle.solution(new int[]{10, 50, 5, 1}));//0
+        System.out.println(Triangle.solution(new int[]{Integer.MAX_VALUE, Integer.MAX_VALUE,Integer.MAX_VALUE}));//0
+
+        System.out.println(MaxProductOfThree.solution(new int[]{-3, 1, 2, -2, 5, 6}));//60
+
     }
 }
