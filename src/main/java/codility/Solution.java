@@ -2,6 +2,7 @@ package codility;
 
 import java.util.Arrays;
 
+import codility.interviews.ArrayToRangesString;
 import codility.lessons.lesson1.BinaryGap;
 import codility.lessons.lesson2.CyclicRotation;
 import codility.lessons.lesson2.OddOccurrencesInArray;
@@ -77,5 +78,11 @@ class Solution {
 
         System.out.println(MaxProductOfThree.solution(new int[]{-3, 1, 2, -2, 5, 6}));//60
 
+        System.out.println(ArrayToRangesString.solution(new int[]{1}));//0
+        System.out.println(ArrayToRangesString.solution(new int[]{1, 4}));//0
+        System.out.println(ArrayToRangesString.solution(new int[]{1, 0}));//0
+        System.out.println(ArrayToRangesString.solution(new int[]{1, 2, 3}));//0
+        System.out.println(ArrayToRangesString.solution(new int[]{1, 2, 3, 5, 6}));//0
+        System.out.println(ArrayToRangesString.solution(new int[]{1, 4, 5, 2, 3, 9, 8, 11, 0}));//0
     }
 }
