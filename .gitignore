@@ -1,11 +1,12 @@
+# IDE configuration.
 *.iml
-.gradle
-/local.properties
-/.idea/caches/build_file_checksums.ser
-/.idea/libraries
-/.idea/modules.xml
-/.idea/workspace.xml
+.idea/
+# Gradle configuration.
+.gradle/
+gradle/
+gradlew*
+build/
+# User configuration.
+local.properties
+# OS configurations.
 .DS_Store
-/build
-/captures
-.externalNativeBuild
