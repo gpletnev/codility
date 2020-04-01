@@ -1,6 +1,6 @@
-package leetcode.challenge.day1
+package leetcode.challenge.week1
 
-import leetcode.challenge.day1.SingleNumber.singleNumber
+import leetcode.challenge.week1.SingleNumber.singleNumber
 import org.junit.Assert
 import org.junit.Test
 

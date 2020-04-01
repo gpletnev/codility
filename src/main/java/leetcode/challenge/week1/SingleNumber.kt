@@ -1,4 +1,4 @@
-package leetcode.challenge.day1
+package leetcode.challenge.week1
 
 object SingleNumber {
 
