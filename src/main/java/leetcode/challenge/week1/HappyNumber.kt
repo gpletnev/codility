@@ -1,5 +1,6 @@
 package leetcode.challenge.week1
 
+// https://leetcode.com/problems/happy-number/
 class HappyNumber {
     fun isHappy(n: Int): Boolean {
         if (n == 1 || n == 7) return true

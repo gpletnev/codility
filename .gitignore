@@ -5,7 +5,9 @@
 .gradle/
 gradle/
 gradlew*
+# build arifacts
 build/
+out/
 # User configuration.
 local.properties
 # OS configurations.

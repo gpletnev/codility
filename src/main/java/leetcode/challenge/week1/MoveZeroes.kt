@@ -1,5 +1,6 @@
 package leetcode.challenge.week1
 
+// https://leetcode.com/problems/move-zeroes/
 object MoveZeroes {
     fun moveZeroes(nums: IntArray) {
         var j = 0
