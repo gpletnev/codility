@@ -12,4 +12,15 @@ class Test {
         Assert.assertEquals(true, backspaceCompare("a##c", "#a#c"))
         Assert.assertEquals(false, backspaceCompare("a#c", "b"))
     }
+
+    @Test
+    fun testMinStack() {
+        val stack = MinStack()
+        stack.push(2147483647)
+        Assert.assertEquals(2147483647, stack.getMin())
+        stack.push(-2147483648)
+        Assert.assertEquals(-2147483648, stack.top())
+        stack.pop()
+        Assert.assertEquals(2147483647, stack.getMin())
+    }
 }
