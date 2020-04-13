@@ -1,6 +1,7 @@
 package leetcode.challenge.week2
 
 import leetcode.challenge.week2.BackspaceStringCompare.backspaceCompare
+import leetcode.challenge.week2.LastStoneWeight.lastStoneWeight
 import org.junit.Assert
 import org.junit.Test
 
@@ -22,5 +23,10 @@ class Test {
         Assert.assertEquals(-2147483648, stack.top())
         stack.pop()
         Assert.assertEquals(2147483647, stack.getMin())
+    }
+
+    @Test
+    fun testLastStoneWeight() {
+        Assert.assertEquals(1, lastStoneWeight(listOf(2, 7, 4, 1, 8, 1).toIntArray()))
     }
 }
