@@ -1,5 +1,6 @@
 package leetcode.challenge.week3
 
+import leetcode.challenge.week3.MinimumPathSum.minPathSum
 import leetcode.challenge.week3.NumberOfIslands.numIslands
 import leetcode.challenge.week3.ProductOfArrayExceptSelf.productExceptSelf
 import leetcode.challenge.week3.ValidParenthesisString.checkValidString
@@ -28,5 +29,12 @@ class Test {
     fun testNumberOfIslands() {
         Assert.assertEquals(1, numIslands(listOf("11110".toCharArray(), "11010".toCharArray(), "11000".toCharArray(), "00000".toCharArray()).toTypedArray()))
         Assert.assertEquals(3, numIslands(listOf("11000".toCharArray(), "11000  ".toCharArray(), "00100".toCharArray(), "00011".toCharArray()).toTypedArray()))
+    }
+
+    @Test
+    fun testMinimumPathSum() {
+        Assert.assertEquals(1, minPathSum(listOf(intArrayOf(1)).toTypedArray()))
+        Assert.assertEquals(3, minPathSum(listOf(intArrayOf(1, 2)).toTypedArray()))
+        Assert.assertEquals(7, minPathSum(listOf(intArrayOf(1, 3, 1), intArrayOf(1, 5, 1), intArrayOf(4, 2, 1)).toTypedArray()))
     }
 }
