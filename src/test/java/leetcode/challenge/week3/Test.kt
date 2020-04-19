@@ -3,6 +3,7 @@ package leetcode.challenge.week3
 import leetcode.challenge.week3.MinimumPathSum.minPathSum
 import leetcode.challenge.week3.NumberOfIslands.numIslands
 import leetcode.challenge.week3.ProductOfArrayExceptSelf.productExceptSelf
+import leetcode.challenge.week3.SearchInRotatedSortedArray.search
 import leetcode.challenge.week3.ValidParenthesisString.checkValidString
 import org.junit.Assert
 import org.junit.Test
@@ -36,5 +37,11 @@ class Test {
         Assert.assertEquals(1, minPathSum(listOf(intArrayOf(1)).toTypedArray()))
         Assert.assertEquals(3, minPathSum(listOf(intArrayOf(1, 2)).toTypedArray()))
         Assert.assertEquals(7, minPathSum(listOf(intArrayOf(1, 3, 1), intArrayOf(1, 5, 1), intArrayOf(4, 2, 1)).toTypedArray()))
+    }
+
+    @Test
+    fun testSearchInRotatedSortedArray() {
+        Assert.assertEquals(4, search(intArrayOf(4, 5, 6, 7, 0, 1, 2), 0))
+        Assert.assertEquals(-1, search(intArrayOf(4, 5, 6, 7, 0, 1, 2), 3))
     }
 }
