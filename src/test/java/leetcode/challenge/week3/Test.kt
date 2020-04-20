@@ -1,5 +1,6 @@
 package leetcode.challenge.week3
 
+import leetcode.challenge.week3.ConstructBinarySearchTreeFromPreorderTraversal.bstFromPreorder
 import leetcode.challenge.week3.MinimumPathSum.minPathSum
 import leetcode.challenge.week3.NumberOfIslands.numIslands
 import leetcode.challenge.week3.ProductOfArrayExceptSelf.productExceptSelf
@@ -43,5 +44,10 @@ class Test {
     fun testSearchInRotatedSortedArray() {
         Assert.assertEquals(4, search(intArrayOf(4, 5, 6, 7, 0, 1, 2), 0))
         Assert.assertEquals(-1, search(intArrayOf(4, 5, 6, 7, 0, 1, 2), 3))
+    }
+
+    @Test
+    fun testConstructBinarySearchTreeFromPreorderTraversal() {
+        Assert.assertEquals(8, bstFromPreorder(intArrayOf(8, 5, 1, 7, 10, 12))?.`val`)
     }
 }
