@@ -1,6 +1,7 @@
 package leetcode.challenge.week3
 
 import leetcode.challenge.week3.ConstructBinarySearchTreeFromPreorderTraversal.bstFromPreorder
+import leetcode.challenge.week3.LeftmostColumnWithAtLeastOne.leftMostColumnWithOne
 import leetcode.challenge.week3.MinimumPathSum.minPathSum
 import leetcode.challenge.week3.NumberOfIslands.numIslands
 import leetcode.challenge.week3.ProductOfArrayExceptSelf.productExceptSelf
@@ -49,5 +50,17 @@ class Test {
     @Test
     fun testConstructBinarySearchTreeFromPreorderTraversal() {
         Assert.assertEquals(8, bstFromPreorder(intArrayOf(8, 5, 1, 7, 10, 12))?.`val`)
+    }
+
+    @Test
+    fun testLeftmostColumnWithAtLeastOne() {
+        var matrix = BinaryMatrix(listOf(intArrayOf(0, 0), intArrayOf(1, 1)).toTypedArray())
+        Assert.assertEquals(0, leftMostColumnWithOne(matrix))
+        matrix = BinaryMatrix(listOf(intArrayOf(0, 0), intArrayOf(0, 1)).toTypedArray())
+        Assert.assertEquals(1, leftMostColumnWithOne(matrix))
+        matrix = BinaryMatrix(listOf(intArrayOf(0, 0), intArrayOf(0, 0)).toTypedArray())
+        Assert.assertEquals(-1, leftMostColumnWithOne(matrix))
+        matrix = BinaryMatrix(listOf(intArrayOf(0, 0, 0, 1), intArrayOf(0, 0, 1, 1), intArrayOf(0, 1, 1, 1)).toTypedArray())
+        Assert.assertEquals(1, leftMostColumnWithOne(matrix))
     }
 }
