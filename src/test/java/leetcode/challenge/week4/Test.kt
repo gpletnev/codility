@@ -29,4 +29,11 @@ class Test {
         Assert.assertEquals(3, cache.get(3))
         Assert.assertEquals(4, cache.get(4))
     }
+
+    @Test
+    fun testJumpGame() {
+        Assert.assertEquals(true, JumpGame.canJump(intArrayOf(2, 3, 1, 1, 4)))
+        Assert.assertEquals(false, JumpGame.canJump(intArrayOf(3, 2, 1, 0, 4)))
+        Assert.assertEquals(true, JumpGame.canJump(intArrayOf(2, 4, 2, 1, 0, 2, 0)))
+    }
 }
