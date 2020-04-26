@@ -36,4 +36,12 @@ class Test {
         Assert.assertEquals(false, JumpGame.canJump(intArrayOf(3, 2, 1, 0, 4)))
         Assert.assertEquals(true, JumpGame.canJump(intArrayOf(2, 4, 2, 1, 0, 2, 0)))
     }
+
+    @Test
+    fun testLongestCommonSubsequence() {
+        Assert.assertEquals(3, LongestCommonSubsequence.longestCommonSubsequence("abcde", "ace"))
+        Assert.assertEquals(3, LongestCommonSubsequence.longestCommonSubsequence("ace", "abcde"))
+        Assert.assertEquals(3, LongestCommonSubsequence.longestCommonSubsequence("abc", "abc"))
+        Assert.assertEquals(0, LongestCommonSubsequence.longestCommonSubsequence("abc", "def"))
+    }
 }
