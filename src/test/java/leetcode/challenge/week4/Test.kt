@@ -44,4 +44,11 @@ class Test {
         Assert.assertEquals(3, LongestCommonSubsequence.longestCommonSubsequence("abc", "abc"))
         Assert.assertEquals(0, LongestCommonSubsequence.longestCommonSubsequence("abc", "def"))
     }
+
+    @Test
+    fun testMaximalSquare() {
+        Assert.assertEquals(0, MaximalSquare.maximalSquare(emptyArray()))
+        Assert.assertEquals(0, MaximalSquare.maximalSquare(listOf("".toCharArray()).toTypedArray()))
+        Assert.assertEquals(4, MaximalSquare.maximalSquare(listOf("10100".toCharArray(), "10111".toCharArray(), "11111".toCharArray(), "10010".toCharArray()).toTypedArray()))
+    }
 }
