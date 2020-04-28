@@ -51,4 +51,30 @@ class Test {
         Assert.assertEquals(0, MaximalSquare.maximalSquare(listOf("".toCharArray()).toTypedArray()))
         Assert.assertEquals(4, MaximalSquare.maximalSquare(listOf("10100".toCharArray(), "10111".toCharArray(), "11111".toCharArray(), "10010".toCharArray()).toTypedArray()))
     }
+
+    @Test
+    fun testFirstUniqueNumber() {
+        var firstUnique = FirstUnique(intArrayOf(2, 3, 5))
+        Assert.assertEquals(2, firstUnique.showFirstUnique())
+        firstUnique.add(5)
+        Assert.assertEquals(2, firstUnique.showFirstUnique())
+        firstUnique.add(2)
+        Assert.assertEquals(3, firstUnique.showFirstUnique())
+        firstUnique.add(3)
+        Assert.assertEquals(-1, firstUnique.showFirstUnique())
+
+        firstUnique = FirstUnique(intArrayOf(7, 7, 7, 7, 7, 7))
+        Assert.assertEquals(-1, firstUnique.showFirstUnique())
+        firstUnique.add(7)
+        firstUnique.add(3)
+        firstUnique.add(3)
+        firstUnique.add(7)
+        firstUnique.add(17)
+        Assert.assertEquals(17, firstUnique.showFirstUnique())
+
+        firstUnique = FirstUnique(intArrayOf(809))
+        Assert.assertEquals(809, firstUnique.showFirstUnique())
+        firstUnique.add(809)
+        Assert.assertEquals(-1, firstUnique.showFirstUnique())
+    }
 }
