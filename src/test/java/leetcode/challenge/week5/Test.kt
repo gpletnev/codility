@@ -50,4 +50,30 @@ class Test {
         root.right!!.right!!.right = TreeNode(1)
         Assert.assertEquals(48, BinaryTreeMaximumPathSum.maxPathSum(root))
     }
+
+
+    @Test
+    fun testCheckIfAStringIsAValidSequenceFromRootToLeavesPathInABinaryTree() {
+        val root = TreeNode(0)
+
+        Assert.assertEquals(true, CheckIfAStringIsAValidSequenceFromRootToLeavesPathInABinaryTree.isValidSequence(root, intArrayOf(0)))
+        Assert.assertEquals(false, CheckIfAStringIsAValidSequenceFromRootToLeavesPathInABinaryTree.isValidSequence(root, intArrayOf(1)))
+
+        root.left = TreeNode(1)
+        root.right = TreeNode(0)
+
+        root.left!!.left = TreeNode(0)
+        root.left!!.right = TreeNode(1)
+        root.right!!.left = TreeNode(0)
+
+        root.left!!.left!!.right = TreeNode(1)
+        root.left!!.right!!.left = TreeNode(0)
+        root.left!!.right!!.right = TreeNode(0)
+
+        Assert.assertEquals(true, CheckIfAStringIsAValidSequenceFromRootToLeavesPathInABinaryTree.isValidSequence(root, intArrayOf(0, 1, 0, 1)))
+        Assert.assertEquals(false, CheckIfAStringIsAValidSequenceFromRootToLeavesPathInABinaryTree.isValidSequence(root, intArrayOf(0, 0, 1)))
+        Assert.assertEquals(false, CheckIfAStringIsAValidSequenceFromRootToLeavesPathInABinaryTree.isValidSequence(root, intArrayOf(0, 1, 1)))
+        Assert.assertEquals(true, CheckIfAStringIsAValidSequenceFromRootToLeavesPathInABinaryTree.isValidSequence(root, intArrayOf(0, 0, 0)))
+        Assert.assertEquals(false, CheckIfAStringIsAValidSequenceFromRootToLeavesPathInABinaryTree.isValidSequence(root, intArrayOf(0, 0)))
+    }
 }
