@@ -27,4 +27,12 @@ class Test {
         Assert.assertEquals(2, SingleElementInASortedArray.singleNonDuplicate(intArrayOf(1, 1, 2, 3, 3, 4, 4, 8, 8)))
         Assert.assertEquals(10, SingleElementInASortedArray.singleNonDuplicate(intArrayOf(3, 3, 7, 7, 10, 11, 11)))
     }
+
+    @Test
+    fun testRemoveKDigits() {
+        Assert.assertEquals("0", RemoveKDigits.removeKdigits(num = "10", k = 2))
+        Assert.assertEquals("1219", RemoveKDigits.removeKdigits(num = "1432219", k = 3))
+        Assert.assertEquals("200", RemoveKDigits.removeKdigits(num = "10200", k = 1))
+        Assert.assertEquals("0", RemoveKDigits.removeKdigits(num = "10", k = 1))
+    }
 }
