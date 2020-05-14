@@ -35,4 +35,15 @@ class Test {
         Assert.assertEquals("200", RemoveKDigits.removeKdigits(num = "10200", k = 1))
         Assert.assertEquals("0", RemoveKDigits.removeKdigits(num = "10", k = 1))
     }
+
+    @Test
+    fun testTrie() {
+        val trie = Trie()
+        trie.insert("apple")
+        Assert.assertEquals(true, trie.search("apple"))
+        Assert.assertEquals(false, trie.search("app"))
+        Assert.assertEquals(true, trie.startsWith("app"))
+        trie.insert("app")
+        Assert.assertEquals(true, trie.search("app"))
+    }
 }
