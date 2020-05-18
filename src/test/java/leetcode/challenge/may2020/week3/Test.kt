@@ -28,4 +28,9 @@ class Test {
         Assert.assertEquals("1 3 5 2 4 NULL", OddEvenLinkedList.oddEvenList(head).toString())
     }
 
+    @Test
+    fun testPermutationInString() {
+        Assert.assertEquals(true, PermutationInString.checkInclusion("ab", "eidbaooo"))
+        Assert.assertEquals(false, PermutationInString.checkInclusion("ab", "eidboaoo"))
+    }
 }
