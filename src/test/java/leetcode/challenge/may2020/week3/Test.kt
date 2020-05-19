@@ -33,4 +33,16 @@ class Test {
         Assert.assertEquals(true, PermutationInString.checkInclusion("ab", "eidbaooo"))
         Assert.assertEquals(false, PermutationInString.checkInclusion("ab", "eidboaoo"))
     }
+
+    @Test
+    fun testStockSpanner() {
+        val stockSpanner = StockSpanner()
+        Assert.assertEquals(1, stockSpanner.next(100))
+        Assert.assertEquals(1, stockSpanner.next(80))
+        Assert.assertEquals(1, stockSpanner.next(60))
+        Assert.assertEquals(2, stockSpanner.next(70))
+        Assert.assertEquals(1, stockSpanner.next(60))
+        Assert.assertEquals(4, stockSpanner.next(75))
+        Assert.assertEquals(6, stockSpanner.next(85))
+    }
 }
