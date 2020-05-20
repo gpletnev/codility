@@ -45,4 +45,18 @@ class Test {
         Assert.assertEquals(4, stockSpanner.next(75))
         Assert.assertEquals(6, stockSpanner.next(85))
     }
+
+    @Test
+    fun testKthSmallestElementInBST() {
+        val root = TreeNode(3)
+        root.left = TreeNode(1)
+        root.right = TreeNode(4)
+        root.left!!.right = TreeNode(2)
+        Assert.assertEquals(1, KthSmallestElementInBST.kthSmallest(root, 1))
+        val node = TreeNode(5)
+        node.left = root
+        node.right = TreeNode(6)
+        Assert.assertEquals(3, KthSmallestElementInBST.kthSmallest(node, 3))
+        Assert.assertEquals(6, KthSmallestElementInBST.kthSmallest(node, 6))
+    }
 }
