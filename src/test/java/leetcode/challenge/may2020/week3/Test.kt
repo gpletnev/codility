@@ -59,4 +59,10 @@ class Test {
         Assert.assertEquals(3, KthSmallestElementInBST.kthSmallest(node, 3))
         Assert.assertEquals(6, KthSmallestElementInBST.kthSmallest(node, 6))
     }
+
+    @Test
+    fun CountSquareSubmatricesWithAllOnes() {
+        Assert.assertEquals(15, CountSquareSubmatricesWithAllOnes.countSquares(listOf(intArrayOf(0, 1, 1, 1), intArrayOf(1, 1, 1, 1), intArrayOf(0, 1, 1, 1)).toTypedArray()))
+        Assert.assertEquals(7, CountSquareSubmatricesWithAllOnes.countSquares(listOf(intArrayOf(1, 0, 1), intArrayOf(1, 1, 0), intArrayOf(1, 1, 0)).toTypedArray()))
+    }
 }
