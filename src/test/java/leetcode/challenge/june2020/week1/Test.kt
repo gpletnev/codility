@@ -24,4 +24,19 @@ class Test {
         Assert.assertEquals(3, root.right!!.left!!.`val`)
         Assert.assertEquals(1, root.right!!.right!!.`val`)
     }
+
+    @Test
+    fun testDeleteNode() {
+        val root = ListNode(4)
+        root.next = ListNode(5)
+        root.next!!.next = ListNode(1)
+        root.next!!.next!!.next = ListNode(9)
+
+        deleteNode(root.next)
+        Assert.assertArrayEquals(intArrayOf(4, 1, 9), root.toIntArray())
+
+        deleteNode(root.next)
+        Assert.assertArrayEquals(intArrayOf(4, 9), root.toIntArray())
+    }
+
 }
