@@ -39,4 +39,9 @@ class Test {
         Assert.assertArrayEquals(intArrayOf(4, 9), root.toIntArray())
     }
 
+    @Test
+    fun testTwoCityScheduling() {
+        Assert.assertEquals(110, TwoCityScheduling.twoCitySchedCost(listOf(intArrayOf(10, 20), intArrayOf(30, 200), intArrayOf(400, 50), intArrayOf(30, 20)).toTypedArray()))
+    }
+
 }
