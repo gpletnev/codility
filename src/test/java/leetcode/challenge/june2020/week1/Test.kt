@@ -44,4 +44,14 @@ class Test {
         Assert.assertEquals(110, TwoCityScheduling.twoCitySchedCost(listOf(intArrayOf(10, 20), intArrayOf(30, 200), intArrayOf(400, 50), intArrayOf(30, 20)).toTypedArray()))
     }
 
+    @Test
+    fun testReverseString() {
+        var s = charArrayOf('h', 'e', 'l', 'l', 'o')
+        ReverseString.reverseString(s)
+        Assert.assertArrayEquals(charArrayOf('o', 'l', 'l', 'e', 'h'), s)
+
+        s = "Hannah".toCharArray()
+        ReverseString.reverseString(s)
+        Assert.assertArrayEquals("hannaH".toCharArray(), s)
+    }
 }
