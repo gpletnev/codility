@@ -54,4 +54,11 @@ class Test {
         ReverseString.reverseString(s)
         Assert.assertArrayEquals("hannaH".toCharArray(), s)
     }
+
+    @Test
+    fun testRandomPickWithWeight() {
+        Assert.assertEquals(0, RandomPickWithWeight(intArrayOf(1)).pickIndex())
+
+        Assert.assertTrue(RandomPickWithWeight(intArrayOf(1, 3)).pickIndex() in 0..1)
+    }
 }
