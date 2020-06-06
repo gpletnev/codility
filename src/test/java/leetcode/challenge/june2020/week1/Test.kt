@@ -61,4 +61,12 @@ class Test {
 
         Assert.assertTrue(RandomPickWithWeight(intArrayOf(1, 3)).pickIndex() in 0..1)
     }
+
+    @Test
+    fun testQueueReconstructionByHeight() {
+        Assert.assertArrayEquals(
+                arrayOf(intArrayOf(5, 0), intArrayOf(7, 0), intArrayOf(5, 2), intArrayOf(6, 1), intArrayOf(4, 4), intArrayOf(7, 1)),
+                QueueReconstructionByHeight.reconstructQueue(arrayOf(intArrayOf(7, 1), intArrayOf(4, 4), intArrayOf(7, 0), intArrayOf(5, 2), intArrayOf(6, 1), intArrayOf(5, 0)))
+        )
+    }
 }
