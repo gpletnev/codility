@@ -69,4 +69,11 @@ class Test {
                 QueueReconstructionByHeight.reconstructQueue(arrayOf(intArrayOf(7, 1), intArrayOf(4, 4), intArrayOf(7, 0), intArrayOf(5, 2), intArrayOf(6, 1), intArrayOf(5, 0)))
         )
     }
+
+    @Test
+    fun testCoinChange2() {
+        Assert.assertEquals(4, CoinChange2.change(5, intArrayOf(1, 2, 5)))
+        Assert.assertEquals(0, CoinChange2.change(3, intArrayOf(2)))
+        Assert.assertEquals(1, CoinChange2.change(10, intArrayOf(10)))
+    }
 }
