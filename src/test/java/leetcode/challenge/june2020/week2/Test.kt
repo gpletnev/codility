@@ -26,4 +26,17 @@ class Test {
         Assert.assertEquals(4, SearchInsertPosition.searchInsert(intArrayOf(1, 3, 5, 6), 7))
         Assert.assertEquals(0, SearchInsertPosition.searchInsert(intArrayOf(1, 3, 5, 6), 0))
     }
+
+    @Test
+    fun testSortColors() {
+        var colors = intArrayOf(2, 0, 2, 1, 1, 0)
+        SortColors.sortColors(colors)
+        Assert.assertArrayEquals(intArrayOf(0, 0, 1, 1, 2, 2), colors)
+        colors = intArrayOf(2, 2, 2, 1, 1, 1)
+        SortColors.sortColors(colors)
+        Assert.assertArrayEquals(intArrayOf(1, 1, 1, 2, 2, 2), colors)
+        colors = intArrayOf(2, 1, 0)
+        SortColors.sortColors(colors)
+        Assert.assertArrayEquals(intArrayOf(0, 1, 2), colors)
+    }
 }
