@@ -92,4 +92,11 @@ class Test {
 
         Assert.assertEquals(false, randomSet.remove(2))
     }
+
+    @Test
+    fun testLargestDivisibleSubset() {
+        Assert.assertArrayEquals(intArrayOf(), LargestDivisibleSubset.largestDivisibleSubset(intArrayOf()).toIntArray())
+        Assert.assertArrayEquals(intArrayOf(1), LargestDivisibleSubset.largestDivisibleSubset(intArrayOf(1)).toIntArray())
+        Assert.assertArrayEquals(intArrayOf(1, 2), LargestDivisibleSubset.largestDivisibleSubset(intArrayOf(1, 2, 3)).toIntArray())
+    }
 }
