@@ -99,4 +99,11 @@ class Test {
         Assert.assertArrayEquals(intArrayOf(1), LargestDivisibleSubset.largestDivisibleSubset(intArrayOf(1)).toIntArray())
         Assert.assertArrayEquals(intArrayOf(1, 2), LargestDivisibleSubset.largestDivisibleSubset(intArrayOf(1, 2, 3)).toIntArray())
     }
+
+    @Test
+    fun testCheapestFlightsWithinKStops() {
+        Assert.assertEquals(200, CheapestFlightsWithinKStops.findCheapestPrice(3, arrayOf(intArrayOf(0, 1, 100), intArrayOf(1, 2, 100), intArrayOf(0, 2, 500)), 0, 2, 1))
+        Assert.assertEquals(500, CheapestFlightsWithinKStops.findCheapestPrice(3, arrayOf(intArrayOf(0, 1, 100), intArrayOf(1, 2, 100), intArrayOf(0, 2, 500)), 0, 2, 0))
+        Assert.assertEquals(500, CheapestFlightsWithinKStops.findCheapestPrice(3, arrayOf(intArrayOf(0, 1, 100), intArrayOf(1, 2, 450), intArrayOf(0, 2, 500)), 0, 2, 1))
+    }
 }
