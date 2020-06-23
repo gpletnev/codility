@@ -9,4 +9,16 @@ class Test {
         Assert.assertEquals(3, SingleNumberII.singleNumber(intArrayOf(2, 2, 3, 2)))
         Assert.assertEquals(99, SingleNumberII.singleNumber(intArrayOf(0, 1, 0, 1, 0, 1, 99)))
     }
+
+    @Test
+    fun testCountCompleteTreeNodes() {
+        val root = TreeNode(1)
+        root.left = TreeNode(2)
+        root.right = TreeNode(3)
+        root.left!!.left = TreeNode(4)
+        root.left!!.right = TreeNode(5)
+        root.right!!.left = TreeNode(6)
+
+        Assert.assertEquals(6, CountCompleteTreeNodes.countNodes(root))
+    }
 }
