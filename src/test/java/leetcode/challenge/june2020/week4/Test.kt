@@ -21,4 +21,10 @@ class Test {
 
         Assert.assertEquals(6, CountCompleteTreeNodes.countNodes(root))
     }
+
+    @Test
+    fun testFindTheDuplicateNumber() {
+        Assert.assertEquals(2, FindTheDuplicateNumber.findDuplicate(intArrayOf(1, 3, 4, 2, 2)))
+        Assert.assertEquals(3, FindTheDuplicateNumber.findDuplicate(intArrayOf(3, 1, 3, 4, 2)))
+    }
 }
