@@ -27,4 +27,22 @@ class Test {
         Assert.assertEquals(2, FindTheDuplicateNumber.findDuplicate(intArrayOf(1, 3, 4, 2, 2)))
         Assert.assertEquals(3, FindTheDuplicateNumber.findDuplicate(intArrayOf(3, 1, 3, 4, 2)))
     }
+
+    @Test
+    fun testSumRootToLeafNumbers() {
+        var root = TreeNode(1)
+        root.left = TreeNode(2)
+        root.right = TreeNode(3)
+        Assert.assertEquals(25, SumRootToLeafNumbers.sumNumbers(root))
+
+        root = TreeNode(4)
+        root.left = TreeNode(9)
+        root.right = TreeNode(0)
+        root.left!!.left = TreeNode(5)
+        root.left!!.right = TreeNode(1)
+        Assert.assertEquals(1026, SumRootToLeafNumbers.sumNumbers(root))
+
+        root = TreeNode(9)
+        Assert.assertEquals(9, SumRootToLeafNumbers.sumNumbers(root))
+    }
 }

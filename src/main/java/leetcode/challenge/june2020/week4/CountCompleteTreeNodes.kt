@@ -1,12 +1,6 @@
 package leetcode.challenge.june2020.week4
 
 // https://leetcode.com/problems/count-complete-tree-nodes/
-
-class TreeNode(var `val`: Int) {
-    var left: TreeNode? = null
-    var right: TreeNode? = null
-}
-
 object CountCompleteTreeNodes {
     fun countNodes(root: TreeNode?): Int {
         if (root == null) {
