@@ -12,4 +12,15 @@ class Test {
         Assert.assertEquals(2, ArrangingCoins.arrangeCoins(5))
         Assert.assertEquals(3, ArrangingCoins.arrangeCoins(8))
     }
+
+    @Test
+    fun testBinaryTreeLevelOrderTraversal_II() {
+        val root = TreeNode(3)
+        root.left = TreeNode(9)
+        root.right = TreeNode(20)
+        root.right!!.left = TreeNode(15)
+        root.right!!.right = TreeNode(7)
+
+        Assert.assertEquals("[15, 7], [9, 20], [3]", BinaryTreeLevelOrderTraversal_II.levelOrderBottom(root).joinToString())
+    }
 }
