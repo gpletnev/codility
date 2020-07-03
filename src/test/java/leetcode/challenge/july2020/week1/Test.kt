@@ -23,4 +23,12 @@ class Test {
 
         Assert.assertEquals("[15, 7], [9, 20], [3]", BinaryTreeLevelOrderTraversal_II.levelOrderBottom(root).joinToString())
     }
+
+    @Test
+    fun testPrisonCellsAfterNDays() {
+        Assert.assertArrayEquals(intArrayOf(0, 1, 1, 0, 0, 0, 0, 0), PrisonCellsAfterNDays.prisonAfterNDays(intArrayOf(0, 1, 0, 1, 1, 0, 0, 1), 1))
+        Assert.assertArrayEquals(intArrayOf(0, 0, 0, 0, 1, 1, 1, 0), PrisonCellsAfterNDays.prisonAfterNDays(intArrayOf(0, 1, 0, 1, 1, 0, 0, 1), 2))
+        Assert.assertArrayEquals(intArrayOf(0, 0, 1, 1, 0, 0, 0, 0), PrisonCellsAfterNDays.prisonAfterNDays(intArrayOf(0, 1, 0, 1, 1, 0, 0, 1), 7))
+        Assert.assertArrayEquals(intArrayOf(0, 0, 1, 1, 1, 1, 1, 0), PrisonCellsAfterNDays.prisonAfterNDays(intArrayOf(1, 0, 0, 1, 0, 0, 1, 0), 1000000000))
+    }
 }
