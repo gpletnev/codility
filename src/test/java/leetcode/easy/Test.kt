@@ -34,4 +34,11 @@ class Test {
         Assert.assertTrue(ValidPalindrome.isPalindrome("A man, a plan, a canal: Panama"))
         Assert.assertFalse(ValidPalindrome.isPalindrome("race a car"))
     }
+
+    @Test
+    fun testUglyNumber() {
+        Assert.assertEquals(true, UglyNumber.isUgly(6))
+        Assert.assertEquals(true, UglyNumber.isUgly(8))
+        Assert.assertEquals(true, UglyNumber.isUgly(14))
+    }
 }
