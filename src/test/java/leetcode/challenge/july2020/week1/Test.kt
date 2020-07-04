@@ -31,4 +31,13 @@ class Test {
         Assert.assertArrayEquals(intArrayOf(0, 0, 1, 1, 0, 0, 0, 0), PrisonCellsAfterNDays.prisonAfterNDays(intArrayOf(0, 1, 0, 1, 1, 0, 0, 1), 7))
         Assert.assertArrayEquals(intArrayOf(0, 0, 1, 1, 1, 1, 1, 0), PrisonCellsAfterNDays.prisonAfterNDays(intArrayOf(1, 0, 0, 1, 0, 0, 1, 0), 1000000000))
     }
+
+    @Test
+    fun testUglyNumberII() {
+        Assert.assertEquals(1, UglyNumberII.nthUglyNumber(1))
+        Assert.assertEquals(2, UglyNumberII.nthUglyNumber(2))
+        Assert.assertEquals(3, UglyNumberII.nthUglyNumber(3))
+        Assert.assertEquals(12, UglyNumberII.nthUglyNumber(10))
+        Assert.assertEquals(15, UglyNumberII.nthUglyNumber(11))
+    }
 }
