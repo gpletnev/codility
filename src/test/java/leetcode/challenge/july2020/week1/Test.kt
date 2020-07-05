@@ -40,4 +40,9 @@ class Test {
         Assert.assertEquals(12, UglyNumberII.nthUglyNumber(10))
         Assert.assertEquals(15, UglyNumberII.nthUglyNumber(11))
     }
+
+    @Test
+    fun testHammingDistance() {
+        Assert.assertEquals(2, HammingDistance.hammingDistance(1, 4))
+    }
 }
