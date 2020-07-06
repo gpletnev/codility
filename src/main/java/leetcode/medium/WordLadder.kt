@@ -3,11 +3,12 @@ package leetcode.medium
 import java.util.*
 import kotlin.collections.ArrayList
 import kotlin.collections.HashMap
+import kotlin.properties.Delegates
 
 // https://leetcode.com/problems/word-ladder/
 object WordLadder {
-    private var L = 0
-    private val allComboDict: MutableMap<String, List<String>> = HashMap()
+    private var L by Delegates.notNull<Int>()
+    private lateinit var allComboDict: MutableMap<String, ArrayList<String>>
 
     private fun visitWordNode(
             queue: Queue<Pair<String, Int>>,
@@ -44,6 +45,7 @@ object WordLadder {
             return 0
         }
 
+        allComboDict = HashMap()
         // Since all words are of same length.
         L = beginWord.length
         for (word in wordList) {
@@ -51,7 +53,7 @@ object WordLadder {
                 // Key is the generic word
                 // Value is a list of words which have the same intermediate generic word.
                 val newWord = "${word.substring(0, i)}*${word.substring(i + 1, L)}"
-                val transformations: MutableList<String> = allComboDict.getOrDefault(newWord, ArrayList()).toMutableList()
+                val transformations = allComboDict.getOrDefault(newWord, ArrayList())
                 transformations.add(word)
                 allComboDict[newWord] = transformations
             }

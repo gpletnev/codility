@@ -45,4 +45,12 @@ class Test {
     fun testHammingDistance() {
         Assert.assertEquals(2, HammingDistance.hammingDistance(1, 4))
     }
+
+    @Test
+    fun testPlusOne() {
+        Assert.assertArrayEquals(intArrayOf(1), `Plus One`.plusOne(intArrayOf(0)))
+        Assert.assertArrayEquals(intArrayOf(1, 0), `Plus One`.plusOne(intArrayOf(9)))
+        Assert.assertArrayEquals(intArrayOf(1, 2, 4), `Plus One`.plusOne(intArrayOf(1, 2, 3)))
+        Assert.assertArrayEquals(intArrayOf(9, 8, 7, 6, 5, 4, 3, 2, 1, 1), `Plus One`.plusOne(intArrayOf(9, 8, 7, 6, 5, 4, 3, 2, 1, 0)))
+    }
 }
