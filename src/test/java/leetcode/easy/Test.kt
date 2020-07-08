@@ -1,9 +1,6 @@
 package leetcode.easy
 
-import leetcode.easy.array.BestTimeToBuyAndSellStock
-import leetcode.easy.array.BestTimeToBuyAndSellStockII
-import leetcode.easy.array.ValidPalindrome
-import leetcode.easy.array.removeDuplicates
+import leetcode.easy.array.*
 import org.junit.Assert
 import org.junit.Test
 
@@ -40,5 +37,10 @@ class Test {
         Assert.assertEquals(true, UglyNumber.isUgly(6))
         Assert.assertEquals(true, UglyNumber.isUgly(8))
         Assert.assertEquals(true, UglyNumber.isUgly(14))
+    }
+
+    @Test
+    fun testTwoSum() {
+        Assert.assertArrayEquals(intArrayOf(0, 1), twoSum(intArrayOf(2, 7, 11, 15), 9))
     }
 }

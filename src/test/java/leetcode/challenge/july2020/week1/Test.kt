@@ -53,4 +53,13 @@ class Test {
         Assert.assertArrayEquals(intArrayOf(1, 2, 4), `Plus One`.plusOne(intArrayOf(1, 2, 3)))
         Assert.assertArrayEquals(intArrayOf(9, 8, 7, 6, 5, 4, 3, 2, 1, 1), `Plus One`.plusOne(intArrayOf(9, 8, 7, 6, 5, 4, 3, 2, 1, 0)))
     }
+
+    @Test
+    fun testIslandPerimeter() {
+        Assert.assertEquals(4, `Island Perimeter`.islandPerimeter(arrayOf(intArrayOf(1))))
+        Assert.assertEquals(0, `Island Perimeter`.islandPerimeter(Array(3) { intArrayOf(0, 0, 0) }))
+        Assert.assertEquals(4, `Island Perimeter`.islandPerimeter(arrayOf(intArrayOf(0, 0, 0), intArrayOf(0, 1, 0), intArrayOf(0, 0, 0))))
+        Assert.assertEquals(12, `Island Perimeter`.islandPerimeter(arrayOf(intArrayOf(1, 1, 1), intArrayOf(1, 1, 1), intArrayOf(1, 1, 1))))
+        Assert.assertEquals(16, `Island Perimeter`.islandPerimeter(arrayOf(intArrayOf(0, 1, 0, 0), intArrayOf(1, 1, 1, 0), intArrayOf(0, 1, 0, 0), intArrayOf(1, 1, 0, 0))))
+    }
 }
