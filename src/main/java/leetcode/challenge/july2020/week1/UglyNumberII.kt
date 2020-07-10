@@ -14,6 +14,6 @@ object UglyNumberII {
             if (nums[i] == nums[index3] * 3) index3++
             if (nums[i] == nums[index5] * 5) index5++
         }
-        return nums[n - 1]
+        return nums.last()
     }
 }
