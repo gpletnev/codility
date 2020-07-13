@@ -38,4 +38,25 @@ class Test {
         root.right!!.right!!.right = TreeNode(8)
         Assert.assertEquals(8, widthOfBinaryTree(root))
     }
+
+    @Test
+    fun testSameTree() {
+        val p = TreeNode(1)
+        p.left = TreeNode(2)
+
+        val q = TreeNode(1)
+        q.right = TreeNode(2)
+        Assert.assertEquals(false, isSameTree(p, q))
+
+        q.left = TreeNode(2)
+        p.right = TreeNode(3)
+        q.right = TreeNode(3)
+        Assert.assertEquals(true, isSameTree(p, q))
+
+        p.left = TreeNode(2)
+        q.left = TreeNode(1)
+        q.right = TreeNode(1)
+        q.right = TreeNode(2)
+        Assert.assertEquals(false, isSameTree(p, q))
+    }
 }
