@@ -59,4 +59,15 @@ class Test {
         q.right = TreeNode(2)
         Assert.assertEquals(false, isSameTree(p, q))
     }
+
+    @Test
+    fun testAngleClock() {
+        Assert.assertEquals(85.0, angleClock(11, 10), 0.00001)
+        Assert.assertEquals(76.5, angleClock(1, 57), 0.00001)
+        Assert.assertEquals(165.0, angleClock(12, 30), 0.00001)
+        Assert.assertEquals(75.0, angleClock(3, 30), 0.00001)
+        Assert.assertEquals(7.5, angleClock(3, 15), 0.00001)
+        Assert.assertEquals(155.0, angleClock(4, 50), 0.00001)
+        Assert.assertEquals(0.0, angleClock(12, 0), 0.00001)
+    }
 }
