@@ -40,6 +40,23 @@ class Test {
     }
 
     @Test
+    fun testSubset() {
+        Assert.assertEquals(
+                listOf(
+                        listOf(),
+                        listOf(3),
+                        listOf(2),
+                        listOf(2, 3),
+                        listOf(1),
+                        listOf(1, 3),
+                        listOf(1, 2),
+                        listOf(1, 2, 3)
+                ).joinToString(),
+                subsets(intArrayOf(1, 2, 3)).joinToString()
+        )
+    }
+
+    @Test
     fun testSameTree() {
         val p = TreeNode(1)
         p.left = TreeNode(2)

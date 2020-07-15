@@ -48,4 +48,20 @@ class Test {
 
         Assert.assertEquals("[3], [9, 20], [15, 7]", BinaryTreeLevelOrderTraversal.levelOrderBottom(root).joinToString())
     }
+
+    @Test
+    fun testProductOfNumbers() {
+        val pon = ProductOfNumbers()
+        pon.add(3)
+        Assert.assertEquals(3, pon.getProduct(1))
+        pon.add(0)
+        pon.add(2)
+        pon.add(5)
+        pon.add(4)
+        Assert.assertEquals(20, pon.getProduct(2))
+        Assert.assertEquals(40, pon.getProduct(3))
+        Assert.assertEquals(0, pon.getProduct(4))
+        pon.add(8)
+        Assert.assertEquals(32, pon.getProduct(2))
+    }
 }
