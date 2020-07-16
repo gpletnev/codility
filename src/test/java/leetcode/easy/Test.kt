@@ -43,4 +43,11 @@ class Test {
     fun testTwoSum() {
         Assert.assertArrayEquals(intArrayOf(0, 1), twoSum(intArrayOf(2, 7, 11, 15), 9))
     }
+
+    @Test
+    fun testHeightChecker() {
+        Assert.assertEquals(3, heightChecker(intArrayOf(1, 1, 4, 2, 1, 3)))
+        Assert.assertEquals(5, heightChecker(intArrayOf(5, 1, 2, 3, 4)))
+        Assert.assertEquals(0, heightChecker(intArrayOf(1, 2, 3, 4, 5)))
+    }
 }

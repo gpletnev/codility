@@ -64,4 +64,9 @@ class Test {
         pon.add(8)
         Assert.assertEquals(32, pon.getProduct(2))
     }
+
+    @Test
+    fun testNetworkDelayTime() {
+        Assert.assertEquals(2, networkDelayTime(arrayOf(intArrayOf(2, 1, 1), intArrayOf(2, 3, 1), intArrayOf(3, 4, 1)), 4, 2))
+    }
 }
