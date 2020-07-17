@@ -50,4 +50,13 @@ class Test {
         Assert.assertEquals(5, heightChecker(intArrayOf(5, 1, 2, 3, 4)))
         Assert.assertEquals(0, heightChecker(intArrayOf(1, 2, 3, 4, 5)))
     }
+
+    @Test
+    fun testIsLongPressedName() {
+        Assert.assertEquals(false, isLongPressedName("alex", "alexxr"))
+        Assert.assertEquals(true, isLongPressedName("alex", "aaleex"))
+        Assert.assertEquals(false, isLongPressedName("saeed", "ssaaedd"))
+        Assert.assertEquals(true, isLongPressedName("leelee", "lleeelee"))
+        Assert.assertEquals(true, isLongPressedName("laiden", "laiden"))
+    }
 }

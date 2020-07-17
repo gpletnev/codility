@@ -17,4 +17,10 @@ class Test {
         Assert.assertEquals(9.261, myPow(2.1, 3), 0.00001)
         Assert.assertEquals(0.25, myPow(2.0, -2), 0.00001)
     }
+
+    @Test
+    fun testTopKFrequent() {
+        Assert.assertArrayEquals(intArrayOf(1, 2), topKFrequent(intArrayOf(1, 1, 1, 2, 2, 3), 2))
+        Assert.assertArrayEquals(intArrayOf(1), topKFrequent(intArrayOf(1), 1))
+    }
 }
