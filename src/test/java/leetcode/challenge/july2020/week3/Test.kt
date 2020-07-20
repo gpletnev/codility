@@ -1,5 +1,7 @@
 package leetcode.challenge.july2020.week3
 
+import leetcode.easy.ListNode
+import leetcode.easy.toIntArray
 import org.junit.Assert
 import org.junit.Test
 
@@ -22,5 +24,20 @@ class Test {
     fun testTopKFrequent() {
         Assert.assertArrayEquals(intArrayOf(1, 2), topKFrequent(intArrayOf(1, 1, 1, 2, 2, 3), 2))
         Assert.assertArrayEquals(intArrayOf(1), topKFrequent(intArrayOf(1), 1))
+    }
+
+    @Test
+    fun testRemoveElements() {
+        var head: ListNode? = null
+        Assert.assertEquals(null, removeElements(head, 6))
+        head = ListNode(6)
+        Assert.assertEquals(null, removeElements(head, 6))
+        head.next = ListNode(6)
+        Assert.assertEquals(null, removeElements(head, 6))
+        head = ListNode(1)
+        head.next = ListNode(2)
+        head.next!!.next = ListNode(3)
+        head.next!!.next!!.next = ListNode(6)
+        Assert.assertArrayEquals(intArrayOf(1, 2, 3), removeElements(head, 6)?.toIntArray())
     }
 }
