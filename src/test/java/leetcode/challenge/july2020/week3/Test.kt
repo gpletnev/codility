@@ -40,4 +40,26 @@ class Test {
         head.next!!.next!!.next = ListNode(6)
         Assert.assertArrayEquals(intArrayOf(1, 2, 3), removeElements(head, 6)?.toIntArray())
     }
+
+    @Test
+    fun testWordSearch() {
+        var board = arrayOf(
+                charArrayOf('A', 'B', 'C', 'E'),
+                charArrayOf('S', 'F', 'C', 'S'),
+                charArrayOf('A', 'D', 'E', 'E')
+        )
+        Assert.assertEquals(true, exist(arrayOf(charArrayOf('A', 'B'), charArrayOf('S', 'F')), "F"))
+        Assert.assertEquals(true, exist(board, "F"))
+        Assert.assertEquals(true, exist(board, "ABCCED"))
+        Assert.assertEquals(true, exist(board, "SEE"))
+        Assert.assertEquals(false, exist(board, "ABCB"))
+
+        board = arrayOf(
+                charArrayOf('A', 'B', 'C', 'E'),
+                charArrayOf('S', 'F', 'E', 'S'),
+                charArrayOf('A', 'D', 'E', 'E')
+        )
+        Assert.assertEquals(true, exist(board.clone(), "ABCESEEEFS"))
+        Assert.assertEquals(true, exist(arrayOf(charArrayOf('C', 'A', 'A'), charArrayOf('A', 'A', 'C'), charArrayOf('B', 'C', 'D')), "AAB"))
+    }
 }
