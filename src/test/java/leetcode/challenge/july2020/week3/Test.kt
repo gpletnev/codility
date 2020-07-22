@@ -1,7 +1,7 @@
 package leetcode.challenge.july2020.week3
 
-import leetcode.easy.ListNode
-import leetcode.easy.toIntArray
+import leetcode.ListNode
+import leetcode.toIntArray
 import org.junit.Assert
 import org.junit.Test
 

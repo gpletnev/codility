@@ -1,5 +1,6 @@
 package codility.lessons.lesson4;
 
+// https://app.codility.com/programmers/lessons/4-counting_elements/missing_integer/
 public class MissingInteger {
     public static int solution(int A[]) {
         int[] counter = new int[A.length + 2];

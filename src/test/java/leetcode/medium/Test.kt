@@ -1,5 +1,6 @@
 package leetcode.medium
 
+import leetcode.TreeNode
 import org.junit.Assert
 import org.junit.Test
 

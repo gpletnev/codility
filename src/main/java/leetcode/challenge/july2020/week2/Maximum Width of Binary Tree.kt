@@ -1,5 +1,6 @@
 package leetcode.challenge.july2020.week2
 
+import leetcode.TreeNode
 import java.util.*
 
 // https://leetcode.com/problems/maximum-width-of-binary-tree/

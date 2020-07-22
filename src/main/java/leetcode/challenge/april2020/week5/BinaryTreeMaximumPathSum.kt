@@ -1,5 +1,7 @@
 package leetcode.challenge.april2020.week5
 
+import leetcode.TreeNode
+
 // https://leetcode.com/problems/binary-tree-maximum-path-sum/
 object BinaryTreeMaximumPathSum {
 
@@ -24,9 +26,4 @@ object BinaryTreeMaximumPathSum {
         maximumPathSum = maximumPathSum?.let { maxOf(it, rootMaximum) } ?: rootMaximum
         return maxOf(leftPathRootSum, rightPathRootSum, root.`val`)
     }
-}
-
-class TreeNode(var `val`: Int) {
-    var left: TreeNode? = null
-    var right: TreeNode? = null
 }

@@ -1,6 +1,6 @@
 package leetcode.challenge.july2020.week3
 
-import leetcode.easy.ListNode
+import leetcode.ListNode
 
 // https://leetcode.com/problems/remove-linked-list-elements
 fun removeElements(head: ListNode?, `val`: Int): ListNode? {

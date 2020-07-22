@@ -1,5 +1,6 @@
 package leetcode.challenge.july2020.week1
 
+import leetcode.TreeNode
 import org.junit.Assert
 import org.junit.Test
 

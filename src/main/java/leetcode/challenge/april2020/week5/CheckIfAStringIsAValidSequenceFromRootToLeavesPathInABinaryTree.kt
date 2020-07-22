@@ -1,5 +1,7 @@
 package leetcode.challenge.april2020.week5
 
+import leetcode.TreeNode
+
 // https://leetcode.com/explore/featured/card/30-day-leetcoding-challenge/532/week-5/3315/
 object CheckIfAStringIsAValidSequenceFromRootToLeavesPathInABinaryTree {
     fun isValidSequence(root: TreeNode?, arr: IntArray): Boolean {
