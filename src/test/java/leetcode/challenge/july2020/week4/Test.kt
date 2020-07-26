@@ -17,4 +17,11 @@ class Test {
     fun testSingleNumberIII() {
         Assert.assertArrayEquals(intArrayOf(3, 5), singleNumber(intArrayOf(1, 2, 1, 3, 2, 5)))
     }
+
+    @Test
+    fun testFindMin() {
+        Assert.assertEquals(1, findMin(intArrayOf(1, 3, 5)))
+        Assert.assertEquals(0, findMin(intArrayOf(2, 2, 2, 0, 1)))
+        Assert.assertEquals(0, findMin(intArrayOf(1, 1, 1, 1, 0, 1, 1)))
+    }
 }
