@@ -24,4 +24,11 @@ class Test {
         Assert.assertEquals(0, findMin(intArrayOf(2, 2, 2, 0, 1)))
         Assert.assertEquals(0, findMin(intArrayOf(1, 1, 1, 1, 0, 1, 1)))
     }
+
+    @Test
+    fun testAddDigits() {
+        Assert.assertEquals(0, addDigits(0))
+        Assert.assertEquals(2, addDigits(38))
+        Assert.assertEquals(1, addDigits(2035))
+    }
 }
