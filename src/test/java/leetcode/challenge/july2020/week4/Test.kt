@@ -25,4 +25,18 @@ class Test {
         Assert.assertEquals(listOf(listOf(0, 1)), allPathsSourceTarget(arrayOf(intArrayOf(1), intArrayOf())))
         Assert.assertEquals(listOf(listOf(0, 1, 3), listOf(0, 2, 3)), allPathsSourceTarget(arrayOf(intArrayOf(1, 2), intArrayOf(3), intArrayOf(3), intArrayOf())))
     }
+
+    @Test
+    fun testFindMin() {
+        Assert.assertEquals(1, findMin(intArrayOf(1, 3, 5)))
+        Assert.assertEquals(0, findMin(intArrayOf(2, 2, 2, 0, 1)))
+        Assert.assertEquals(0, findMin(intArrayOf(1, 1, 1, 1, 0, 1, 1)))
+    }
+
+    @Test
+    fun testAddDigits() {
+        Assert.assertEquals(0, addDigits(0))
+        Assert.assertEquals(2, addDigits(38))
+        Assert.assertEquals(1, addDigits(2035))
+    }
 }
