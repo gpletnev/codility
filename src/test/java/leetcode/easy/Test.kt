@@ -75,4 +75,11 @@ class Test {
         Assert.assertEquals(8, kthLargest.add(9))
         Assert.assertEquals(8, kthLargest.add(4))
     }
+
+    @Test
+    fun testArrayQuickSort() {
+        val array = intArrayOf(2, 4, 7, 3, 6, 6, 5, 1, 0)
+        ArrayQuickSort.quickSort(array)
+        Assert.assertArrayEquals(intArrayOf(0, 1, 2, 3, 4, 5, 6, 6, 7), array)
+    }
 }
