@@ -12,4 +12,13 @@ class Test {
         Assert.assertEquals(3, recentCounter.ping(3001))
         Assert.assertEquals(3, recentCounter.ping(3002))
     }
+
+    @Test
+    fun testCombinationSum() {
+        Assert.assertEquals("[]", combinationSum(intArrayOf(2), 1).toString())
+        Assert.assertEquals("[[1]]", combinationSum(intArrayOf(1), 1).toString())
+        Assert.assertEquals("[[1, 1]]", combinationSum(intArrayOf(1), 2).toString())
+        Assert.assertEquals("[[2, 2, 2, 2], [2, 3, 3], [3, 5]]", combinationSum(intArrayOf(2, 3, 5), 8).toString())
+        Assert.assertEquals("[[2, 2, 3], [7]]", combinationSum(intArrayOf(2, 3, 6, 7), 7).toString())
+    }
 }
