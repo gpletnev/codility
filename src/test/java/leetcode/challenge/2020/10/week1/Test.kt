@@ -21,4 +21,13 @@ class Test {
         Assert.assertEquals("[[2, 2, 2, 2], [2, 3, 3], [3, 5]]", combinationSum(intArrayOf(2, 3, 5), 8).toString())
         Assert.assertEquals("[[2, 2, 3], [7]]", combinationSum(intArrayOf(2, 3, 6, 7), 7).toString())
     }
+
+    @Test
+    fun testFindPairs() {
+        Assert.assertEquals(2, findPairs(intArrayOf(-1, -1, -3), 1))
+        Assert.assertEquals(2, findPairs(intArrayOf(1, 2, 4, 4, 3, 3, 0, 9, 2, 3), 3))
+        Assert.assertEquals(1, findPairs(intArrayOf(1, 3, 1, 5, 4), 0))
+        Assert.assertEquals(4, findPairs(intArrayOf(1, 2, 3, 4, 5), 1))
+        Assert.assertEquals(2, findPairs(intArrayOf(3, 1, 4, 1, 5), 2))
+    }
 }
