@@ -30,4 +30,13 @@ class Test {
         Assert.assertEquals(4, findPairs(intArrayOf(1, 2, 3, 4, 5), 1))
         Assert.assertEquals(2, findPairs(intArrayOf(3, 1, 4, 1, 5), 2))
     }
+
+    @Test
+    fun testRemoveCoveredIntervals() {
+        Assert.assertEquals(2, removeCoveredIntervals(arrayOf(intArrayOf(1, 4), intArrayOf(3, 6), intArrayOf(2, 8))))
+        Assert.assertEquals(1, removeCoveredIntervals(arrayOf(intArrayOf(1, 4), intArrayOf(2, 3))))
+        Assert.assertEquals(2, removeCoveredIntervals(arrayOf(intArrayOf(0, 10), intArrayOf(5, 12))))
+        Assert.assertEquals(2, removeCoveredIntervals(arrayOf(intArrayOf(1, 4), intArrayOf(3, 6), intArrayOf(2, 8))))
+        Assert.assertEquals(1, removeCoveredIntervals(arrayOf(intArrayOf(1, 2), intArrayOf(1, 4), intArrayOf(3, 4))))
+    }
 }
