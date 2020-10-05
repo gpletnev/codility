@@ -39,4 +39,12 @@ class Test {
         Assert.assertEquals(2, removeCoveredIntervals(arrayOf(intArrayOf(1, 4), intArrayOf(3, 6), intArrayOf(2, 8))))
         Assert.assertEquals(1, removeCoveredIntervals(arrayOf(intArrayOf(1, 2), intArrayOf(1, 4), intArrayOf(3, 4))))
     }
+
+    @Test
+    fun testBitwiseComplement() {
+        Assert.assertEquals(2, bitwiseComplement(5))
+        Assert.assertEquals(0, bitwiseComplement(7))
+        Assert.assertEquals(5, bitwiseComplement(10))
+        Assert.assertEquals(1, bitwiseComplement(0))
+    }
 }
