@@ -1,5 +1,7 @@
 package leetcode.challenge.`2020`.`10`.week1
 
+import leetcode.ListNode
+import leetcode.toIntArray
 import org.junit.Assert
 import org.junit.Test
 
@@ -46,5 +48,29 @@ class Test {
         Assert.assertEquals(0, bitwiseComplement(7))
         Assert.assertEquals(5, bitwiseComplement(10))
         Assert.assertEquals(1, bitwiseComplement(0))
+    }
+
+    @Test
+    fun testRotateRight() {
+        var head = ListNode(1)
+        head.next = ListNode(2)
+        Assert.assertArrayEquals(intArrayOf(2, 1), rotateRight(head, 1)?.toIntArray())
+
+        head = ListNode(1)
+        head.next = ListNode(2)
+        head.next!!.next = ListNode(3)
+        Assert.assertArrayEquals(intArrayOf(3, 1, 2), rotateRight(head, 1)?.toIntArray())
+
+        head = ListNode(1)
+        head.next = ListNode(2)
+        head.next!!.next = ListNode(3)
+        Assert.assertArrayEquals(intArrayOf(3, 1, 2), rotateRight(head, 4)?.toIntArray())
+
+        head = ListNode(1)
+        head.next = ListNode(2)
+        head.next!!.next = ListNode(3)
+        head.next!!.next!!.next = ListNode(4)
+        head.next!!.next!!.next!!.next = ListNode(5)
+        Assert.assertArrayEquals(intArrayOf(4, 5, 1, 2, 3), rotateRight(head, 2)?.toIntArray())
     }
 }
