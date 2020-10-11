@@ -36,4 +36,12 @@ class Test {
         Assert.assertEquals(2, findMinArrowShots(arrayOf(intArrayOf(10, 16), intArrayOf(2, 8), intArrayOf(1, 6), intArrayOf(7, 12))))
         Assert.assertEquals(2, findMinArrowShots(arrayOf(intArrayOf(-2147483646, -2147483645), intArrayOf(2147483646, 2147483647))))
     }
+
+    @Test
+    fun RemoveDuplicateLetters() {
+        Assert.assertEquals("", removeDuplicateLetters(""))
+        Assert.assertEquals("a", removeDuplicateLetters("aaaa"))
+        Assert.assertEquals("abc", removeDuplicateLetters("bcabc"))
+        Assert.assertEquals("acdb", removeDuplicateLetters("cbacdcbc"))
+    }
 }
