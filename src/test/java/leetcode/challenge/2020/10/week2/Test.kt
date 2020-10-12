@@ -44,4 +44,13 @@ class Test {
         Assert.assertEquals("abc", removeDuplicateLetters("bcabc"))
         Assert.assertEquals("acdb", removeDuplicateLetters("cbacdcbc"))
     }
+
+    @Test
+    fun testBuddyStrings() {
+        Assert.assertEquals(true, buddyStrings("ab", "ba"))
+        Assert.assertEquals(false, buddyStrings("ab", "ab"))
+        Assert.assertEquals(true, buddyStrings("aa", "aa"))
+        Assert.assertEquals(true, buddyStrings("aaaaaaabc", "aaaaaaacb"))
+        Assert.assertEquals(false, buddyStrings("", "aa"))
+    }
 }
