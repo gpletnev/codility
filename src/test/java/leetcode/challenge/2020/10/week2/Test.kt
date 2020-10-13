@@ -1,6 +1,8 @@
 package leetcode.challenge.`2020`.`10`.week2
 
+import leetcode.ListNode
 import leetcode.TreeNode
+import leetcode.toIntArray
 import org.junit.Assert
 import org.junit.Test
 
@@ -52,5 +54,22 @@ class Test {
         Assert.assertEquals(true, buddyStrings("aa", "aa"))
         Assert.assertEquals(true, buddyStrings("aaaaaaabc", "aaaaaaacb"))
         Assert.assertEquals(false, buddyStrings("", "aa"))
+    }
+
+    @Test
+    fun testSortList() {
+        var head: ListNode? = null
+        Assert.assertEquals(null, SortList.sortList(head))
+        head = ListNode(4)
+        head.next = ListNode(2)
+        head.next!!.next = ListNode(1)
+        head.next!!.next!!.next = ListNode(3)
+        Assert.assertArrayEquals(intArrayOf(1, 2, 3, 4), SortList.sortList(head)?.toIntArray())
+        head = ListNode(-1)
+        head.next = ListNode(5)
+        head.next!!.next = ListNode(3)
+        head.next!!.next!!.next = ListNode(4)
+        head.next!!.next!!.next!!.next = ListNode(0)
+        Assert.assertArrayEquals(intArrayOf(-1, 0, 3, 4, 5), SortList.sortList(head)?.toIntArray())
     }
 }
