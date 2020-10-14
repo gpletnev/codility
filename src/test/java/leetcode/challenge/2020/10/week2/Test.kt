@@ -72,4 +72,11 @@ class Test {
         head.next!!.next!!.next!!.next = ListNode(0)
         Assert.assertArrayEquals(intArrayOf(-1, 0, 3, 4, 5), SortList.sortList(head)?.toIntArray())
     }
+
+    @Test
+    fun testRob() {
+        Assert.assertEquals(3, rob(intArrayOf(2, 3, 3)))
+        Assert.assertEquals(4, rob(intArrayOf(1, 2, 3, 1)))
+        Assert.assertEquals(0, rob(intArrayOf()))
+    }
 }
