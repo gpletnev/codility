@@ -14,4 +14,11 @@ class Test {
         rotate(nums, 2)
         Assert.assertArrayEquals(intArrayOf(3, 99, -1, -100), nums)
     }
+
+    @Test
+    fun testSearchMatrix() {
+        Assert.assertEquals(true, searchMatrix(arrayOf(intArrayOf(1, 3, 5, 7), intArrayOf(10, 11, 16, 20), intArrayOf(23, 30, 34, 50)), 3))
+        Assert.assertEquals(false, searchMatrix(arrayOf(intArrayOf(1, 3, 5, 7), intArrayOf(10, 11, 16, 20), intArrayOf(23, 30, 34, 50)), 13))
+        Assert.assertEquals(false, searchMatrix(arrayOf(), 3))
+    }
 }
