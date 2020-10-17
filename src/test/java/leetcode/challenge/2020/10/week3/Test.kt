@@ -21,4 +21,13 @@ class Test {
         Assert.assertEquals(false, searchMatrix(arrayOf(intArrayOf(1, 3, 5, 7), intArrayOf(10, 11, 16, 20), intArrayOf(23, 30, 34, 50)), 13))
         Assert.assertEquals(false, searchMatrix(arrayOf(), 3))
     }
+
+    @Test
+    fun testFindRepeatedDnaSequences() {
+        Assert.assertArrayEquals(arrayOf("AAAAAAAAAA"), findRepeatedDnaSequences("AAAAAAAAAAA").toTypedArray())
+        Assert.assertArrayEquals(emptyArray<String>(), findRepeatedDnaSequences("").toTypedArray())
+        Assert.assertArrayEquals(emptyArray<String>(), findRepeatedDnaSequences("AAAAAAAAAA").toTypedArray())
+        Assert.assertArrayEquals(arrayOf("AAAAACCCCC", "CCCCCAAAAA"), findRepeatedDnaSequences("AAAAACCCCCAAAAACCCCCCAAAAAGGGTTT").toTypedArray())
+        Assert.assertArrayEquals(arrayOf("AAAAAAAAAA"), findRepeatedDnaSequences("AAAAAAAAAAAAA").toTypedArray())
+    }
 }
