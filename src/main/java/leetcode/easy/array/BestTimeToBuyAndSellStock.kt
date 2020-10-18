@@ -5,7 +5,7 @@ object BestTimeToBuyAndSellStock {
     fun maxProfit(prices: IntArray): Int {
     // find min followed by max
         var maxProfit = 0
-        if (prices.size > 0) {
+        if (prices.isNotEmpty()) {
             var min = prices[0]
             for (i in 1..prices.lastIndex) {
                 if (prices[i] < min) {

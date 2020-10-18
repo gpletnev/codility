@@ -30,4 +30,14 @@ class Test {
         Assert.assertArrayEquals(arrayOf("AAAAACCCCC", "CCCCCAAAAA"), findRepeatedDnaSequences("AAAAACCCCCAAAAACCCCCCAAAAAGGGTTT").toTypedArray())
         Assert.assertArrayEquals(arrayOf("AAAAAAAAAA"), findRepeatedDnaSequences("AAAAAAAAAAAAA").toTypedArray())
     }
+
+    @Test
+    fun testMaxProfit() {
+        Assert.assertEquals(0, maxProfit(2, intArrayOf()))
+        Assert.assertEquals(0, maxProfit(2, intArrayOf(1)))
+        Assert.assertEquals(2, maxProfit(2, intArrayOf(1, 3)))
+        Assert.assertEquals(0, maxProfit(2, intArrayOf(3, 1)))
+        Assert.assertEquals(2, maxProfit(2, intArrayOf(2, 4, 1)))
+        Assert.assertEquals(7, maxProfit(2, intArrayOf(3, 2, 6, 5, 0, 3)))
+    }
 }
