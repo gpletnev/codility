@@ -1,5 +1,6 @@
 package leetcode.challenge.`2020`.`10`.week3
 
+import leetcode.Node
 import org.junit.Assert
 import org.junit.Test
 
@@ -54,5 +55,20 @@ class Test {
         Assert.assertEquals(0, minDominoRotations(intArrayOf(2, 2, 2, 2, 2, 2), intArrayOf(5, 2, 6, 2, 3, 2)))
         Assert.assertEquals(2, minDominoRotations(intArrayOf(2, 1, 2, 4, 2, 2), intArrayOf(5, 2, 6, 2, 3, 2)))
         Assert.assertEquals(-1, minDominoRotations(intArrayOf(3, 5, 1, 2, 3), intArrayOf(3, 6, 3, 3, 4)))
+    }
+
+    @Test
+    fun testCloneGraph() {
+        val node1 = Node(1)
+        val node2 = Node(2)
+        val node3 = Node(3)
+        val node4 = Node(4)
+
+        node1.neighbors = arrayListOf(node2, node4)
+        node2.neighbors = arrayListOf(node1, node3)
+        node3.neighbors = arrayListOf(node2, node4)
+        node4.neighbors = arrayListOf(node1, node3)
+
+        println(node1.toString())
     }
 }
