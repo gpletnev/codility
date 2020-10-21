@@ -71,4 +71,14 @@ class Test {
 
         println(node1.toString())
     }
+
+    @Test
+    fun testAsteroidCollision() {
+        Assert.assertArrayEquals(intArrayOf(-2, 2), asteroidCollision(intArrayOf(-2, 2, -1)))
+        Assert.assertArrayEquals(intArrayOf(2), asteroidCollision(intArrayOf(2, -1, -1, -1)))
+        Assert.assertArrayEquals(intArrayOf(5, 10), asteroidCollision(intArrayOf(5, 10, -5)))
+        Assert.assertArrayEquals(intArrayOf(), asteroidCollision(intArrayOf(8, -8)))
+        Assert.assertArrayEquals(intArrayOf(10), asteroidCollision(intArrayOf(10, 2, -5)))
+        Assert.assertArrayEquals(intArrayOf(-2, -1, 1, 2), asteroidCollision(intArrayOf(1, -2, -1, 1, 2)))
+    }
 }
