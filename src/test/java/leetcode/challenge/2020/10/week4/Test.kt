@@ -28,4 +28,11 @@ class Test {
         Assert.assertEquals(true, find132pattern(intArrayOf(3, 1, 4, 2)))
         Assert.assertEquals(true, find132pattern(intArrayOf(-1, 3, 2, 0)))
     }
+
+    @Test
+    fun bagOfTokensScoreTest() {
+        Assert.assertEquals(0, bagOfTokensScore(intArrayOf(100), 50))
+        Assert.assertEquals(1, bagOfTokensScore(intArrayOf(100, 200), 150))
+        Assert.assertEquals(2, bagOfTokensScore(intArrayOf(100, 200, 300, 400), 200))
+    }
 }
