@@ -44,4 +44,11 @@ class Test {
         Assert.assertEquals(true, winnerSquareGame(4))
         Assert.assertEquals(false, winnerSquareGame(7))
     }
+
+    @Test
+    fun champagneTowerTest() {
+        Assert.assertEquals(0.0, champagneTower(1, 1, 1), 0.01)
+        Assert.assertEquals(0.5, champagneTower(2, 1, 1), 0.01)
+        Assert.assertEquals(1.0, champagneTower(100000009, 33, 17), 0.01)
+    }
 }
