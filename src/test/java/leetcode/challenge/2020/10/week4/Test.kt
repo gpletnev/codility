@@ -35,4 +35,13 @@ class Test {
         Assert.assertEquals(1, bagOfTokensScore(intArrayOf(100, 200), 150))
         Assert.assertEquals(2, bagOfTokensScore(intArrayOf(100, 200, 300, 400), 200))
     }
+
+    @Test
+    fun winnerSquareGameTest() {
+        Assert.assertEquals(false, winnerSquareGame(0))
+        Assert.assertEquals(true, winnerSquareGame(1))
+        Assert.assertEquals(false, winnerSquareGame(2))
+        Assert.assertEquals(true, winnerSquareGame(4))
+        Assert.assertEquals(false, winnerSquareGame(7))
+    }
 }
