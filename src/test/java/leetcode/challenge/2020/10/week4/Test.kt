@@ -1,5 +1,6 @@
 package leetcode.challenge.`2020`.`10`.week4
 
+import leetcode.ListNode
 import leetcode.TreeNode
 import org.junit.Assert
 import org.junit.Test
@@ -50,5 +51,21 @@ class Test {
         Assert.assertEquals(0.0, champagneTower(1, 1, 1), 0.01)
         Assert.assertEquals(0.5, champagneTower(2, 1, 1), 0.01)
         Assert.assertEquals(1.0, champagneTower(100000009, 33, 17), 0.01)
+    }
+
+    @Test
+    fun detectCycleTestO() {
+        val node = ListNode(3)
+        Assert.assertEquals(null, detectCycle(node))
+
+        node.next = ListNode(2)
+        node.next!!.next = node
+        Assert.assertEquals(node, detectCycle(node))
+
+        node.next!!.next = ListNode(0)
+        node.next!!.next!!.next = ListNode(-4)
+        node.next!!.next!!.next!!.next = node.next
+
+        Assert.assertEquals(node.next, detectCycle(node))
     }
 }
