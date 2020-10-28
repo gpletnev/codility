@@ -68,4 +68,13 @@ class Test {
 
         Assert.assertEquals(node.next, detectCycle(node))
     }
+
+    @Test
+    fun summaryRangesTest() {
+        Assert.assertArrayEquals(arrayOf(), summaryRanges(intArrayOf()).toTypedArray())
+        Assert.assertArrayEquals(arrayOf("-1"), summaryRanges(intArrayOf(-1)).toTypedArray())
+        Assert.assertArrayEquals(arrayOf("0"), summaryRanges(intArrayOf(0)).toTypedArray())
+        Assert.assertArrayEquals(arrayOf("0->2", "4->5", "7"), summaryRanges(intArrayOf(0, 1, 2, 4, 5, 7)).toTypedArray())
+        Assert.assertArrayEquals(arrayOf("0", "2->4", "6", "8->9"), summaryRanges(intArrayOf(0, 2, 3, 4, 6, 8, 9)).toTypedArray())
+    }
 }
