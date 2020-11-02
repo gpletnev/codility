@@ -1,6 +1,7 @@
 package leetcode.challenge.`2020`.`11`.week1
 
 import leetcode.ListNode
+import leetcode.toIntArray
 import leetcode.toList
 import org.junit.Assert
 import org.junit.Test
@@ -25,5 +26,14 @@ class Test {
 
         node = intArrayOf(1, 0, 0, 1, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0).toList()!!
         Assert.assertEquals(18880, getDecimalValue(node))
+    }
+
+    @Test
+    fun insertionSortListTest() {
+        var node = intArrayOf(4, 2, 1, 3).toList()
+        Assert.assertArrayEquals(intArrayOf(1, 2, 3, 4), insertionSortList(node)?.toIntArray())
+
+        node = intArrayOf(-1, 5, 3, 4, 0).toList()
+        Assert.assertArrayEquals(intArrayOf(-1, 0, 3, 4, 5), insertionSortList(node)?.toIntArray())
     }
 }
