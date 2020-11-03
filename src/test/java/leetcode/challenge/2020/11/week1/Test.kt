@@ -36,4 +36,14 @@ class Test {
         node = intArrayOf(-1, 5, 3, 4, 0).toList()
         Assert.assertArrayEquals(intArrayOf(-1, 0, 3, 4, 5), insertionSortList(node)?.toIntArray())
     }
+
+    @Test
+    fun maxPowerTest() {
+        Assert.assertEquals(2, maxPower("cc"))
+        Assert.assertEquals(2, maxPower("leetcode"))
+        Assert.assertEquals(5, maxPower("abbcccddddeeeeedcba"))
+        Assert.assertEquals(5, maxPower("triplepillooooow"))
+        Assert.assertEquals(11, maxPower("hooraaaaaaaaaaay"))
+        Assert.assertEquals(1, maxPower("tourist"))
+    }
 }
