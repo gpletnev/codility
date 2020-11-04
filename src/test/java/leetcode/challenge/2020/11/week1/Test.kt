@@ -46,4 +46,12 @@ class Test {
         Assert.assertEquals(11, maxPower("hooraaaaaaaaaaay"))
         Assert.assertEquals(1, maxPower("tourist"))
     }
+
+    @Test
+    fun findMinHeightTreesTest() {
+        Assert.assertArrayEquals(intArrayOf(1), findMinHeightTrees(4, arrayOf(intArrayOf(1, 0), intArrayOf(1, 2), intArrayOf(1, 3))).toIntArray())
+        Assert.assertArrayEquals(intArrayOf(3, 4), findMinHeightTrees(6, arrayOf(intArrayOf(3, 0), intArrayOf(3, 1), intArrayOf(3, 2), intArrayOf(3, 4), intArrayOf(5, 4))).toIntArray())
+        Assert.assertArrayEquals(intArrayOf(0), findMinHeightTrees(1, emptyArray()).toIntArray())
+        Assert.assertArrayEquals(intArrayOf(0, 1), findMinHeightTrees(2, arrayOf(intArrayOf(0, 1))).toIntArray())
+    }
 }
