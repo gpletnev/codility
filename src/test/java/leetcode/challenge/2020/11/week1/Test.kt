@@ -54,4 +54,10 @@ class Test {
         Assert.assertArrayEquals(intArrayOf(0), findMinHeightTrees(1, emptyArray()).toIntArray())
         Assert.assertArrayEquals(intArrayOf(0, 1), findMinHeightTrees(2, arrayOf(intArrayOf(0, 1))).toIntArray())
     }
+
+    @Test
+    fun minCostToMoveChipsTest() {
+        Assert.assertEquals(1, minCostToMoveChips(intArrayOf(1, 2, 3)))
+        Assert.assertEquals(2, minCostToMoveChips(intArrayOf(2, 2, 2, 3, 3)))
+    }
 }
