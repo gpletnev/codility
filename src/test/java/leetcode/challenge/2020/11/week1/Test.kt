@@ -60,4 +60,11 @@ class Test {
         Assert.assertEquals(1, minCostToMoveChips(intArrayOf(1, 2, 3)))
         Assert.assertEquals(2, minCostToMoveChips(intArrayOf(2, 2, 2, 3, 3)))
     }
+
+    @Test
+    fun smallestDivisorTest() {
+        Assert.assertEquals(5, smallestDivisor(intArrayOf(1, 2, 5, 9), 6))
+        Assert.assertEquals(3, smallestDivisor(intArrayOf(2, 3, 5, 7, 11), 11))
+        Assert.assertEquals(4, smallestDivisor(intArrayOf(19), 5))
+    }
 }
