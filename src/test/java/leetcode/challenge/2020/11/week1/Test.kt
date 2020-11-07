@@ -67,4 +67,18 @@ class Test {
         Assert.assertEquals(3, smallestDivisor(intArrayOf(2, 3, 5, 7, 11), 11))
         Assert.assertEquals(4, smallestDivisor(intArrayOf(19), 5))
     }
+
+    @Test
+    fun addTwoNumbersTest() {
+
+        Assert.assertArrayEquals(intArrayOf(9, 9, 9, 9, 9, 9, 9, 9, 9, 9), addTwoNumbers(
+                intArrayOf(9, 9, 9, 9, 9, 9, 9, 9, 9, 9).toList(),
+                intArrayOf(0).toList()).toIntArray())
+
+        Assert.assertArrayEquals(intArrayOf(7, 8, 0, 7), addTwoNumbers(intArrayOf(7, 2, 4, 3).toList(), intArrayOf(5, 6, 4).toList()).toIntArray())
+
+        Assert.assertArrayEquals(intArrayOf(4, 0, 0, 0, 0, 0, 0, 0, 0, 6), addTwoNumbers(
+                intArrayOf(3, 9, 9, 9, 9, 9, 9, 9, 9, 9).toList(),
+                intArrayOf(7).toList()).toIntArray())
+    }
 }
