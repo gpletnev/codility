@@ -18,8 +18,8 @@ fun helper(node: TreeNode?, _curMax: Int, _curMin: Int): Int {
     }
     // else, update max and min
     // and return the max of left and right subtrees
-    curMax = Math.max(curMax, node.`val`)
-    curMin = Math.min(curMin, node.`val`)
+    curMax = maxOf(curMax, node.`val`)
+    curMin = minOf(curMin, node.`val`)
     val left = helper(node.left, curMax, curMin)
     val right = helper(node.right, curMax, curMin)
     return Math.max(left, right)
