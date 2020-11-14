@@ -24,4 +24,10 @@ class Test {
         Assert.assertEquals(false, validSquare(intArrayOf(0, 0), intArrayOf(0, 1), intArrayOf(1, 1), intArrayOf(1, 1)))
         Assert.assertEquals(false, validSquare(intArrayOf(0, 0), intArrayOf(0, 1), intArrayOf(1, 1), intArrayOf(1, 2)))
     }
+
+    @Test
+    fun poorPigsTest() {
+        Assert.assertEquals(3, poorPigs(8, 15, 15))
+        Assert.assertEquals(2, poorPigs(9, 30, 15))
+    }
 }
