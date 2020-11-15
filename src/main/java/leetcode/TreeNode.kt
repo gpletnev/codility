@@ -19,11 +19,13 @@ class BinaryTree(tree: List<Int?>) {
             while (queue.isNotEmpty() && iterator.hasNext()) {
                 val node = queue.poll()
                 val left: Int? = iterator.next()
-                val right: Int? = iterator.next()
                 if (left != null) node?.left = TreeNode(left)
-                if (right != null) node?.right = TreeNode(right)
                 queue.add(node?.left)
-                queue.add(node?.right)
+                if (iterator.hasNext()) {
+                    val right: Int? = iterator.next()
+                    if (right != null) node?.right = TreeNode(right)
+                    queue.add(node?.right)
+                }
             }
         }
     }

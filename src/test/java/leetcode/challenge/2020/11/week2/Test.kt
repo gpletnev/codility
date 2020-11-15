@@ -28,6 +28,6 @@ class Test {
     @Test
     fun poorPigsTest() {
         Assert.assertEquals(3, poorPigs(8, 15, 15))
-        Assert.assertEquals(2, poorPigs(9, 30, 15))
+        Assert.assertEquals(5, poorPigs(1000, 15, 60))
     }
 }
