@@ -20,4 +20,9 @@ class Test {
         Assert.assertEquals(5, longestMountain(intArrayOf(2, 1, 4, 7, 3, 2, 5)))
         Assert.assertEquals(0, longestMountain(intArrayOf(2, 2, 2)))
     }
+
+    @Test
+    fun mirrorReflectionTest() {
+        Assert.assertEquals(2, mirrorReflection(2, 1))
+    }
 }
