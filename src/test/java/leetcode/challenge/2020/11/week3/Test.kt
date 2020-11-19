@@ -25,4 +25,12 @@ class Test {
     fun mirrorReflectionTest() {
         Assert.assertEquals(2, mirrorReflection(2, 1))
     }
+
+    @Test
+    fun mergeTest() {
+        Assert.assertArrayEquals(arrayOf(intArrayOf(1, 6), intArrayOf(8, 10), intArrayOf(15, 18)),
+                merge(arrayOf(intArrayOf(1, 3), intArrayOf(2, 6), intArrayOf(8, 10), intArrayOf(15, 18))))
+        Assert.assertArrayEquals(arrayOf(intArrayOf(1, 5)),
+                merge(arrayOf(intArrayOf(1, 4), intArrayOf(4, 5))))
+    }
 }
