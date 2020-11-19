@@ -33,4 +33,13 @@ class Test {
         Assert.assertArrayEquals(arrayOf(intArrayOf(1, 5)),
                 merge(arrayOf(intArrayOf(1, 4), intArrayOf(4, 5))))
     }
+
+    @Test
+    fun decodeStringTest() {
+        Assert.assertEquals("a", decodeString("a"))
+        Assert.assertEquals("aaabcbc", decodeString("3[a]2[bc]"))
+        Assert.assertEquals("accaccacc", decodeString("3[a2[c]]"))
+        Assert.assertEquals("abcabccdcdcdef", decodeString("2[abc]3[cd]ef"))
+        Assert.assertEquals("abccdcdcdxyz", decodeString("abc3[cd]xyz"))
+    }
 }
