@@ -42,4 +42,11 @@ class Test {
         Assert.assertEquals("abcabccdcdcdef", decodeString("2[abc]3[cd]ef"))
         Assert.assertEquals("abccdcdcdxyz", decodeString("abc3[cd]xyz"))
     }
+
+    @Test
+    fun atMostNGivenDigitSetTest() {
+        Assert.assertEquals(1, atMostNGivenDigitSet(arrayOf("7"), 8))
+        Assert.assertEquals(20, atMostNGivenDigitSet(arrayOf("1", "3", "5", "7"), 100))
+        Assert.assertEquals(29523, atMostNGivenDigitSet(arrayOf("1", "4", "9"), 1000000000))
+    }
 }
