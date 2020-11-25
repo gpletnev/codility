@@ -20,4 +20,14 @@ class Test {
         Assert.assertEquals(1, calculate(" 3/2"))
         Assert.assertEquals(5, calculate("3+5 / 2"))
     }
+
+    @Test
+    fun smallestRepunitDivByKTest() {
+        Assert.assertEquals(22, smallestRepunitDivByK(23))
+        Assert.assertEquals(1, smallestRepunitDivByK(1))
+        Assert.assertEquals(-1, smallestRepunitDivByK(2))
+        Assert.assertEquals(3, smallestRepunitDivByK(3))
+        Assert.assertEquals(16, smallestRepunitDivByK(17))
+        Assert.assertEquals(-1, smallestRepunitDivByK(5))
+    }
 }
