@@ -30,4 +30,10 @@ class Test {
         Assert.assertEquals(16, smallestRepunitDivByK(17))
         Assert.assertEquals(-1, smallestRepunitDivByK(5))
     }
+
+    @Test
+    fun longestSubstringTest() {
+        Assert.assertEquals(3, longestSubstring("aaabb", 3))
+        Assert.assertEquals(5, longestSubstring("ababbc", 2))
+    }
 }
