@@ -36,4 +36,10 @@ class Test {
         Assert.assertEquals(3, longestSubstring("aaabb", 3))
         Assert.assertEquals(5, longestSubstring("ababbc", 2))
     }
+
+    @Test
+    fun canPartitionTest() {
+        Assert.assertEquals(true, canPartition(intArrayOf(1, 5, 11, 5)))
+        Assert.assertEquals(false, canPartition(intArrayOf(1, 2, 3, 5)))
+    }
 }
