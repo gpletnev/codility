@@ -42,4 +42,13 @@ class Test {
         Assert.assertEquals(true, canPartition(intArrayOf(1, 5, 11, 5)))
         Assert.assertEquals(false, canPartition(intArrayOf(1, 2, 3, 5)))
     }
+
+    @Test
+    fun maxSlidingWindowTest() {
+        Assert.assertArrayEquals(intArrayOf(1), maxSlidingWindow(intArrayOf(1), 1))
+        Assert.assertArrayEquals(intArrayOf(1, -1), maxSlidingWindow(intArrayOf(1, -1), 1))
+        Assert.assertArrayEquals(intArrayOf(11), maxSlidingWindow(intArrayOf(9, 11), 2))
+        Assert.assertArrayEquals(intArrayOf(4), maxSlidingWindow(intArrayOf(4, -2), 2))
+        Assert.assertArrayEquals(intArrayOf(3, 3, 5, 5, 6, 7), maxSlidingWindow(intArrayOf(1, 3, -1, -3, 5, 3, 6, 7), 3))
+    }
 }
