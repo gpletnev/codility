@@ -35,12 +35,22 @@ class Test {
         )
 
         Assert.assertEquals(
-                listOf(1, null, 5, null, 7).joinToString(),
-                increasingBST(BinaryTree(listOf(5, 1, 7)).head).joinToString()
+            listOf(1, null, 5, null, 7).joinToString(),
+            increasingBST(BinaryTree(listOf(5, 1, 7)).head).joinToString()
         )
         Assert.assertEquals(
-                listOf(1, null, 2, null, 3, null, 4, null, 5, null, 6, null, 7, null, 8, null, 9).joinToString(),
-                increasingBST(BinaryTree(listOf(5, 3, 6, 2, 4, null, 8, 1, null, null, null, 7, 9)).head).joinToString()
+            listOf(1, null, 2, null, 3, null, 4, null, 5, null, 6, null, 7, null, 8, null, 9).joinToString(),
+            increasingBST(BinaryTree(listOf(5, 3, 6, 2, 4, null, 8, 1, null, null, null, 7, 9)).head).joinToString()
         )
+    }
+
+    @Test
+    fun kthFactorTest() {
+        Assert.assertEquals(2, kthFactor(2, 2))
+        Assert.assertEquals(1, kthFactor(1, 1))
+        Assert.assertEquals(-1, kthFactor(4, 4))
+        Assert.assertEquals(3, kthFactor(12, 3))
+        Assert.assertEquals(7, kthFactor(7, 2))
+        Assert.assertEquals(4, kthFactor(1000, 3))
     }
 }
