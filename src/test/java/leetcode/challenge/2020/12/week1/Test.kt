@@ -30,8 +30,8 @@ class Test {
     @Test
     fun increasingBSTTest() {
         Assert.assertEquals(
-                listOf(1, null, 5).joinToString(),
-                increasingBST(BinaryTree(listOf(5, 1)).head).joinToString()
+            listOf(1, null, 5).joinToString(),
+            increasingBST(BinaryTree(listOf(5, 1)).head).joinToString()
         )
 
         Assert.assertEquals(
@@ -52,5 +52,11 @@ class Test {
         Assert.assertEquals(3, kthFactor(12, 3))
         Assert.assertEquals(7, kthFactor(7, 2))
         Assert.assertEquals(4, kthFactor(1000, 3))
+    }
+
+    @Test
+    fun canPlaceFlowersTest() {
+        Assert.assertEquals(true, canPlaceFlowers(intArrayOf(1, 0, 0, 0, 1), 1))
+        Assert.assertEquals(false, canPlaceFlowers(intArrayOf(1, 0, 0, 0, 1), 2))
     }
 }
