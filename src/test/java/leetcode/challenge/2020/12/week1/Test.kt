@@ -59,4 +59,14 @@ class Test {
         Assert.assertEquals(true, canPlaceFlowers(intArrayOf(1, 0, 0, 0, 1), 1))
         Assert.assertEquals(false, canPlaceFlowers(intArrayOf(1, 0, 0, 0, 1), 2))
     }
+
+    @Test
+    fun generateMatrixTest() {
+        Assert.assertArrayEquals(arrayOf(intArrayOf(1)), generateMatrix(1))
+        Assert.assertArrayEquals(arrayOf(intArrayOf(1, 2), intArrayOf(4, 3)), generateMatrix(2))
+        Assert.assertArrayEquals(
+            arrayOf(intArrayOf(1, 2, 3), intArrayOf(8, 9, 4), intArrayOf(7, 6, 5)),
+            generateMatrix(3)
+        )
+    }
 }
