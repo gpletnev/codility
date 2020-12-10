@@ -25,4 +25,12 @@ class Test {
         Assert.assertEquals(20, bstIterator.next())
         Assert.assertEquals(false, bstIterator.hasNext())
     }
+
+    @Test
+    fun validMountainArrayTest() {
+        Assert.assertEquals(false, validMountainArray(intArrayOf(9, 8, 7, 6, 5, 4, 3, 2, 1, 0)))
+        Assert.assertEquals(false, validMountainArray(intArrayOf(2, 1)))
+        Assert.assertEquals(false, validMountainArray(intArrayOf(3, 5, 5)))
+        Assert.assertEquals(true, validMountainArray(intArrayOf(0, 3, 2, 1)))
+    }
 }
