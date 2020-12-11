@@ -33,4 +33,15 @@ class Test {
         Assert.assertEquals(false, validMountainArray(intArrayOf(3, 5, 5)))
         Assert.assertEquals(true, validMountainArray(intArrayOf(0, 3, 2, 1)))
     }
+
+    @Test
+    fun removeDuplicatesTest() {
+        var array = intArrayOf(1, 1, 1, 2, 2, 3)
+        Assert.assertEquals(5, removeDuplicates(array))
+        Assert.assertArrayEquals(intArrayOf(1, 1, 2, 2, 3), array.copyOf(5))
+
+        array = intArrayOf(0, 0, 1, 1, 1, 1, 2, 3, 3)
+        Assert.assertEquals(7, removeDuplicates(array))
+        Assert.assertArrayEquals(intArrayOf(0, 0, 1, 1, 2, 3, 3), array.copyOf(7))
+    }
 }
