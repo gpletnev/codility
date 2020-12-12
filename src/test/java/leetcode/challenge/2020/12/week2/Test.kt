@@ -44,4 +44,16 @@ class Test {
         Assert.assertEquals(7, removeDuplicates(array))
         Assert.assertArrayEquals(intArrayOf(0, 0, 1, 1, 2, 3, 3), array.copyOf(7))
     }
+
+    @Test
+    fun subtreeWithAllDeepestTest() {
+        var binaryTree = BinaryTree(listOf(1))
+        Assert.assertEquals(binaryTree.head!!, subtreeWithAllDeepest(binaryTree.head!!))
+
+        binaryTree = BinaryTree(listOf(0, 1, 3, null, 2))
+        Assert.assertEquals(binaryTree.head!!.left!!.right, subtreeWithAllDeepest(binaryTree.head!!))
+
+        binaryTree = BinaryTree(listOf(3, 5, 1, 6, 2, 0, 8, null, null, 7, 4))
+        Assert.assertEquals(binaryTree.head!!.left!!.right, subtreeWithAllDeepest(binaryTree.head!!))
+    }
 }
