@@ -61,4 +61,13 @@ class Test {
     fun maxCoinsTest() {
         Assert.assertEquals(167, maxCoins(intArrayOf(3, 1, 5, 8)))
     }
+
+    @Test
+    fun partitionTest() {
+        Assert.assertArrayEquals(listOf(listOf("a")).toTypedArray(), partition("a").toTypedArray())
+        Assert.assertArrayEquals(
+            listOf(listOf("a", "a", "b"), listOf("aa", "b")).toTypedArray(),
+            partition("aab").toTypedArray()
+        )
+    }
 }
