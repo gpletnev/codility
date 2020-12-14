@@ -56,4 +56,9 @@ class Test {
         binaryTree = BinaryTree(listOf(3, 5, 1, 6, 2, 0, 8, null, null, 7, 4))
         Assert.assertEquals(binaryTree.head!!.left!!.right, subtreeWithAllDeepest(binaryTree.head!!))
     }
+
+    @Test
+    fun maxCoinsTest() {
+        Assert.assertEquals(167, maxCoins(intArrayOf(3, 1, 5, 8)))
+    }
 }
