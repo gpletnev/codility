@@ -19,4 +19,9 @@ class Test {
         Assert.assertTrue(isValidBST(BinaryTree(listOf(2, 1, 3)).head))
         Assert.assertFalse(isValidBST(BinaryTree(listOf(5, 1, 4, null, null, 3, 6)).head))
     }
+
+    @Test
+    fun fourSumCountTest() {
+        Assert.assertEquals(2, fourSumCount(intArrayOf(1, 2), intArrayOf(-2, -1), intArrayOf(-1, 2), intArrayOf(0, 2)))
+    }
 }
