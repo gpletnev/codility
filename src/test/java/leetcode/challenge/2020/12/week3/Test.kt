@@ -24,4 +24,12 @@ class Test {
     fun fourSumCountTest() {
         Assert.assertEquals(2, fourSumCount(intArrayOf(1, 2), intArrayOf(-2, -1), intArrayOf(-1, 2), intArrayOf(0, 2)))
     }
+
+    @Test
+    fun increasingTripletTest() {
+        Assert.assertTrue(increasingTriplet(intArrayOf(1, 2, -1, 0, 1)))
+        Assert.assertTrue(increasingTriplet(intArrayOf(1, 2, 3, 4, 5)))
+        Assert.assertFalse(increasingTriplet(intArrayOf(5, 4, 3, 2, 1)))
+        Assert.assertTrue(increasingTriplet(intArrayOf(2, 1, 5, 0, 4, 6)))
+    }
 }
