@@ -32,4 +32,51 @@ class Test {
         Assert.assertFalse(increasingTriplet(intArrayOf(5, 4, 3, 2, 1)))
         Assert.assertTrue(increasingTriplet(intArrayOf(2, 1, 5, 0, 4, 6)))
     }
+
+    @Test
+    fun cherryPickupTest() {
+
+        Assert.assertEquals(
+            4, cherryPickup(
+                arrayOf(
+                    intArrayOf(1, 1),
+                    intArrayOf(1, 1)
+                )
+            )
+        )
+
+        Assert.assertEquals(
+            24, cherryPickup(
+                arrayOf(
+                    intArrayOf(3, 1, 1),
+                    intArrayOf(2, 5, 1),
+                    intArrayOf(1, 5, 5),
+                    intArrayOf(2, 1, 1)
+                )
+            )
+        )
+
+        Assert.assertEquals(
+            28, cherryPickup(
+                arrayOf(
+                    intArrayOf(1, 0, 0, 0, 0, 0, 1),
+                    intArrayOf(2, 0, 0, 0, 0, 3, 0),
+                    intArrayOf(2, 0, 9, 0, 0, 0, 0),
+                    intArrayOf(0, 3, 0, 5, 4, 0, 0),
+                    intArrayOf(1, 0, 2, 3, 0, 0, 6)
+                )
+            )
+        )
+
+        Assert.assertEquals(
+            22, cherryPickup(
+                arrayOf(
+                    intArrayOf(1, 0, 0, 3),
+                    intArrayOf(0, 0, 0, 3),
+                    intArrayOf(0, 0, 3, 3),
+                    intArrayOf(9, 0, 3, 3)
+                )
+            )
+        )
+    }
 }
