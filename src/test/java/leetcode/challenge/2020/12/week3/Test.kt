@@ -92,4 +92,11 @@ class Test {
         Assert.assertEquals("h", decodeAtIndex("ha22", 5))
         Assert.assertEquals("a", decodeAtIndex("a2345678999999999999999", 1))
     }
+
+    @Test
+    fun smallestRangeIITest() {
+        Assert.assertEquals(0, smallestRangeII(intArrayOf(1), 0))
+        Assert.assertEquals(6, smallestRangeII(intArrayOf(0, 10), 2))
+        Assert.assertEquals(3, smallestRangeII(intArrayOf(1, 3, 6), 3))
+    }
 }
