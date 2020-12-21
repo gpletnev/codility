@@ -79,4 +79,17 @@ class Test {
             )
         )
     }
+
+    @Test
+    fun decodeAtIndexTest() {
+        Assert.assertEquals(
+            "l", decodeAtIndex(
+                "yyuele72uthzyoeut7oyku2yqmghy5luy9qguc28ukav7an6a2bvizhph35t86qicv4gyeo6av7gerovv5lnw47954bsv2xruaej",
+                123365626
+            )
+        )
+        Assert.assertEquals("o", decodeAtIndex("leet2code3", 10))
+        Assert.assertEquals("h", decodeAtIndex("ha22", 5))
+        Assert.assertEquals("a", decodeAtIndex("a2345678999999999999999", 1))
+    }
 }
