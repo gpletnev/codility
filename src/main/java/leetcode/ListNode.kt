@@ -17,7 +17,7 @@ fun ListNode.toIntArray(): IntArray {
 }
 
 fun IntArray.toList(): ListNode? {
-    if (this.isNotEmpty()) {
+    return if (this.isNotEmpty()) {
         val head = ListNode(this[0])
         var next = head
         for (i in 1..this.lastIndex) {
@@ -25,8 +25,8 @@ fun IntArray.toList(): ListNode? {
             next.next = node
             next = next.next!!
         }
-        return head
+        head
     } else {
-        return null
+        null
     }
 }
