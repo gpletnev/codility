@@ -27,4 +27,20 @@ class Test {
         Assert.assertArrayEquals(intArrayOf(1), swapPairs(intArrayOf(1).toList())!!.toIntArray())
         Assert.assertArrayEquals(intArrayOf(2, 1, 4, 3), swapPairs(intArrayOf(1, 2, 3, 4).toList())!!.toIntArray())
     }
+
+    @Test
+    fun findDiagonalOrderTest() {
+        Assert.assertArrayEquals(
+            intArrayOf(),
+            findDiagonalOrder(arrayOf(intArrayOf()))
+        )
+        Assert.assertArrayEquals(
+            intArrayOf(1),
+            findDiagonalOrder(arrayOf(intArrayOf(1)))
+        )
+        Assert.assertArrayEquals(
+            intArrayOf(1, 2, 4, 7, 5, 3, 6, 8, 9),
+            findDiagonalOrder(arrayOf(intArrayOf(1, 2, 3), intArrayOf(4, 5, 6), intArrayOf(7, 8, 9)))
+        )
+    }
 }
