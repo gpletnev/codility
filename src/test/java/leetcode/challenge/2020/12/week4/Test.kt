@@ -43,4 +43,12 @@ class Test {
             findDiagonalOrder(arrayOf(intArrayOf(1, 2, 3), intArrayOf(4, 5, 6), intArrayOf(7, 8, 9)))
         )
     }
+
+    @Test
+    fun numDecodingsTest() {
+        Assert.assertEquals(2, numDecodings("12"))
+        Assert.assertEquals(3, numDecodings("226"))
+        Assert.assertEquals(0, numDecodings("0"))
+        Assert.assertEquals(1, numDecodings("1"))
+    }
 }
