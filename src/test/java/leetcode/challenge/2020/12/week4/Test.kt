@@ -51,4 +51,18 @@ class Test {
         Assert.assertEquals(0, numDecodings("0"))
         Assert.assertEquals(1, numDecodings("1"))
     }
+
+    @Test
+    fun minJumpsTest() {
+        Assert.assertEquals(3, minJumps(intArrayOf(100, -23, -23, 404, 100, 23, 23, 23, 3, 404)))
+        Assert.assertEquals(0, minJumps(intArrayOf(7)))
+        Assert.assertEquals(1, minJumps(intArrayOf(7, 6, 9, 6, 9, 6, 9, 7)))
+        Assert.assertEquals(3, minJumps(intArrayOf(11, 22, 7, 7, 7, 7, 7, 7, 7, 22, 13)))
+    }
+
+    @Test
+    fun reachNumberTest() {
+        Assert.assertEquals(2, reachNumber(3))
+        Assert.assertEquals(3, reachNumber(2))
+    }
 }
