@@ -1,34 +1,27 @@
-package codility.lessons.lesson2;
+package codility.lessons.lesson2
 
-import java.util.HashMap;
+import java.util.*
 
-public class OddOccurrencesInArray {
-    public static int solution(int[] A) {
-        int result = 0;
-
-        for (int i : A) {
-            result ^= i;
-        }
-        return result;
+object OddOccurrencesInArray {
+    @JvmStatic
+    fun solution(A: IntArray): Int {
+        return A.reduce { res, i -> res.xor(i) }
     }
 
-    public static <T> T solutionT(T[] A) {
-        T result = null;
-        HashMap<T, Boolean> map = new HashMap<>();
-        for (T i : A) {
+    @JvmStatic
+    fun <T> solutionT(A: Array<T>): T? {
+        var result: T? = null
+        val map = HashMap<T, Boolean>()
+        for (i in A) {
             if (map.containsKey(i)) {
-                map.remove(i);
+                map.remove(i)
             } else {
-                map.put(i, true);
+                map[i] = true
             }
         }
-        for (T key : map.keySet()) {
-            System.out.println(key);
+        if (map.keys.size > 0) {
+            result = map.keys.iterator().next()
         }
-
-        if (map.keySet().size() > 0) {
-            result = map.keySet().iterator().next();
-        }
-        return result;
+        return result
     }
 }
