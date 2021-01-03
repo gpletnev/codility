@@ -2,6 +2,7 @@ package codility.lessons.lesson2
 
 import java.util.*
 
+// https://app.codility.com/programmers/lessons/2-arrays/cyclic_rotation/
 object CyclicRotation {
     fun solution(A: IntArray, K: Int): IntArray {
         val list = A.toList()

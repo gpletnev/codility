@@ -1,5 +1,6 @@
 package codility.lessons.lesson1
 
+// https://app.codility.com/programmers/lessons/1-iterations/binary_gap/
 object BinaryGap {
     @JvmStatic
     fun solution(N: Int): Int {

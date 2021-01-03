@@ -2,6 +2,7 @@ package codility.lessons.lesson2
 
 import java.util.*
 
+// https://app.codility.com/programmers/lessons/2-arrays/odd_occurrences_in_array/
 object OddOccurrencesInArray {
     @JvmStatic
     fun solution(A: IntArray): Int {

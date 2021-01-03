@@ -1,9 +1,10 @@
-package codility.lessons.lesson3;
+package codility.lessons.lesson3
 
-public class FrogJmp {
-    public static int solution(int X, int Y, int D) {
-        int jumps = (Y - X) / D;
-
-        return (Y - X) % D != 0 ? jumps + 1 : jumps;
+// https://app.codility.com/programmers/lessons/3-time_complexity/frog_jmp/
+object FrogJmp {
+    @JvmStatic
+    fun solution(X: Int, Y: Int, D: Int): Int {
+        val jumps = (Y - X) / D
+        return if ((Y - X) % D != 0) jumps + 1 else jumps
     }
 }

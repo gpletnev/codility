@@ -1,7 +1,5 @@
 package codility.lessons;
 
-import codility.interviews.PointsOnOneRay;
-import codility.interviews.PointsOnOneRay.Point2D;
 import codility.lessons.lesson5.MushroomPicker;
 import org.junit.Test;
 

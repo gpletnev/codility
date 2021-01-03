@@ -1,15 +1,12 @@
-package codility.lessons.lesson3;
+package codility.lessons.lesson3
 
-import java.util.Arrays;
-
-public class PermMissingElem {
-    public static int solution(int[] A) {
-        long n = A.length + 1;
-        long arithmeticSequenceSum = (n * (n + 1)) / 2;
-        long sum = Arrays.stream(A).asLongStream().sum();
-        for (int i : A) {
-            sum += i;
-        }
-        return (int) (arithmeticSequenceSum - sum);
+// https://app.codility.com/programmers/lessons/3-time_complexity/perm_missing_elem/
+object PermMissingElem {
+    @JvmStatic
+    fun solution(A: IntArray): Int {
+        val n = (A.size + 1).toLong()
+        val arithmeticSequenceSum = n * (n + 1) / 2
+        val sum = A.sum()
+        return (arithmeticSequenceSum - sum).toInt()
     }
 }

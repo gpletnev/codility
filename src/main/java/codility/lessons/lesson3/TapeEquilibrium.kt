@@ -1,22 +1,20 @@
-package codility.lessons.lesson3;
+package codility.lessons.lesson3
 
-public class TapeEquilibrium {
-    public static int solution(int[] A) {
-        int sum = 0;
-        for (int i : A) {
-            sum += i;
-        }
-        int firstPartSum = A[0];
-        int secondPartSum = sum - A[0];
-        int minDifference = Math.abs(firstPartSum - secondPartSum);
-        for (int P = 1; P < A.length - 1; P++) {
-            firstPartSum += A[P];
-            secondPartSum -= A[P];
-            int difference = Math.abs(firstPartSum - secondPartSum);
+// https://app.codility.com/programmers/lessons/3-time_complexity/tape_equilibrium/
+object TapeEquilibrium {
+    fun solution(A: IntArray): Int {
+        val sum = A.sum()
+        var firstPartSum = A[0]
+        var secondPartSum = sum - A[0]
+        var minDifference = Math.abs(firstPartSum - secondPartSum)
+        for (P in 1 until A.size - 1) {
+            firstPartSum += A[P]
+            secondPartSum -= A[P]
+            val difference = Math.abs(firstPartSum - secondPartSum)
             if (difference < minDifference) {
-                minDifference = difference;
+                minDifference = difference
             }
         }
-        return minDifference;
+        return minDifference
     }
 }
