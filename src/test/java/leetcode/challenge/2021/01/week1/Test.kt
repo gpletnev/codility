@@ -17,4 +17,11 @@ class Test {
         )
         Assert.assertFalse(canFormArray(intArrayOf(1, 3, 5, 7), arrayOf(intArrayOf(2, 4, 6, 8))))
     }
+
+    @Test
+    fun countArrangementTest() {
+        Assert.assertEquals(1, countArrangement(1))
+        Assert.assertEquals(2, countArrangement(2))
+        Assert.assertEquals(3, countArrangement(3))
+    }
 }
