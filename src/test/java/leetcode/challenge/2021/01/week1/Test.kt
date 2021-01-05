@@ -39,4 +39,16 @@ class Test {
             mergeTwoLists(intArrayOf(1, 3, 4).toList(), intArrayOf(1, 2, 4).toList())!!.toIntArray()
         )
     }
+
+    @Test
+    fun deleteDuplicatesTest() {
+        Assert.assertArrayEquals(
+            intArrayOf(1, 2, 5),
+            deleteDuplicates(intArrayOf(1, 2, 3, 3, 4, 4, 5).toList())!!.toIntArray()
+        )
+        Assert.assertArrayEquals(
+            intArrayOf(2, 3),
+            deleteDuplicates(intArrayOf(1, 1, 1, 2, 3).toList())!!.toIntArray()
+        )
+    }
 }
