@@ -1,7 +1,6 @@
 package codility;
 
 import codility.interviews.ArrayToRangesString;
-import codility.lessons.lesson4.FrogRiverOne;
 import codility.lessons.lesson4.MaxCounters;
 import codility.lessons.lesson4.MissingInteger;
 import codility.lessons.lesson4.PermCheck;
@@ -21,8 +20,6 @@ class Solution {
         System.out.println(PermCheck.solution(new int[]{4, 1, 3, 2}));
         System.out.println(PermCheck.solution(new int[]{4, 1, 3}));
         System.out.println(PermCheck.solution(new int[]{1, 4, 1}));
-
-        System.out.println(FrogRiverOne.solution(5, new int[]{1, 3, 1, 4, 2, 3, 5, 4}));
 
         System.out.println(Arrays.toString(MaxCounters.solution(5, new int[]{3, 4, 4, 6, 1, 4, 4})));
 

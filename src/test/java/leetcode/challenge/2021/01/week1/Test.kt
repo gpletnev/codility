@@ -51,4 +51,10 @@ class Test {
             deleteDuplicates(intArrayOf(1, 1, 1, 2, 3).toList())!!.toIntArray()
         )
     }
+
+    @Test
+    fun findKthPositiveTest() {
+        Assert.assertEquals(9, findKthPositive(intArrayOf(2, 3, 4, 7, 11), 5))
+        Assert.assertEquals(6, findKthPositive(intArrayOf(1, 2, 3, 4), 2))
+    }
 }
