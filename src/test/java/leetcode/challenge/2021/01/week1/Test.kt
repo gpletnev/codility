@@ -57,4 +57,12 @@ class Test {
         Assert.assertEquals(9, findKthPositive(intArrayOf(2, 3, 4, 7, 11), 5))
         Assert.assertEquals(6, findKthPositive(intArrayOf(1, 2, 3, 4), 2))
     }
+
+    @Test
+    fun lengthOfLongestSubstringTest() {
+        Assert.assertEquals(0, lengthOfLongestSubstring(""))
+        Assert.assertEquals(3, lengthOfLongestSubstring("pwwkew"))
+        Assert.assertEquals(3, lengthOfLongestSubstring("abcabcbb"))
+        Assert.assertEquals(1, lengthOfLongestSubstring("bbbbb"))
+    }
 }
