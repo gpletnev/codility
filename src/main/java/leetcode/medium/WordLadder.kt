@@ -1,13 +1,10 @@
 package leetcode.medium
 
 import java.util.*
-import kotlin.collections.ArrayList
-import kotlin.collections.HashMap
-import kotlin.properties.Delegates
 
 // https://leetcode.com/problems/word-ladder/
 object WordLadder {
-    private var L by Delegates.notNull<Int>()
+    /*private var L by Delegates.notNull<Int>()
     private lateinit var allComboDict: MutableMap<String, ArrayList<String>>
 
     private fun visitWordNode(
@@ -86,6 +83,35 @@ object WordLadder {
             if (ans > -1) {
                 return ans
             }
+        }
+        return 0
+    }*/
+    fun ladderLength(beginWord: String, endWord: String, wordList: List<String>): Int {
+        val dict = wordList.toMutableSet()
+        val queue: Queue<String> = LinkedList()
+        queue.add(beginWord)
+        var level = 1
+        while (!queue.isEmpty()) {
+            val size = queue.size
+            for (q in 0 until size) {
+                val cur = queue.poll().toCharArray()
+                for (i in cur.indices) {
+                    val tmp = cur[i]
+                    var chr = 'a'
+                    while (chr <= 'z') {
+                        cur[i] = chr
+                        val dest = String(cur)
+                        if (dict.contains(dest)) {
+                            if (dest == endWord) return level + 1
+                            queue.add(dest)
+                            dict.remove(dest)
+                        }
+                        chr++
+                    }
+                    cur[i] = tmp
+                }
+            }
+            level++
         }
         return 0
     }
