@@ -10,4 +10,11 @@ class Test {
         Assert.assertFalse(arrayStringsAreEqual(arrayOf("a", "cb"), arrayOf("a", "bc")))
         Assert.assertTrue(arrayStringsAreEqual(arrayOf("abc", "d", "defg"), arrayOf("abcddefg")))
     }
+
+    @Test
+    fun createSortedArrayTest() {
+        Assert.assertEquals(1, createSortedArray(intArrayOf(1, 5, 6, 2)))
+        Assert.assertEquals(3, createSortedArray(intArrayOf(1, 2, 3, 6, 5, 4)))
+        Assert.assertEquals(4, createSortedArray(intArrayOf(1, 3, 3, 3, 2, 4, 2, 1, 2)))
+    }
 }
