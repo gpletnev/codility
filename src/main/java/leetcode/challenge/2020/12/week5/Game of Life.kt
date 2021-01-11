@@ -34,7 +34,7 @@ fun gameOfLife(board: Array<IntArray>) {
                         // Check the validity of the neighboring cell.
                         // and whether it was originally a live cell.
                         // The evaluation is done against the copy, since that is never updated.
-                        if (r < rows && r >= 0 && c < cols && c >= 0 && copyBoard[r][c] == 1) {
+                        if (r in 0 until rows && c in 0 until cols && copyBoard[r][c] == 1) {
                             liveNeighbors += 1
                         }
                     }
