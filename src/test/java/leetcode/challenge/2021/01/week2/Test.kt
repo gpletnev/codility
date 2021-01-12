@@ -1,5 +1,7 @@
 package leetcode.challenge.`2021`.`01`.week2
 
+import leetcode.toIntArray
+import leetcode.toList
 import org.junit.Assert
 import org.junit.Test
 
@@ -27,5 +29,21 @@ class Test {
         nums1 = intArrayOf(1)
         merge(nums1, _m = 1, nums2 = intArrayOf(), _n = 0)
         Assert.assertArrayEquals(intArrayOf(1), nums1)
+    }
+
+    @Test
+    fun addTwoNumbersTest() {
+        Assert.assertArrayEquals(
+            intArrayOf(0),
+            addTwoNumbers(intArrayOf(0).toList(), intArrayOf(0).toList())!!.toIntArray()
+        )
+        Assert.assertArrayEquals(
+            intArrayOf(7, 0, 8),
+            addTwoNumbers(intArrayOf(2, 4, 3).toList(), intArrayOf(5, 6, 4).toList())!!.toIntArray()
+        )
+        Assert.assertArrayEquals(
+            intArrayOf(8, 9, 9, 9, 0, 0, 0, 1),
+            addTwoNumbers(intArrayOf(9, 9, 9, 9, 9, 9, 9).toList(), intArrayOf(9, 9, 9, 9).toList())!!.toIntArray()
+        )
     }
 }
