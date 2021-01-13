@@ -46,4 +46,11 @@ class Test {
             addTwoNumbers(intArrayOf(9, 9, 9, 9, 9, 9, 9).toList(), intArrayOf(9, 9, 9, 9).toList())!!.toIntArray()
         )
     }
+
+    @Test
+    fun numRescueBoatsTest() {
+        Assert.assertEquals(1, numRescueBoats(intArrayOf(1, 2), 3))
+        Assert.assertEquals(3, numRescueBoats(intArrayOf(3, 2, 1, 2), 3))
+        Assert.assertEquals(4, numRescueBoats(intArrayOf(3, 5, 3, 4), 5))
+    }
 }
