@@ -53,4 +53,11 @@ class Test {
         Assert.assertEquals(3, numRescueBoats(intArrayOf(3, 2, 1, 2), 3))
         Assert.assertEquals(4, numRescueBoats(intArrayOf(3, 5, 3, 4), 5))
     }
+
+    @Test
+    fun minOperationsTest() {
+        Assert.assertEquals(2, minOperations(intArrayOf(1, 1, 4, 2, 3), 5))
+        Assert.assertEquals(-1, minOperations(intArrayOf(5, 6, 7, 8, 9), 4))
+        Assert.assertEquals(5, minOperations(intArrayOf(3, 2, 20, 1, 1, 3), 10))
+    }
 }
