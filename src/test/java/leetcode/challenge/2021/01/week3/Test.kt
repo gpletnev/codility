@@ -16,4 +16,12 @@ class Test {
         Assert.assertEquals(5, findKthLargest(intArrayOf(3, 2, 1, 5, 6, 4), 2))
         Assert.assertEquals(4, findKthLargest(intArrayOf(3, 2, 3, 1, 2, 4, 5, 5, 6), 4))
     }
+
+    @Test
+    fun countVowelStringsText() {
+        Assert.assertEquals(5, countVowelStrings(1))
+        Assert.assertEquals(15, countVowelStrings(2))
+        Assert.assertEquals(35, countVowelStrings(3))
+        Assert.assertEquals(70, countVowelStrings(4))
+    }
 }
