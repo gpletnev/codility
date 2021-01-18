@@ -24,4 +24,11 @@ class Test {
         Assert.assertEquals(35, countVowelStrings(3))
         Assert.assertEquals(70, countVowelStrings(4))
     }
+
+    @Test
+    fun maxOperationsTest() {
+        Assert.assertEquals(3, maxOperations(intArrayOf(1, 1, 1, 2, 2, 2, 4), 3))
+        Assert.assertEquals(2, maxOperations(intArrayOf(2, 1, 3, 4), 5))
+        Assert.assertEquals(2, maxOperations(intArrayOf(2, 1, 3, 3, 4), 6))
+    }
 }
