@@ -31,4 +31,13 @@ class Test {
         Assert.assertEquals(2, maxOperations(intArrayOf(2, 1, 3, 4), 5))
         Assert.assertEquals(2, maxOperations(intArrayOf(2, 1, 3, 3, 4), 6))
     }
+
+    @Test
+    fun longestPalindromeTest() {
+        Assert.assertEquals("a", longestPalindrome("a"))
+        Assert.assertTrue(longestPalindrome("ac") in listOf("a", "c"))
+        Assert.assertEquals("bb", longestPalindrome("cbbd"))
+        Assert.assertTrue(longestPalindrome("babad") in listOf("bab", "aba"))
+        Assert.assertTrue(longestPalindrome("aababccccd") in listOf("cccc"))
+    }
 }
