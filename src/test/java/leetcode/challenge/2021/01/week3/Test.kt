@@ -40,4 +40,13 @@ class Test {
         Assert.assertTrue(longestPalindrome("babad") in listOf("bab", "aba"))
         Assert.assertTrue(longestPalindrome("aababccccd") in listOf("cccc"))
     }
+
+    @Test
+    fun isValidTest() {
+        Assert.assertTrue(isValid("()"))
+        Assert.assertTrue(isValid("()[]{}"))
+        Assert.assertFalse(isValid("(]"))
+        Assert.assertFalse(isValid("([)]"))
+        Assert.assertTrue(isValid("{[]}"))
+    }
 }
