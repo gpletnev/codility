@@ -49,4 +49,11 @@ class Test {
         Assert.assertFalse(isValid("([)]"))
         Assert.assertTrue(isValid("{[]}"))
     }
+
+    @Test
+    fun mostCompetitiveTest() {
+        Assert.assertArrayEquals(intArrayOf(2, 2), mostCompetitive(intArrayOf(2, 2), 2))
+        Assert.assertArrayEquals(intArrayOf(2, 6), mostCompetitive(intArrayOf(3, 5, 2, 6), 2))
+        Assert.assertArrayEquals(intArrayOf(2, 3, 3, 4), mostCompetitive(intArrayOf(2, 4, 3, 3, 5, 4, 9, 6), 4))
+    }
 }
