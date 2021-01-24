@@ -1,5 +1,6 @@
 package leetcode.challenge.`2021`.`01`.week4
 
+import leetcode.toList
 import org.junit.Assert
 import org.junit.Test
 
@@ -29,5 +30,12 @@ class Test {
                 )
             ).joinToString { it.joinToString() }
         )
+    }
+
+    @Test
+    fun mergeKListsTest() {
+        Assert.assertNull(mergeKLists(arrayOf(intArrayOf().toList())))
+        Assert.assertNull(mergeKLists(arrayOf(intArrayOf().toList())))
+
     }
 }
