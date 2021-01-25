@@ -38,4 +38,12 @@ class Test {
         Assert.assertNull(mergeKLists(arrayOf(intArrayOf().toList())))
 
     }
+
+    @Test
+    fun kLengthApartTest() {
+        Assert.assertTrue(kLengthApart(intArrayOf(1, 0, 0, 0, 1, 0, 0, 1), 2))
+        Assert.assertFalse(kLengthApart(intArrayOf(1, 0, 0, 1, 0, 1), 2))
+        Assert.assertTrue(kLengthApart(intArrayOf(1, 1, 1, 1, 1), 0))
+        Assert.assertTrue(kLengthApart(intArrayOf(0, 1, 0, 1), 1))
+    }
 }
