@@ -46,4 +46,40 @@ class Test {
         Assert.assertTrue(kLengthApart(intArrayOf(1, 1, 1, 1, 1), 0))
         Assert.assertTrue(kLengthApart(intArrayOf(0, 1, 0, 1), 1))
     }
+
+    @Test
+    fun minimumEffortPathTest() {
+        Assert.assertEquals(
+            2,
+            minimumEffortPath(
+                arrayOf(
+                    intArrayOf(1, 2, 2),
+                    intArrayOf(3, 8, 2),
+                    intArrayOf(5, 3, 5)
+                )
+            )
+        )
+        Assert.assertEquals(
+            1,
+            minimumEffortPath(
+                arrayOf(
+                    intArrayOf(1, 2, 3),
+                    intArrayOf(3, 8, 4),
+                    intArrayOf(5, 3, 5)
+                )
+            )
+        )
+        Assert.assertEquals(
+            0,
+            minimumEffortPath(
+                arrayOf(
+                    intArrayOf(1, 2, 1, 1, 1),
+                    intArrayOf(1, 2, 1, 2, 1),
+                    intArrayOf(1, 2, 1, 2, 1),
+                    intArrayOf(1, 2, 1, 2, 1),
+                    intArrayOf(1, 1, 1, 2, 1)
+                )
+            )
+        )
+    }
 }
