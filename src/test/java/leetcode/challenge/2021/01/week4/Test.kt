@@ -82,4 +82,20 @@ class Test {
             )
         )
     }
+
+    @Test
+    fun concatenatedBinaryTest() {
+        Assert.assertEquals(1, concatenatedBinary(1))
+        Assert.assertEquals(6, concatenatedBinary(2))
+        Assert.assertEquals(27, concatenatedBinary(3))
+        Assert.assertEquals(220, concatenatedBinary(4))
+        Assert.assertEquals(1765, concatenatedBinary(5))
+        Assert.assertEquals(14126, concatenatedBinary(6))
+        Assert.assertEquals(113015, concatenatedBinary(7))
+        Assert.assertEquals(1808248, concatenatedBinary(8))
+        Assert.assertEquals(28931977, concatenatedBinary(9))
+        Assert.assertEquals(462911642, concatenatedBinary(10))
+        Assert.assertEquals(406586234, concatenatedBinary(11))
+        Assert.assertEquals(505379714, concatenatedBinary(12))
+    }
 }
