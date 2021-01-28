@@ -98,4 +98,10 @@ class Test {
         Assert.assertEquals(406586234, concatenatedBinary(11))
         Assert.assertEquals(505379714, concatenatedBinary(12))
     }
+
+    @Test
+    fun getSmallestStringTest() {
+        Assert.assertEquals("aay", getSmallestString(3, 27))
+        Assert.assertEquals("aaszz", getSmallestString(5, 73))
+    }
 }
