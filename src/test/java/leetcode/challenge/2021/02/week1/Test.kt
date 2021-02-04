@@ -32,4 +32,11 @@ class Test {
             trimBST(BinaryTree(listOf(1, null, 2)).head, 2, 4).joinToString()
         )
     }
+
+    @Test
+    fun findLHSTest() {
+        Assert.assertEquals(5, findLHS(intArrayOf(1, 3, 2, 2, 5, 2, 3, 7)))
+        Assert.assertEquals(2, findLHS(intArrayOf(1, 2, 3, 4)))
+        Assert.assertEquals(0, findLHS(intArrayOf(1, 1, 1, 1)))
+    }
 }
