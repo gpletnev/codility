@@ -39,4 +39,12 @@ class Test {
         Assert.assertEquals(2, findLHS(intArrayOf(1, 2, 3, 4)))
         Assert.assertEquals(0, findLHS(intArrayOf(1, 1, 1, 1)))
     }
+
+    @Test
+    fun simplifyPathTest() {
+        Assert.assertEquals("/home", simplifyPath("/home/"))
+        Assert.assertEquals("/", simplifyPath("/../"))
+        Assert.assertEquals("/home/foo", simplifyPath("/home//foo/"))
+        Assert.assertEquals("/c", simplifyPath("/a/./b/../../c/"))
+    }
 }
