@@ -47,4 +47,12 @@ class Test {
         Assert.assertEquals("/home/foo", simplifyPath("/home//foo/"))
         Assert.assertEquals("/c", simplifyPath("/a/./b/../../c/"))
     }
+
+    @Test
+    fun rightSideViewTest() {
+        Assert.assertArrayEquals(
+            intArrayOf(1, 3, 4),
+            rightSideView(BinaryTree(listOf(1, 2, 3, null, 5, null, 4)).head).toIntArray()
+        )
+    }
 }
