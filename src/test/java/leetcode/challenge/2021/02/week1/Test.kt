@@ -55,4 +55,16 @@ class Test {
             rightSideView(BinaryTree(listOf(1, 2, 3, null, 5, null, 4)).head).toIntArray()
         )
     }
+
+    @Test
+    fun shortestToCharTest() {
+        Assert.assertArrayEquals(
+            intArrayOf(3, 2, 1, 0, 1, 0, 0, 1, 2, 2, 1, 0),
+            shortestToChar(s = "loveleetcode", c = 'e')
+        )
+        Assert.assertArrayEquals(
+            intArrayOf(3, 2, 1, 0),
+            shortestToChar(s = "aaab", c = 'b')
+        )
+    }
 }
