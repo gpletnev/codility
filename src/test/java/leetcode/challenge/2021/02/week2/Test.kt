@@ -44,4 +44,11 @@ class Test {
             convertBST(root).joinToString()
         )
     }
+
+    @Test
+    fun isAnagramTest() {
+        Assert.assertTrue(isAnagram("anagram", "nagaram"))
+        Assert.assertFalse(isAnagram("rat", "car"))
+        Assert.assertFalse(isAnagram("a", "ab"))
+    }
 }
