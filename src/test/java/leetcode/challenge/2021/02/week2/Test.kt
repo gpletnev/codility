@@ -51,4 +51,13 @@ class Test {
         Assert.assertFalse(isAnagram("rat", "car"))
         Assert.assertFalse(isAnagram("a", "ab"))
     }
+
+    @Test
+    fun numberOfStepsTest() {
+        Assert.assertEquals(0, numberOfSteps(0))
+        Assert.assertEquals(6, numberOfSteps(14))
+        Assert.assertEquals(4, numberOfSteps(8))
+        Assert.assertEquals(1, numberOfSteps(1))
+        Assert.assertEquals(12, numberOfSteps(123))
+    }
 }
