@@ -113,4 +113,19 @@ class Test {
             )
         )
     }
+
+    @Test
+    fun isBipartiteTest() {
+        Assert.assertTrue(isBipartite(arrayOf(intArrayOf(1, 3), intArrayOf(0, 2), intArrayOf(1, 3), intArrayOf(0, 2))))
+        Assert.assertFalse(
+            isBipartite(
+                arrayOf(
+                    intArrayOf(1, 2, 3),
+                    intArrayOf(0, 2),
+                    intArrayOf(1, 1, 3),
+                    intArrayOf(0, 2)
+                )
+            )
+        )
+    }
 }
