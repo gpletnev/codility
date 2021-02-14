@@ -60,4 +60,57 @@ class Test {
         Assert.assertEquals(1, numberOfSteps(1))
         Assert.assertEquals(12, numberOfSteps(123))
     }
+
+    @Test
+    fun shortestPathBinaryMatrixTest() {
+        Assert.assertEquals(
+            1,
+            shortestPathBinaryMatrix(
+                arrayOf(
+                    intArrayOf(0)
+                )
+            )
+        )
+        Assert.assertEquals(
+            2,
+            shortestPathBinaryMatrix(
+                arrayOf(
+                    intArrayOf(0, 1),
+                    intArrayOf(1, 0)
+                )
+            )
+        )
+        Assert.assertEquals(
+            -1,
+            shortestPathBinaryMatrix(
+                arrayOf(
+                    intArrayOf(1, 0, 0),
+                    intArrayOf(1, 1, 0),
+                    intArrayOf(1, 1, 0)
+                )
+            )
+        )
+        Assert.assertEquals(
+            4,
+            shortestPathBinaryMatrix(
+                arrayOf(
+                    intArrayOf(0, 0, 0),
+                    intArrayOf(1, 1, 0),
+                    intArrayOf(1, 1, 0)
+                )
+            )
+        )
+        Assert.assertEquals(
+            13,
+            shortestPathBinaryMatrix(
+                arrayOf(
+                    intArrayOf(0, 1, 0, 0, 0),
+                    intArrayOf(0, 1, 0, 1, 0),
+                    intArrayOf(0, 1, 0, 1, 0),
+                    intArrayOf(0, 1, 0, 1, 0),
+                    intArrayOf(0, 0, 0, 1, 0),
+                )
+            )
+        )
+    }
 }
