@@ -41,4 +41,12 @@ class Test {
         Assert.assertEquals(listOf("12345"), letterCasePermutation("12345"))
         Assert.assertEquals(listOf("0"), letterCasePermutation("0"))
     }
+
+    @Test
+    fun maxAreaTest() {
+        Assert.assertEquals(49, maxArea(intArrayOf(1, 8, 6, 2, 5, 4, 8, 3, 7)))
+        Assert.assertEquals(1, maxArea(intArrayOf(1, 1)))
+        Assert.assertEquals(16, maxArea(intArrayOf(4, 3, 2, 1, 4)))
+        Assert.assertEquals(0, maxArea(intArrayOf(0, 0, 0)))
+    }
 }
