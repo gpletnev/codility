@@ -49,4 +49,9 @@ class Test {
         Assert.assertEquals(16, maxArea(intArrayOf(4, 3, 2, 1, 4)))
         Assert.assertEquals(0, maxArea(intArrayOf(0, 0, 0)))
     }
+
+    @Test
+    fun numberOfArithmeticSlicesTest() {
+        Assert.assertEquals(8, numberOfArithmeticSlices(intArrayOf(1, 3, 5, 7, 9, 15, 20, 25, 28, 31)))
+    }
 }
