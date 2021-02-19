@@ -54,4 +54,12 @@ class Test {
     fun numberOfArithmeticSlicesTest() {
         Assert.assertEquals(8, numberOfArithmeticSlices(intArrayOf(1, 3, 5, 7, 9, 15, 20, 25, 28, 31)))
     }
+
+    @Test
+    fun minRemoveToMakeValidTest() {
+        Assert.assertEquals("lee(t(c)o)de", minRemoveToMakeValid("lee(t(c)o)de)"))
+        Assert.assertEquals("ab(c)d", minRemoveToMakeValid("a)b(c)d"))
+        Assert.assertEquals("", minRemoveToMakeValid("))(("))
+        Assert.assertEquals("(a(bc)d)", minRemoveToMakeValid("(a(b(c)d)"))
+    }
 }
