@@ -62,4 +62,13 @@ class Test {
         Assert.assertEquals("", minRemoveToMakeValid("))(("))
         Assert.assertEquals("(a(bc)d)", minRemoveToMakeValid("(a(b(c)d)"))
     }
+
+    @Test
+    fun romanToIntTest() {
+        Assert.assertEquals(3, romanToInt("III"))
+        Assert.assertEquals(4, romanToInt("IV"))
+        Assert.assertEquals(9, romanToInt("IX"))
+        Assert.assertEquals(58, romanToInt("LVIII"))
+        Assert.assertEquals(1994, romanToInt("MCMXCIV"))
+    }
 }
