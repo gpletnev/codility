@@ -71,4 +71,12 @@ class Test {
         Assert.assertEquals(58, romanToInt("LVIII"))
         Assert.assertEquals(1994, romanToInt("MCMXCIV"))
     }
+
+    @Test
+    fun brokenCalcTest() {
+        Assert.assertEquals(2, brokenCalc(2, 3))
+        Assert.assertEquals(2, brokenCalc(5, 8))
+        Assert.assertEquals(3, brokenCalc(3, 10))
+        Assert.assertEquals(1023, brokenCalc(1024, 1))
+    }
 }
