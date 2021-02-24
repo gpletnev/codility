@@ -9,4 +9,12 @@ class Test {
         Assert.assertEquals("apple", findLongestWord("abpcplea", listOf("ale", "apple", "monkey", "plea")))
         Assert.assertEquals("a", findLongestWord("abpcplea", listOf("a", "b", "c")))
     }
+
+    @Test
+    fun scoreOfParenthesesTest() {
+        Assert.assertEquals(1, scoreOfParentheses("()"))
+        Assert.assertEquals(2, scoreOfParentheses("(())"))
+        Assert.assertEquals(2, scoreOfParentheses("()()"))
+        Assert.assertEquals(6, scoreOfParentheses("(()(()))"))
+    }
 }
