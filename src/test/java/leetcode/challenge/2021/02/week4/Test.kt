@@ -17,4 +17,11 @@ class Test {
         Assert.assertEquals(2, scoreOfParentheses("()()"))
         Assert.assertEquals(6, scoreOfParentheses("(()(()))"))
     }
+
+    @Test
+    fun findUnsortedSubarrayTest() {
+        Assert.assertEquals(5, findUnsortedSubarray(intArrayOf(2, 6, 4, 8, 10, 9, 15)))
+        Assert.assertEquals(0, findUnsortedSubarray(intArrayOf(1, 2, 3, 4)))
+        Assert.assertEquals(0, findUnsortedSubarray(intArrayOf(1)))
+    }
 }
