@@ -24,4 +24,10 @@ class Test {
         Assert.assertEquals(0, findUnsortedSubarray(intArrayOf(1, 2, 3, 4)))
         Assert.assertEquals(0, findUnsortedSubarray(intArrayOf(1)))
     }
+
+    @Test
+    fun validateStackSequencesTest() {
+        Assert.assertTrue(validateStackSequences(intArrayOf(1, 2, 3, 4, 5), intArrayOf(4, 5, 3, 2, 1)))
+        Assert.assertFalse(validateStackSequences(intArrayOf(1, 2, 3, 4, 5), intArrayOf(4, 3, 5, 1, 2)))
+    }
 }
