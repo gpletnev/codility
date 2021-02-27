@@ -30,4 +30,13 @@ class Test {
         Assert.assertTrue(validateStackSequences(intArrayOf(1, 2, 3, 4, 5), intArrayOf(4, 5, 3, 2, 1)))
         Assert.assertFalse(validateStackSequences(intArrayOf(1, 2, 3, 4, 5), intArrayOf(4, 3, 5, 1, 2)))
     }
+
+    @Test
+    fun divideTest() {
+        Assert.assertEquals(3, divide(10, 3))
+        Assert.assertEquals(-2, divide(7, -3))
+        Assert.assertEquals(0, divide(0, 1))
+        Assert.assertEquals(1, divide(1, 1))
+        Assert.assertEquals(2147483647, divide(-2147483648, -1))
+    }
 }
