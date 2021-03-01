@@ -39,4 +39,22 @@ class Test {
         Assert.assertEquals(1, divide(1, 1))
         Assert.assertEquals(2147483647, divide(-2147483648, -1))
     }
+
+    @Test
+    fun testFreqStack() {
+        val fs = FreqStack()
+        with(fs) {
+            push(5)
+            push(7)
+            push(5)
+            push(7)
+            push(4)
+            push(5)
+            Assert.assertEquals(5, pop())
+            Assert.assertEquals(7, pop())
+            Assert.assertEquals(5, pop())
+            Assert.assertEquals(4, pop())
+        }
+
+    }
 }
