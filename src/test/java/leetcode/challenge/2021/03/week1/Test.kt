@@ -16,4 +16,12 @@ class Test {
         Assert.assertArrayEquals(intArrayOf(2, 3), findErrorNums(intArrayOf(1, 2, 2, 4)))
         Assert.assertArrayEquals(intArrayOf(1, 2), findErrorNums(intArrayOf(1, 1)))
     }
+
+    @Test
+    fun missingNumberTest() {
+        Assert.assertEquals(2, missingNumber(intArrayOf(3, 0, 1)))
+        Assert.assertEquals(2, missingNumber(intArrayOf(0, 1)))
+        Assert.assertEquals(8, missingNumber(intArrayOf(9, 6, 4, 2, 3, 5, 7, 0, 1)))
+        Assert.assertEquals(1, missingNumber(intArrayOf(0)))
+    }
 }
