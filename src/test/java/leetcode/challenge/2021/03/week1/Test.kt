@@ -1,5 +1,6 @@
 package leetcode.challenge.`2021`.`03`.week1
 
+import leetcode.BinaryTree
 import leetcode.ListNode
 import leetcode.toList
 import org.junit.Assert
@@ -64,6 +65,13 @@ class Test {
 
             Assert.assertEquals(null, getIntersectionNode(headA, headB))
         }
+    }
 
+    @Test
+    fun averageOfLevelsTest() {
+        Assert.assertEquals(
+            doubleArrayOf(3.0, 14.5, 11.0).joinToString(),
+            averageOfLevels(BinaryTree(listOf(3, 9, 20, null, null, 15, 7)).head).joinToString()
+        )
     }
 }
