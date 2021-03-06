@@ -74,4 +74,10 @@ class Test {
             averageOfLevels(BinaryTree(listOf(3, 9, 20, null, null, 15, 7)).head).joinToString()
         )
     }
+
+    @Test
+    fun minimumLengthEncodingTest() {
+        Assert.assertEquals(10, minimumLengthEncoding(arrayOf("time", "me", "bell")))
+        Assert.assertEquals(2, minimumLengthEncoding(arrayOf("t")))
+    }
 }
