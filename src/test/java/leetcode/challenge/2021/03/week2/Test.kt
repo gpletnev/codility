@@ -17,4 +17,13 @@ class Test {
             addOneRow(BinaryTree(listOf(4, 2, null, 3, 1)).head!!, 1, 3).joinToString()
         )
     }
+
+    @Test
+    fun intToRomanTest() {
+        Assert.assertEquals("III", intToRoman(3))
+        Assert.assertEquals("IV", intToRoman(4))
+        Assert.assertEquals("IX", intToRoman(9))
+        Assert.assertEquals("LVIII", intToRoman(58))
+        Assert.assertEquals("MCMXCIV", intToRoman(1994))
+    }
 }
