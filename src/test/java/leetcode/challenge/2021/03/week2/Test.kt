@@ -26,4 +26,13 @@ class Test {
         Assert.assertEquals("LVIII", intToRoman(58))
         Assert.assertEquals("MCMXCIV", intToRoman(1994))
     }
+
+    @Test
+    fun coinChangeTest() {
+        Assert.assertEquals(3, coinChange(intArrayOf(1, 2, 5), 11))
+        Assert.assertEquals(-1, coinChange(intArrayOf(2), 3))
+        Assert.assertEquals(0, coinChange(intArrayOf(1), 0))
+        Assert.assertEquals(1, coinChange(intArrayOf(1), 1))
+        Assert.assertEquals(2, coinChange(intArrayOf(1), 2))
+    }
 }
