@@ -35,4 +35,13 @@ class Test {
         Assert.assertEquals(1, coinChange(intArrayOf(1), 1))
         Assert.assertEquals(2, coinChange(intArrayOf(1), 2))
     }
+
+    @Test
+    fun hasAllCodesTest() {
+        Assert.assertTrue(hasAllCodes("00110110", 2))
+        Assert.assertTrue(hasAllCodes("00110", 2))
+        Assert.assertTrue(hasAllCodes("0110", 1))
+        Assert.assertFalse(hasAllCodes("0110", 2))
+        Assert.assertFalse(hasAllCodes("0000000001011100", 4))
+    }
 }
