@@ -44,4 +44,10 @@ class Test {
         Assert.assertFalse(hasAllCodes("0110", 2))
         Assert.assertFalse(hasAllCodes("0000000001011100", 4))
     }
+
+    @Test
+    fun numFactoredBinaryTreesTest() {
+        Assert.assertEquals(3, numFactoredBinaryTrees(intArrayOf(2, 4)))
+        Assert.assertEquals(7, numFactoredBinaryTrees(intArrayOf(2, 4, 5, 10)))
+    }
 }
