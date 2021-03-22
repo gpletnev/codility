@@ -65,4 +65,13 @@ class Test {
             undergroundSystem.getAverageTime("Leyton", "Paradise") // return 6.66667
         }
     }
+
+    @Test
+    fun reorderedPowerOf2Test() {
+        Assert.assertTrue(reorderedPowerOf2(1))
+        Assert.assertFalse(reorderedPowerOf2(10))
+        Assert.assertTrue(reorderedPowerOf2(16))
+        Assert.assertFalse(reorderedPowerOf2(24))
+        Assert.assertTrue(reorderedPowerOf2(46))
+    }
 }
