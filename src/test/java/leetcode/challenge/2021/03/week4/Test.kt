@@ -56,4 +56,34 @@ class Test {
             ).joinToString()
         )
     }
+
+    @Test
+    fun wordSubsetsTest() {
+        Assert.assertArrayEquals(
+            arrayOf("facebook", "google", "leetcode"),
+            wordSubsets(arrayOf("amazon", "apple", "facebook", "google", "leetcode"), arrayOf("e", "o")).toTypedArray()
+        )
+        Assert.assertArrayEquals(
+            arrayOf("apple", "google", "leetcode"),
+            wordSubsets(arrayOf("amazon", "apple", "facebook", "google", "leetcode"), arrayOf("l", "e")).toTypedArray()
+        )
+        Assert.assertArrayEquals(
+            arrayOf("facebook", "google"),
+            wordSubsets(arrayOf("amazon", "apple", "facebook", "google", "leetcode"), arrayOf("e", "oo")).toTypedArray()
+        )
+        Assert.assertArrayEquals(
+            arrayOf("google", "leetcode"),
+            wordSubsets(
+                arrayOf("amazon", "apple", "facebook", "google", "leetcode"),
+                arrayOf("eo", "lo")
+            ).toTypedArray()
+        )
+        Assert.assertArrayEquals(
+            arrayOf("facebook", "leetcode"),
+            wordSubsets(
+                arrayOf("amazon", "apple", "facebook", "google", "leetcode"),
+                arrayOf("ec", "oc", "ceo")
+            ).toTypedArray()
+        )
+    }
 }
