@@ -86,4 +86,10 @@ class Test {
             ).toTypedArray()
         )
     }
+
+    @Test
+    fun countSubstringsTest() {
+        Assert.assertEquals(3, countSubstrings("abc"))
+        Assert.assertEquals(6, countSubstrings("aaa"))
+    }
 }
