@@ -92,4 +92,10 @@ class Test {
         Assert.assertEquals(3, countSubstrings("abc"))
         Assert.assertEquals(6, countSubstrings("aaa"))
     }
+
+    @Test
+    fun originalDigitsTest() {
+        Assert.assertEquals("012", originalDigits("owoztneoer"))
+        Assert.assertEquals("45", originalDigits("fviefuro"))
+    }
 }
