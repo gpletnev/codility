@@ -20,4 +20,13 @@ class Test {
             flipMatchVoyage(BinaryTree(listOf(1, 2, 3)).head, intArrayOf(1, 2, 3)).toIntArray()
         )
     }
+
+    @Test
+    fun maxEnvelopesTest() {
+        Assert.assertEquals(
+            3,
+            maxEnvelopes(arrayOf(intArrayOf(5, 4), intArrayOf(6, 4), intArrayOf(6, 7), intArrayOf(2, 3)))
+        )
+        Assert.assertEquals(1, maxEnvelopes(arrayOf(intArrayOf(1, 1), intArrayOf(1, 1), intArrayOf(1, 1))))
+    }
 }
