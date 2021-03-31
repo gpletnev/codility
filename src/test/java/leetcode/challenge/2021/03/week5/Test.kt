@@ -29,4 +29,10 @@ class Test {
         )
         Assert.assertEquals(1, maxEnvelopes(arrayOf(intArrayOf(1, 1), intArrayOf(1, 1), intArrayOf(1, 1))))
     }
+
+    @Test
+    fun movesToStampTest() {
+        Assert.assertArrayEquals(intArrayOf(1, 0, 2), movesToStamp("abc", "ababc"))
+        Assert.assertArrayEquals(intArrayOf(2, 3, 0, 1), movesToStamp("abca", "aabcaca"))
+    }
 }
