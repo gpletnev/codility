@@ -16,4 +16,11 @@ class Test {
         Assert.assertEquals(4, findMaxForm(arrayOf("10", "0001", "111001", "1", "0"), m = 5, n = 3))
         Assert.assertEquals(2, findMaxForm(arrayOf("10", "0", "1"), m = 1, n = 1))
     }
+
+    @Test
+    fun longestValidParenthesesTest() {
+        Assert.assertEquals(2, longestValidParentheses("(()"))
+        Assert.assertEquals(4, longestValidParentheses(")()())"))
+        Assert.assertEquals(0, longestValidParentheses(""))
+    }
 }
