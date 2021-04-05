@@ -23,4 +23,10 @@ class Test {
         Assert.assertEquals(4, longestValidParentheses(")()())"))
         Assert.assertEquals(0, longestValidParentheses(""))
     }
+
+    @Test
+    fun isIdealPermutationTest() {
+        Assert.assertTrue(isIdealPermutation(intArrayOf(1, 0, 2)))
+        Assert.assertFalse(isIdealPermutation(intArrayOf(1, 2, 0)))
+    }
 }
