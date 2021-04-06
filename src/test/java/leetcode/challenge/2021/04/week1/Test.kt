@@ -29,4 +29,10 @@ class Test {
         Assert.assertTrue(isIdealPermutation(intArrayOf(1, 0, 2)))
         Assert.assertFalse(isIdealPermutation(intArrayOf(1, 2, 0)))
     }
+
+    @Test
+    fun minOperationsTest() {
+        Assert.assertEquals(2, minOperations(3))
+        Assert.assertEquals(9, minOperations(6))
+    }
 }
