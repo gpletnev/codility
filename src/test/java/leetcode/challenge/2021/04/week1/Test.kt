@@ -35,4 +35,12 @@ class Test {
         Assert.assertEquals(2, minOperations(3))
         Assert.assertEquals(9, minOperations(6))
     }
+
+    @Test
+    fun halvesAreAlikeTest() {
+        Assert.assertTrue(halvesAreAlike("book"))
+        Assert.assertFalse(halvesAreAlike("textbook"))
+        Assert.assertFalse(halvesAreAlike("MerryChristmas"))
+        Assert.assertTrue(halvesAreAlike("AbCdEfGh"))
+    }
 }
