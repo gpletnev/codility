@@ -13,4 +13,11 @@ class Test {
         Assert.assertArrayEquals(arrayOf(), letterCombinations("").toTypedArray())
         Assert.assertArrayEquals(arrayOf("a", "b", "c"), letterCombinations("2").toTypedArray())
     }
+
+    @Test
+    fun isAlienSortedTest() {
+        Assert.assertTrue(isAlienSorted(arrayOf("hello", "leetcode"), "hlabcdefgijkmnopqrstuvwxyz"))
+        Assert.assertFalse(isAlienSorted(arrayOf("word", "world", "row"), "worldabcefghijkmnpqstuvxyz"))
+        Assert.assertFalse(isAlienSorted(arrayOf("apple", "app"), "abcdefghijklmnopqrstuvwxyz"))
+    }
 }
