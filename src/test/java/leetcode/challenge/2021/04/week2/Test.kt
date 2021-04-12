@@ -33,5 +33,11 @@ class Test {
             deepestLeavesSum(BinaryTree(listOf(6, 7, 8, 2, 7, 1, 3, 9, null, 1, 4, null, null, null, 5)).head!!)
         )
     }
+
+    @Test
+    fun constructArrayTest() {
+        Assert.assertArrayEquals(intArrayOf(1, 2, 3), constructArray(3, 1))
+        Assert.assertArrayEquals(intArrayOf(1, 3, 2), constructArray(3, 2))
+    }
 }
 
