@@ -26,7 +26,7 @@ class Test {
 
     @Test
     fun testFindPairs() {
-        Assert.assertEquals(2, findPairs(intArrayOf(-1, -1, -3), 1))
+        Assert.assertEquals(0, findPairs(intArrayOf(-1, -1, -3), 1))
         Assert.assertEquals(2, findPairs(intArrayOf(1, 2, 4, 4, 3, 3, 0, 9, 2, 3), 3))
         Assert.assertEquals(1, findPairs(intArrayOf(1, 3, 1, 5, 4), 0))
         Assert.assertEquals(4, findPairs(intArrayOf(1, 2, 3, 4, 5), 1))

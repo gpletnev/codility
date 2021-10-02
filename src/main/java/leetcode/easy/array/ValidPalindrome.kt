@@ -12,7 +12,7 @@ object ValidPalindrome {
             while (start < end && !s[end].isLetterOrDigit()) {
                 end--
             }
-            if (start < end && s[start].toLowerCase() != s[end].toLowerCase()) {
+            if (start < end && s[start].lowercaseChar() != s[end].lowercaseChar()) {
                 return false
             }
             start++

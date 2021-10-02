@@ -6,7 +6,7 @@ import org.junit.Test
 
 class Test {
     @Test
-    fun testRemoveDuplicatesfromSortedArray() {
+    fun testRemoveDuplicatesFromSortedArray() {
         Assert.assertEquals(2, removeDuplicates(listOf(1, 1, 2).toIntArray()))
         Assert.assertEquals(5, removeDuplicates(listOf(0, 0, 1, 1, 1, 2, 2, 3, 3, 4).toIntArray()))
     }
@@ -36,7 +36,8 @@ class Test {
     fun testUglyNumber() {
         Assert.assertEquals(true, UglyNumber.isUgly(6))
         Assert.assertEquals(true, UglyNumber.isUgly(8))
-        Assert.assertEquals(true, UglyNumber.isUgly(14))
+        Assert.assertEquals(false, UglyNumber.isUgly(14))
+        Assert.assertEquals(true, UglyNumber.isUgly(1))
     }
 
     @Test

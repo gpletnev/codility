@@ -6,7 +6,7 @@ fun getSmallestString(n: Int, k: Int): String {
     var sum = 0
     for (i in n - 1 downTo 0) {
         val x = minOf(25, k - n - sum)
-        c[i] = (x + 'a'.toInt()).toChar()
+        c[i] = (x + 'a'.code).toChar()
         sum += x
     }
     return String(c)

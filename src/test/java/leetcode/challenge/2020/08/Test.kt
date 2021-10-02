@@ -9,6 +9,6 @@ class Test {
     fun testDetectCapitalUse() {
         Assert.assertEquals(true, detectCapitalUse("USA"))
         Assert.assertEquals(false, detectCapitalUse("FlaG"))
-        Assert.assertEquals(true, detectCapitalUse("?---"))
+        Assert.assertEquals(false, detectCapitalUse("?---"))
     }
 }

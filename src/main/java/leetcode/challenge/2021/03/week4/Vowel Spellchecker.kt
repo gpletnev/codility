@@ -1,5 +1,7 @@
 package leetcode.challenge.`2021`.`03`.week4
 
+import java.util.*
+
 // https://leetcode.com/problems/vowel-spellchecker/
 fun spellchecker(wordlist: Array<String>, queries: Array<String>): Array<String> {
     val words = wordlist.toSet()
@@ -7,7 +9,7 @@ fun spellchecker(wordlist: Array<String>, queries: Array<String>): Array<String>
     val vowel = mutableMapOf<String, String>()
 
     for (w in wordlist) {
-        val lower = w.toLowerCase()
+        val lower = w.lowercase(Locale.getDefault())
         val devowel = lower.replace("[aeiou]".toRegex(), "#")
         cap.putIfAbsent(lower, w)
         vowel.putIfAbsent(devowel, w)
@@ -15,7 +17,7 @@ fun spellchecker(wordlist: Array<String>, queries: Array<String>): Array<String>
 
     for (i in queries.indices) {
         if (words.contains(queries[i])) continue
-        val lower = queries[i].toLowerCase()
+        val lower = queries[i].lowercase(Locale.getDefault())
         val devowel = lower.replace("[aeiou]".toRegex(), "#")
         queries[i] = when {
             cap.containsKey(lower) -> {

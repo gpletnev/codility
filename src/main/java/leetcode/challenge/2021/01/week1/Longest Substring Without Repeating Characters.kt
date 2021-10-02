@@ -9,9 +9,9 @@ fun lengthOfLongestSubstring(s: String): Int {
     var j = 0
     var i = 0
     while (j < n) {
-        i = maxOf(index[s[j].toInt()], i)
+        i = maxOf(index[s[j].code], i)
         length = maxOf(length, j - i + 1)
-        index[s[j].toInt()] = j + 1
+        index[s[j].code] = j + 1
         j++
     }
 

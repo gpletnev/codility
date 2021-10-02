@@ -5,9 +5,9 @@ fun hammingWeight(n: Int): Int {
     //return n.countOneBits()
 
     var weight = 0
-    var n = n
-    while (n != 0) {
-        n = n and (n - 1)
+    var _n = n
+    while (_n != 0) {
+        _n = _n and (_n - 1)
         weight++
     }
 

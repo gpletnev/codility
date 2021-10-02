@@ -53,9 +53,9 @@ object SortList {
         return mid
     }
 
-    private fun merge(list1: ListNode?, list2: ListNode?) {
-        var list1 = list1
-        var list2 = list2
+    private fun merge(_list1: ListNode?, _list2: ListNode?) {
+        var list1 = _list1
+        var list2 = _list2
         val dummyHead = ListNode(0)
         var newTail: ListNode? = dummyHead
         while (list1 != null && list2 != null) {

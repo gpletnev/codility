@@ -20,7 +20,7 @@ fun letterCasePermutation(S: String): List<String> {
         for (j in 0 until bitCount) {
             val index = letterIndexes[j]
             val bit = bitString[j]
-            perm[index] = if (bit == '1') sChars[index].toUpperCase() else sChars[index].toLowerCase()
+            perm[index] = if (bit == '1') sChars[index].uppercaseChar() else sChars[index].lowercaseChar()
         }
         list.add(String(perm))
     }
