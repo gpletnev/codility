@@ -1,7 +1,7 @@
 package leetcode.challenge.`2021`.`04`.week3
 
 // https://leetcode.com/problems/fibonacci-number/
-//fun fib(n: Int): Int {
+//fun fib(n: Int): Int { // Binet's formula
 //    val goldenRatio = (1 + Math.sqrt(5.0)) / 2
 //    return Math.round(Math.pow(goldenRatio, n.toDouble()) / Math.sqrt(5.0)).toInt()
 //}

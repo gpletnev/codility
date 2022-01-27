@@ -7,14 +7,14 @@ fun sortedSquares(nums: IntArray): IntArray {
     val result = IntArray(nums.size)
     var left = 0
     var right = nums.lastIndex
-    for (p in nums.lastIndex downTo 0) {
+    for (i in nums.lastIndex downTo 0) {
         val absLeft = abs(nums[left])
         val absRight = abs(nums[right])
         if (abs(absLeft) > abs(absRight)) {
-            result[p] = absLeft * absLeft
+            result[i] = absLeft * absLeft
             left++
         } else {
-            result[p] = absRight * absRight
+            result[i] = absRight * absRight
             right--
         }
     }

@@ -16,9 +16,7 @@ fun rotate(nums: IntArray, k: Int) {
         var prev = nums[start]
         do {
             val next = (current + shift) % nums.size
-            val temp = nums[next]
-            nums[next] = prev
-            prev = temp
+            nums[next] = prev.also { prev = nums[next] }
             current = next
             count++
         } while (start != current)

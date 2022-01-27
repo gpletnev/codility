@@ -49,7 +49,9 @@ class Test {
     fun isAnagramTest() {
         Assert.assertTrue(isAnagram("anagram", "nagaram"))
         Assert.assertFalse(isAnagram("rat", "car"))
+        Assert.assertTrue(isAnagram("aa", "aa"))
         Assert.assertFalse(isAnagram("a", "ab"))
+        Assert.assertTrue(isAnagram("", ""))
     }
 
     @Test
