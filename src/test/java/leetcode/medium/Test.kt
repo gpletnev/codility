@@ -47,7 +47,10 @@ class Test {
         root.right!!.left = TreeNode(15)
         root.right!!.right = TreeNode(7)
 
-        Assert.assertEquals("[3], [9, 20], [15, 7]", BinaryTreeLevelOrderTraversal.levelOrderBottom(root).joinToString())
+        Assert.assertEquals(
+            "[3], [9, 20], [15, 7]",
+            BinaryTreeLevelOrderTraversal.levelOrderBottom(root).joinToString()
+        )
     }
 
     @Test
@@ -68,6 +71,17 @@ class Test {
 
     @Test
     fun testNetworkDelayTime() {
-        Assert.assertEquals(2, networkDelayTime(arrayOf(intArrayOf(2, 1, 1), intArrayOf(2, 3, 1), intArrayOf(3, 4, 1)), 4, 2))
+        Assert.assertEquals(
+            2,
+            networkDelayTime(arrayOf(intArrayOf(2, 1, 1), intArrayOf(2, 3, 1), intArrayOf(3, 4, 1)), 4, 2)
+        )
     }
+
+    @Test
+    fun testTwoSumII() {
+        Assert.assertArrayEquals(intArrayOf(1, 2), twoSumII(intArrayOf(2, 7, 11, 15), 9))
+        Assert.assertArrayEquals(intArrayOf(1, 3), twoSumII(intArrayOf(2, 3, 4), 6))
+        Assert.assertArrayEquals(intArrayOf(1, 2), twoSumII(intArrayOf(-1, 0), -1))
+    }
+
 }
