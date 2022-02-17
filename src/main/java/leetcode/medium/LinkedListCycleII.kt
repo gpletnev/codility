@@ -1,5 +1,7 @@
 package leetcode.medium
 
+import leetcode.ListNode
+
 // https://leetcode.com/problems/linked-list-cycle-ii/
 object LinkedListCycleII {
     fun detectCycle(head: ListNode?): ListNode? {
@@ -20,8 +22,4 @@ object LinkedListCycleII {
         }
         return null
     }
-}
-
-class ListNode(var `val`: Int) {
-    var next: ListNode? = null
 }

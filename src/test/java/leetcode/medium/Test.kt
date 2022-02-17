@@ -1,6 +1,9 @@
 package leetcode.medium
 
+import leetcode.ListNode
 import leetcode.TreeNode
+import leetcode.toIntArray
+import leetcode.toList
 import org.junit.Assert
 import org.junit.Test
 
@@ -82,6 +85,16 @@ class Test {
         Assert.assertArrayEquals(intArrayOf(1, 2), twoSumII(intArrayOf(2, 7, 11, 15), 9))
         Assert.assertArrayEquals(intArrayOf(1, 3), twoSumII(intArrayOf(2, 3, 4), 6))
         Assert.assertArrayEquals(intArrayOf(1, 2), twoSumII(intArrayOf(-1, 0), -1))
+    }
+
+    @Test
+    fun testRemoveNthFromEnd() {
+        Assert.assertArrayEquals(
+            intArrayOf(1, 2, 3, 5),
+            removeNthFromEnd(intArrayOf(1, 2, 3, 4, 5).toList(), 2)!!.toIntArray()
+        )
+        Assert.assertArrayEquals(intArrayOf(1), removeNthFromEnd(intArrayOf(1, 2).toList(), 1)!!.toIntArray())
+        Assert.assertEquals(null, removeNthFromEnd(intArrayOf(1).toList(), 1))
     }
 
 }
