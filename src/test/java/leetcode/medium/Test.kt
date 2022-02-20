@@ -97,4 +97,23 @@ class Test {
         Assert.assertEquals(null, removeNthFromEnd(intArrayOf(1).toList(), 1))
     }
 
+    @Test
+    fun testMaxAreaOfIsland() {
+        Assert.assertEquals(0, maxAreaOfIsland(arrayOf(intArrayOf(0, 0, 0, 0))))
+        Assert.assertEquals(
+            6, maxAreaOfIsland(
+                arrayOf(
+                    intArrayOf(0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0),
+                    intArrayOf(0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0),
+                    intArrayOf(0, 1, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0),
+                    intArrayOf(0, 1, 0, 0, 1, 1, 0, 0, 1, 0, 1, 0, 0),
+                    intArrayOf(0, 1, 0, 0, 1, 1, 0, 0, 1, 1, 1, 0, 0),
+                    intArrayOf(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0),
+                    intArrayOf(0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0),
+                    intArrayOf(0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0)
+                )
+            )
+        )
+    }
+
 }
