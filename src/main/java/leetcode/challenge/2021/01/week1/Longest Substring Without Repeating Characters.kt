@@ -2,17 +2,16 @@ package leetcode.challenge.`2021`.`01`.week1
 
 // https://leetcode.com/problems/longest-substring-without-repeating-characters/
 fun lengthOfLongestSubstring(s: String): Int {
-    val n = s.length
     var length = 0
     val index = IntArray(128)
 
-    var j = 0
-    var i = 0
-    while (j < n) {
-        i = maxOf(index[s[j].code], i)
-        length = maxOf(length, j - i + 1)
-        index[s[j].code] = j + 1
-        j++
+    var l = 0
+    var r = 0
+    while (r < s.length) {
+        val c = s[r].code
+        l = maxOf(l, index[c])
+        length = maxOf(length, r - l + 1)
+        index[c] = ++r
     }
 
     return length

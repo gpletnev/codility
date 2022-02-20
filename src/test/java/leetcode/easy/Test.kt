@@ -83,4 +83,16 @@ class Test {
         ArrayQuickSort.quickSort(array)
         Assert.assertArrayEquals(intArrayOf(0, 1, 2, 3, 4, 5, 6, 6, 7), array)
     }
+
+    @Test
+    fun testFloodFill() {
+        Assert.assertArrayEquals(
+            arrayOf(intArrayOf(2, 2, 2), intArrayOf(2, 2, 0), intArrayOf(2, 0, 1)),
+            floodFill(arrayOf(intArrayOf(1, 1, 1), intArrayOf(1, 1, 0), intArrayOf(1, 0, 1)), 0, 0, 2)
+        )
+        Assert.assertArrayEquals(
+            arrayOf(intArrayOf(2, 2, 2), intArrayOf(2, 2, 2)),
+            floodFill(arrayOf(intArrayOf(0, 0, 0), intArrayOf(0, 0, 0)), 0, 0, 2)
+        )
+    }
 }
