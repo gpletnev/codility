@@ -1,6 +1,9 @@
 package leetcode.easy
 
+import leetcode.BinaryTree
+import leetcode.TreeNode
 import leetcode.easy.array.*
+import leetcode.joinToString
 import org.junit.Assert
 import org.junit.Test
 
@@ -94,5 +97,16 @@ class Test {
             arrayOf(intArrayOf(2, 2, 2), intArrayOf(2, 2, 2)),
             floodFill(arrayOf(intArrayOf(0, 0, 0), intArrayOf(0, 0, 0)), 0, 0, 2)
         )
+    }
+
+    @Test
+    fun testMergeTrees() {
+        var root1: TreeNode? = TreeNode(1)
+        var root2 = BinaryTree(listOf(1, 2)).head
+        Assert.assertEquals("2, 2", mergeTrees(root1, root2).joinToString())
+
+        root1 = BinaryTree(listOf(1, 3, 2, 5)).head
+        root2 = BinaryTree(listOf(2, 1, 3, null, 4, null, 7)).head
+        Assert.assertEquals("3, 4, 5, 5, 4, null, 7", mergeTrees(root1, root2).joinToString())
     }
 }
