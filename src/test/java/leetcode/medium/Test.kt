@@ -128,4 +128,27 @@ class Test {
             updateMatrix(arrayOf(intArrayOf(0, 0, 0), intArrayOf(0, 1, 0), intArrayOf(1, 1, 1)))
         )
     }
+
+    @Test
+    fun testOrangesRotting() {
+        Assert.assertEquals(0, orangesRotting(arrayOf(intArrayOf(0, 2))))
+        Assert.assertEquals(
+            -1, orangesRotting(
+                arrayOf(
+                    intArrayOf(2, 1, 1),
+                    intArrayOf(0, 1, 1),
+                    intArrayOf(1, 0, 1)
+                )
+            )
+        )
+        Assert.assertEquals(
+            4, orangesRotting(
+                arrayOf(
+                    intArrayOf(2, 1, 1),
+                    intArrayOf(1, 1, 0),
+                    intArrayOf(0, 1, 1)
+                )
+            )
+        )
+    }
 }
