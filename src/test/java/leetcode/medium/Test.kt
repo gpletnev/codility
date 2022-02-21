@@ -116,4 +116,16 @@ class Test {
         )
     }
 
+    @Test
+    fun testUpdateMatrix() {
+        Assert.assertArrayEquals(
+            arrayOf(intArrayOf(0, 0, 0), intArrayOf(0, 1, 0), intArrayOf(0, 0, 0)),
+            updateMatrix(arrayOf(intArrayOf(0, 0, 0), intArrayOf(0, 1, 0), intArrayOf(0, 0, 0)))
+        )
+
+        Assert.assertArrayEquals(
+            arrayOf(intArrayOf(0, 0, 0), intArrayOf(0, 1, 0), intArrayOf(1, 2, 1)),
+            updateMatrix(arrayOf(intArrayOf(0, 0, 0), intArrayOf(0, 1, 0), intArrayOf(1, 1, 1)))
+        )
+    }
 }
