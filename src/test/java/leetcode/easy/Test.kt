@@ -1,9 +1,8 @@
 package leetcode.easy
 
-import leetcode.BinaryTree
-import leetcode.TreeNode
+import leetcode.*
 import leetcode.easy.array.*
-import leetcode.joinToString
+import leetcode.easy.list.reverseList
 import org.junit.Assert
 import org.junit.Test
 
@@ -108,5 +107,15 @@ class Test {
         root1 = BinaryTree(listOf(1, 3, 2, 5)).head
         root2 = BinaryTree(listOf(2, 1, 3, null, 4, null, 7)).head
         Assert.assertEquals("3, 4, 5, 5, 4, null, 7", mergeTrees(root1, root2).joinToString())
+    }
+
+    @Test
+    fun reverseListTest() {
+        Assert.assertNull(reverseList(null))
+        Assert.assertArrayEquals(intArrayOf(2, 1), reverseList(intArrayOf(1, 2).toList())!!.toIntArray())
+        Assert.assertArrayEquals(
+            intArrayOf(5, 4, 3, 2, 1),
+            reverseList(intArrayOf(1, 2, 3, 4, 5).toList())!!.toIntArray()
+        )
     }
 }

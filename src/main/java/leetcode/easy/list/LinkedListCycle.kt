@@ -16,4 +16,4 @@ object LinkedListCycle {
     }
 }
 
-class ListNode(val next: ListNode?)
+class ListNode(var next: ListNode?)
