@@ -156,12 +156,16 @@ class Test {
     fun combineTest() {
         Assert.assertEquals(listOf(listOf(1)), combine(1, 1))
         Assert.assertEquals(listOf(listOf(1, 2)), combine(2, 2))
+        Assert.assertEquals(listOf(listOf(1, 2), listOf(1, 3), listOf(2, 3)), combine(3, 2))
+    }
+
+    @Test
+    fun permutateTest() {
+        Assert.assertEquals(listOf(listOf(1)), permute(intArrayOf(1)))
+        Assert.assertEquals(listOf(listOf(0, 1), listOf(1, 0)), permute(intArrayOf(0, 1)))
         Assert.assertEquals(
-            listOf(
-                listOf(1, 2),
-                listOf(1, 3),
-                listOf(2, 3)
-            ), combine(3, 2)
+            "[1, 2, 3], [1, 3, 2], [2, 1, 3], [2, 3, 1], [3, 1, 2], [3, 2, 1]",
+            permute(intArrayOf(1, 2, 3)).joinToString()
         )
     }
 }
