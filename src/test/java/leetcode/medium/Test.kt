@@ -168,4 +168,10 @@ class Test {
             permute(intArrayOf(1, 2, 3)).joinToString()
         )
     }
+
+    @Test
+    fun robTest() {
+        Assert.assertEquals(4, rob(intArrayOf(1, 2, 3, 1)))
+        Assert.assertEquals(12, rob(intArrayOf(2, 7, 9, 3, 1)))
+    }
 }
