@@ -26,3 +26,21 @@ fun letterCasePermutation(S: String): List<String> {
     }
     return list
 }
+
+//fun letterCasePermutation(S: String): List<String> {
+//    var list: List<String> = listOf("")
+//
+//    for (c in S) {
+//        val aux: MutableList<String> = mutableListOf()
+//        for (i in list.indices) {
+//            if (c.isLetter()) {
+//                aux.add(list[i] + c.toLowerCase())
+//                aux.add(list[i] + c.toUpperCase())
+//            } else {
+//                aux.add(list[i] + c)
+//            }
+//        }
+//        list = aux
+//    }
+//    return list
+//}

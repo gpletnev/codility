@@ -118,4 +118,10 @@ class Test {
             reverseList(intArrayOf(1, 2, 3, 4, 5).toList())!!.toIntArray()
         )
     }
+
+    @Test
+    fun climbStairsTest() {
+        Assert.assertEquals(3, climbStairs(3))
+        Assert.assertEquals(5, climbStairs(4))
+    }
 }
