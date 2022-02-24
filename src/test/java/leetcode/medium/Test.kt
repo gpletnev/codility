@@ -174,4 +174,10 @@ class Test {
         Assert.assertEquals(4, rob(intArrayOf(1, 2, 3, 1)))
         Assert.assertEquals(12, rob(intArrayOf(2, 7, 9, 3, 1)))
     }
+
+    @Test
+    fun minimumTotalTest() {
+        Assert.assertEquals(11, minimumTotal(listOf(listOf(2), listOf(3, 4), listOf(6, 5, 7), listOf(4, 1, 8, 3))))
+        Assert.assertEquals(-1, minimumTotal(listOf(listOf(-1))))
+    }
 }
