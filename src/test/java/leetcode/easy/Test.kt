@@ -124,4 +124,11 @@ class Test {
         Assert.assertEquals(3, climbStairs(3))
         Assert.assertEquals(5, climbStairs(4))
     }
+
+    @Test
+    fun reverseBitsTest() {
+        Assert.assertEquals(1, reverseBits(2147483648.toInt()))
+        Assert.assertEquals(964176192, reverseBits(43261596))
+        Assert.assertEquals(-1073741825, reverseBits(4294967293.toInt()))
+    }
 }
