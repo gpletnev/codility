@@ -131,4 +131,11 @@ class Test {
         Assert.assertEquals(964176192, reverseBits(43261596))
         Assert.assertEquals(-1073741825, reverseBits(4294967293.toInt()))
     }
+
+    @Test
+    fun searchRange() {
+        Assert.assertArrayEquals(intArrayOf(-1, -1), searchRange(intArrayOf(), 0))
+        Assert.assertArrayEquals(intArrayOf(-1, -1), searchRange(intArrayOf(5, 7, 7, 8, 8, 10), 6))
+        Assert.assertArrayEquals(intArrayOf(3, 4), searchRange(intArrayOf(5, 7, 7, 8, 8, 10), 8))
+    }
 }
