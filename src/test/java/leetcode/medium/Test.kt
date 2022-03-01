@@ -180,4 +180,11 @@ class Test {
         Assert.assertEquals(11, minimumTotal(listOf(listOf(2), listOf(3, 4), listOf(6, 5, 7), listOf(4, 1, 8, 3))))
         Assert.assertEquals(-1, minimumTotal(listOf(listOf(-1))))
     }
+
+    @Test
+    fun findMinTest() {
+        Assert.assertEquals(1, findMin(intArrayOf(3, 4, 5, 1, 2)))
+        Assert.assertEquals(0, findMin(intArrayOf(4, 5, 6, 7, 0, 1, 2)))
+        Assert.assertEquals(11, findMin(intArrayOf(11, 13, 15, 17)))
+    }
 }
