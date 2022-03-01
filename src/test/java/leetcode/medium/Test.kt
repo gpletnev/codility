@@ -187,4 +187,10 @@ class Test {
         Assert.assertEquals(0, findMin(intArrayOf(4, 5, 6, 7, 0, 1, 2)))
         Assert.assertEquals(11, findMin(intArrayOf(11, 13, 15, 17)))
     }
+
+    @Test
+    fun findPeakElementTest() {
+        Assert.assertEquals(2, findPeakElement(intArrayOf(1, 2, 3, 1)))
+        Assert.assertEquals(5, findPeakElement(intArrayOf(1, 2, 1, 3, 5, 6, 4)))
+    }
 }
