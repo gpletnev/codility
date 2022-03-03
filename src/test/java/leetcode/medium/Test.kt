@@ -164,8 +164,14 @@ class Test {
         Assert.assertEquals(listOf(listOf(1)), permute(intArrayOf(1)))
         Assert.assertEquals(listOf(listOf(0, 1), listOf(1, 0)), permute(intArrayOf(0, 1)))
         Assert.assertEquals(
-            "[1, 2, 3], [1, 3, 2], [2, 1, 3], [2, 3, 1], [3, 1, 2], [3, 2, 1]",
-            permute(intArrayOf(1, 2, 3)).joinToString()
+            "[[1,2,3],[1,3,2],[2,1,3],[2,3,1],[3,1,2],[3,2,1]]",
+            permute(intArrayOf(1, 2, 3)).joinToString(separator = ",", prefix = "[", postfix = "]") {
+                it.joinToString(
+                    separator = ",",
+                    prefix = "[",
+                    postfix = "]"
+                )
+            }
         )
     }
 
@@ -192,5 +198,35 @@ class Test {
     fun findPeakElementTest() {
         Assert.assertEquals(2, findPeakElement(intArrayOf(1, 2, 3, 1)))
         Assert.assertEquals(5, findPeakElement(intArrayOf(1, 2, 1, 3, 5, 6, 4)))
+    }
+
+    @Test
+    fun intervalIntersectionTest() {
+        Assert.assertEquals(
+            "[[1,2],[5,5],[8,10],[15,23],[24,24],[25,25]]",
+            intervalIntersection(
+                arrayOf(intArrayOf(0, 2), intArrayOf(5, 10), intArrayOf(13, 23), intArrayOf(24, 25)),
+                arrayOf(intArrayOf(1, 5), intArrayOf(8, 12), intArrayOf(15, 24), intArrayOf(25, 26))
+            ).joinToString(separator = ",", prefix = "[", postfix = "]") {
+                it.joinToString(
+                    separator = ",",
+                    prefix = "[",
+                    postfix = "]"
+                )
+            }
+        )
+        Assert.assertEquals(
+            "[]",
+            intervalIntersection(
+                arrayOf(intArrayOf(1, 3), intArrayOf(5, 9)),
+                arrayOf()
+            ).joinToString(separator = ",", prefix = "[", postfix = "]") {
+                it.joinToString(
+                    separator = ",",
+                    prefix = "[",
+                    postfix = "]"
+                )
+            }
+        )
     }
 }

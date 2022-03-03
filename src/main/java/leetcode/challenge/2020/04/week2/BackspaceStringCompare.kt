@@ -4,16 +4,16 @@ import java.util.*
 
 // https://leetcode.com/problems/backspace-string-compare/
 object BackspaceStringCompare {
-    fun backspaceCompare(S: String, T: String): Boolean {
+    fun backspaceCompare(s: String, t: String): Boolean {
         //return build(S) == build(T) // using stack
 
-        var i = S.length - 1
-        var j = T.length - 1
+        var i = s.lastIndex
+        var j = t.lastIndex
         var skipS = 0
         var skipT = 0
         while (i >= 0 || j >= 0) {
             while (i >= 0) {
-                if (S[i] == '#') {
+                if (s[i] == '#') {
                     skipS++
                     i--
                 } else if (skipS > 0) {
@@ -22,7 +22,7 @@ object BackspaceStringCompare {
                 } else break
             }
             while (j >= 0) {
-                if (T[j] == '#') {
+                if (t[j] == '#') {
                     skipT++
                     j--
                 } else if (skipT > 0) {
@@ -31,7 +31,7 @@ object BackspaceStringCompare {
                 } else break
             }
 
-            if (i >= 0 && j >= 0 && S[i] != T[j]) return false
+            if (i >= 0 && j >= 0 && s[i] != t[j]) return false
 
             if (i >= 0 != j >= 0) return false
             i--
