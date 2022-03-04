@@ -229,4 +229,11 @@ class Test {
             }
         )
     }
+
+    @Test
+    fun findAnagramsTest() {
+        Assert.assertArrayEquals(intArrayOf(1, 2, 3, 5), findAnagrams("abacbabc", "abc").toIntArray())
+        Assert.assertArrayEquals(intArrayOf(0, 6), findAnagrams("cbaebabacd", "abc").toIntArray())
+        Assert.assertArrayEquals(intArrayOf(0, 1, 2), findAnagrams("abab", "ab").toIntArray())
+    }
 }
