@@ -236,4 +236,10 @@ class Test {
         Assert.assertArrayEquals(intArrayOf(0, 6), findAnagrams("cbaebabacd", "abc").toIntArray())
         Assert.assertArrayEquals(intArrayOf(0, 1, 2), findAnagrams("abab", "ab").toIntArray())
     }
+
+    @Test
+    fun numSubarrayProductLessThanKTest() {
+        Assert.assertEquals(8, numSubarrayProductLessThanK(intArrayOf(10, 5, 2, 6), 100))
+        Assert.assertEquals(0, numSubarrayProductLessThanK(intArrayOf(1, 2, 3), 0))
+    }
 }
