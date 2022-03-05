@@ -249,4 +249,26 @@ class Test {
         Assert.assertEquals(1, minSubArrayLen(4, intArrayOf(1, 4, 4)))
         Assert.assertEquals(0, minSubArrayLen(11, intArrayOf(1, 1, 1, 1, 1, 1, 1, 1)))
     }
+
+    @Test
+    fun findCircleNumTest() {
+        Assert.assertEquals(
+            2, findCircleNum(
+                arrayOf(
+                    intArrayOf(1, 1, 0),
+                    intArrayOf(1, 1, 0),
+                    intArrayOf(0, 0, 1)
+                )
+            )
+        )
+        Assert.assertEquals(
+            3, findCircleNum(
+                arrayOf(
+                    intArrayOf(1, 0, 0),
+                    intArrayOf(0, 1, 0),
+                    intArrayOf(0, 0, 1)
+                )
+            )
+        )
+    }
 }
