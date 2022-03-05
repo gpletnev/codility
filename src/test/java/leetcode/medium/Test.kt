@@ -242,4 +242,11 @@ class Test {
         Assert.assertEquals(8, numSubarrayProductLessThanK(intArrayOf(10, 5, 2, 6), 100))
         Assert.assertEquals(0, numSubarrayProductLessThanK(intArrayOf(1, 2, 3), 0))
     }
+
+    @Test
+    fun minSubArrayLenTest() {
+        Assert.assertEquals(2, minSubArrayLen(7, intArrayOf(2, 3, 1, 2, 4, 3)))
+        Assert.assertEquals(1, minSubArrayLen(4, intArrayOf(1, 4, 4)))
+        Assert.assertEquals(0, minSubArrayLen(11, intArrayOf(1, 1, 1, 1, 1, 1, 1, 1)))
+    }
 }
