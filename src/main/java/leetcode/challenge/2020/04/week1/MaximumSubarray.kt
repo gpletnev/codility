@@ -1,7 +1,5 @@
 package leetcode.challenge.`2020`.`04`.week1
 
-import java.lang.Integer.max
-
 // https://leetcode.com/problems/maximum-subarray/
 object MaximumSubarray {
     fun maxSubArray(nums: IntArray): Int {
@@ -9,7 +7,7 @@ object MaximumSubarray {
         var globalMax = Int.MIN_VALUE
 
         for (n in nums) {
-            localMax = max(n, n + localMax)
+            localMax = maxOf(n, n + localMax)
             if (localMax > globalMax)
                 globalMax = localMax
         }
@@ -23,9 +21,10 @@ object MaximumSubarray {
 
         val m = (l + r) / 2
 
-        return Math.max(Math.max(maxSubArraySum(nums, l, m),
-                maxSubArraySum(nums, m + 1, r)),
-                maxCrossingSum(nums, l, m, r))
+        return maxOf(
+            maxOf(maxSubArraySum(nums, l, m), maxSubArraySum(nums, m + 1, r)),
+            maxCrossingSum(nums, l, m, r)
+        )
     }
 
     private fun maxCrossingSum(nums: IntArray, l: Int, m: Int, r: Int): Int {
