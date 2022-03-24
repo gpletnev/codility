@@ -150,4 +150,18 @@ class Test {
             matrixReshape(arrayOf(intArrayOf(1, 2), intArrayOf(3, 4)), 2, 4)
         )
     }
+
+    @Test
+    fun generatePascalTriangleTest() {
+        Assert.assertArrayEquals(
+            arrayOf(
+                intArrayOf(1),
+                intArrayOf(1, 1),
+                intArrayOf(1, 2, 1),
+                intArrayOf(1, 3, 3, 1),
+                intArrayOf(1, 4, 6, 4, 1)
+            ),
+            generatePascalTriangle(5).map { it.toIntArray() }.toTypedArray()
+        )
+    }
 }
