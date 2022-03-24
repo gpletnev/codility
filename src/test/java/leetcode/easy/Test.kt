@@ -138,4 +138,16 @@ class Test {
         Assert.assertArrayEquals(intArrayOf(-1, -1), searchRange(intArrayOf(5, 7, 7, 8, 8, 10), 6))
         Assert.assertArrayEquals(intArrayOf(3, 4), searchRange(intArrayOf(5, 7, 7, 8, 8, 10), 8))
     }
+
+    @Test
+    fun matrixReshapeTest() {
+        Assert.assertArrayEquals(
+            arrayOf(intArrayOf(1, 2, 3, 4)),
+            matrixReshape(arrayOf(intArrayOf(1, 2), intArrayOf(3, 4)), 1, 4)
+        )
+        Assert.assertArrayEquals(
+            arrayOf(intArrayOf(1, 2), intArrayOf(3, 4)),
+            matrixReshape(arrayOf(intArrayOf(1, 2), intArrayOf(3, 4)), 2, 4)
+        )
+    }
 }
