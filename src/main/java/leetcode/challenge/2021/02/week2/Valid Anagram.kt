@@ -3,8 +3,8 @@ package leetcode.challenge.`2021`.`02`.week2
 // https://leetcode.com/problems/valid-anagram/
 fun isAnagram(s: String, t: String): Boolean {
 
-    val sMap = s.groupBy { it }
-    val tMap = t.groupBy { it }
+    val sMap = s.groupingBy { it }.eachCount()
+    val tMap = t.groupingBy { it }.eachCount()
 
     return sMap == tMap
 //    if (s.length != t.length) return false
