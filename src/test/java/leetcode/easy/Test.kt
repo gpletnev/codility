@@ -164,4 +164,12 @@ class Test {
             generatePascalTriangle(5).map { it.toIntArray() }.toTypedArray()
         )
     }
+
+    @Test
+    fun deleteDuplicatesTest() {
+        Assert.assertEquals(null, deleteDuplicates(null))
+        Assert.assertArrayEquals(intArrayOf(1), deleteDuplicates(intArrayOf(1).toList())!!.toIntArray())
+        Assert.assertArrayEquals(intArrayOf(1, 2), deleteDuplicates(intArrayOf(1, 1, 2).toList())!!.toIntArray())
+        Assert.assertArrayEquals(intArrayOf(1), deleteDuplicates(intArrayOf(1, 1, 1).toList())!!.toIntArray())
+    }
 }
