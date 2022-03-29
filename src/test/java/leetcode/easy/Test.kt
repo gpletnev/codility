@@ -172,4 +172,14 @@ class Test {
         Assert.assertArrayEquals(intArrayOf(1, 2), deleteDuplicates(intArrayOf(1, 1, 2).toList())!!.toIntArray())
         Assert.assertArrayEquals(intArrayOf(1), deleteDuplicates(intArrayOf(1, 1, 1).toList())!!.toIntArray())
     }
+
+    @Test
+    fun testMyQueue() {
+        val myQueue = MyQueue()
+        myQueue.push(1)
+        myQueue.push(2)
+        Assert.assertEquals(1, myQueue.peek())
+        Assert.assertEquals(1, myQueue.pop())
+        Assert.assertFalse(myQueue.empty())
+    }
 }
