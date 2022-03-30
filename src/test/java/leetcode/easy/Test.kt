@@ -3,6 +3,7 @@ package leetcode.easy
 import leetcode.*
 import leetcode.easy.array.*
 import leetcode.easy.list.reverseList
+import leetcode.easy.tree.preorderTraversal
 import org.junit.Assert
 import org.junit.Test
 
@@ -181,5 +182,17 @@ class Test {
         Assert.assertEquals(1, myQueue.peek())
         Assert.assertEquals(1, myQueue.pop())
         Assert.assertFalse(myQueue.empty())
+    }
+
+    @Test
+    fun preorderTraversalTest() {
+        Assert.assertArrayEquals(intArrayOf(), preorderTraversal(null).toIntArray())
+        val tree = TreeNode(1)
+        Assert.assertArrayEquals(intArrayOf(1), preorderTraversal(tree).toIntArray())
+        tree.right = TreeNode(2)
+        tree.right!!.left = TreeNode(3)
+        Assert.assertArrayEquals(intArrayOf(1, 2, 3), preorderTraversal(tree).toIntArray())
+        tree.left = TreeNode(4)
+        Assert.assertArrayEquals(intArrayOf(1, 4, 2, 3), preorderTraversal(tree).toIntArray())
     }
 }
