@@ -52,7 +52,7 @@ class Test {
 
         Assert.assertEquals(
             "[3], [9, 20], [15, 7]",
-            BinaryTreeLevelOrderTraversal.levelOrderBottom(root).joinToString()
+            BinaryTreeLevelOrderTraversal.levelOrder(root).joinToString()
         )
     }
 
