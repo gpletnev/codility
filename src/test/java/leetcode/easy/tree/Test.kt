@@ -1,5 +1,6 @@
 package leetcode.easy.tree
 
+import leetcode.BinaryTree
 import leetcode.TreeNode
 import org.junit.Assert
 import org.junit.Test
@@ -40,5 +41,14 @@ class Test {
         Assert.assertArrayEquals(intArrayOf(3, 2, 1), postorderTraversal(tree).toIntArray())
         tree.left = TreeNode(4)
         Assert.assertArrayEquals(intArrayOf(4, 3, 2, 1), postorderTraversal(tree).toIntArray())
+    }
+
+    @Test
+    fun isSymmetricTest() {
+        Assert.assertFalse(isSymmetric(BinaryTree(listOf(9, -42, -42, null, 76, 76, null, null, 13, null, 13)).head))
+        Assert.assertTrue(isSymmetric(BinaryTree(listOf(1)).head))
+        Assert.assertTrue(isSymmetric(BinaryTree(listOf(1, 2, 2, 3, 4, 4, 3)).head))
+        Assert.assertFalse(isSymmetric(BinaryTree(listOf(1, 2, 2, 3, 4, 4, 3, 5)).head))
+        Assert.assertFalse(isSymmetric(BinaryTree(listOf(1, 2, 2, null, 3, null, 3)).head))
     }
 }
