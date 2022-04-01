@@ -51,4 +51,12 @@ class Test {
         Assert.assertFalse(isSymmetric(BinaryTree(listOf(1, 2, 2, 3, 4, 4, 3, 5)).head))
         Assert.assertFalse(isSymmetric(BinaryTree(listOf(1, 2, 2, null, 3, null, 3)).head))
     }
+
+    @Test
+    fun hasPathSumTest() {
+        Assert.assertTrue(hasPathSum(BinaryTree(listOf(-2, null, -3)).head, -5))
+        Assert.assertFalse(hasPathSum(null, 0))
+        Assert.assertFalse(hasPathSum(BinaryTree(listOf(1, 2, 3)).head, 5))
+        Assert.assertTrue(hasPathSum(BinaryTree(listOf(5, 4, 8, 11, null, 13, 4, 7, 2, null, null, null, 1)).head, 22))
+    }
 }
