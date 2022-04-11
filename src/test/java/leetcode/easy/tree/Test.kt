@@ -68,4 +68,11 @@ class Test {
         Assert.assertEquals(root, lowestCommonAncestor(root!!, root.left!!, root.right!!))
         Assert.assertEquals(root.left, lowestCommonAncestor(root, root.left!!, root.left!!.right!!))
     }
+
+    @Test
+    fun findTargetTest() {
+        Assert.assertFalse(findTarget(BinaryTree(listOf(2, 1, 3)).head, 1))
+        Assert.assertTrue(findTarget(BinaryTree(listOf(5, 3, 6, 2, 4, null, 7)).head, 9))
+        Assert.assertFalse(findTarget(BinaryTree(listOf(5, 3, 6, 2, 4, null, 7)).head, 28))
+    }
 }
