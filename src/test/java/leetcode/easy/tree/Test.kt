@@ -59,4 +59,13 @@ class Test {
         Assert.assertFalse(hasPathSum(BinaryTree(listOf(1, 2, 3)).head, 5))
         Assert.assertTrue(hasPathSum(BinaryTree(listOf(5, 4, 8, 11, null, 13, 4, 7, 2, null, null, null, 1)).head, 22))
     }
+
+    @Test
+    fun lowestCommonAncestorTest() {
+        var root = BinaryTree(listOf(2, 1)).head
+        Assert.assertEquals(root, lowestCommonAncestor(root!!, root.left!!, root))
+        root = BinaryTree(listOf(6, 2, 8, 0, 4, 7, 9, null, null, 3, 5)).head
+        Assert.assertEquals(root, lowestCommonAncestor(root!!, root.left!!, root.right!!))
+        Assert.assertEquals(root.left, lowestCommonAncestor(root, root.left!!, root.left!!.right!!))
+    }
 }
