@@ -271,4 +271,12 @@ class Test {
             )
         )
     }
+
+    @Test
+    fun testReverseInteger() {
+        Assert.assertEquals(123, reverse(321))
+        Assert.assertEquals(0, reverse(0))
+        Assert.assertEquals(0, reverse(Int.MAX_VALUE))
+        Assert.assertEquals(0, reverse(Int.MIN_VALUE))
+    }
 }
