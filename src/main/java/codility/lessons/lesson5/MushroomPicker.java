@@ -1,6 +1,7 @@
 package codility.lessons.lesson5;
 
-import static codility.Util.*;
+import static codility.Util.prefixSums;
+import static codility.Util.sliceSum;
 
 /**
  * Problem: You are given a non-empty, zero-indexed array A of n (1 <= n <= 100 000) integers

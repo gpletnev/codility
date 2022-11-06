@@ -1,7 +1,5 @@
 package leetcode.challenge.`2020`.`10`.week3
 
-import java.util.*
-
 // https://leetcode.com/problems/minimum-domino-rotations-for-equal-row/
 fun minDominoRotations(A: IntArray, B: IntArray): Int {
     /*    val countA = IntArray(7)

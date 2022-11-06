@@ -1,7 +1,5 @@
 package leetcode.challenge.`2020`.`12`.week2
 
-import java.util.*
-
 // https://leetcode.com/problems/palindrome-partitioning/
 fun partition(s: String): List<List<String>> {
     val dp = Array(s.length) { BooleanArray(s.length) }

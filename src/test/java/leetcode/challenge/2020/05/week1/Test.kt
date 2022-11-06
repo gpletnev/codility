@@ -1,7 +1,7 @@
 package leetcode.challenge.`2020`.`05`.week1
 
-import org.junit.Assert
-import org.junit.Test
+import org.junit.jupiter.api.Test
+import kotlin.test.assertEquals
 
 class Test {
 
@@ -13,8 +13,8 @@ class Test {
         root.left!!.left = TreeNode(4)
         root.right!!.right = TreeNode(5)
 
-        Assert.assertEquals(false, CousinsInBinaryTree.isCousins(root, 4, 3))
-        Assert.assertEquals(true, CousinsInBinaryTree.isCousins(root, 4, 5))
-        Assert.assertEquals(false, CousinsInBinaryTree.isCousins(root, 2, 3))
+        assertEquals(false, CousinsInBinaryTree.isCousins(root, 4, 3))
+        assertEquals(true, CousinsInBinaryTree.isCousins(root, 4, 5))
+        assertEquals(false, CousinsInBinaryTree.isCousins(root, 2, 3))
     }
 }

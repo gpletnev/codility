@@ -1,7 +1,5 @@
 package leetcode.challenge.`2020`.`10`.week1
 
-import java.util.*
-
 // https://leetcode.com/problems/combination-sum/
 fun combinationSum(candidates: IntArray, target: Int): List<List<Int>> {
     val list: MutableList<List<Int>> = ArrayList()

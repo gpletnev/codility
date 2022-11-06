@@ -1,7 +1,5 @@
 package leetcode.challenge.`2020`.`10`.week2
 
-import java.util.*
-
 // https://leetcode.com/problems/buddy-strings/
 fun buddyStrings(A: String, B: String): Boolean {
     if (A.length != B.length) return false

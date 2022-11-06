@@ -1,7 +1,7 @@
 package leetcode
 
-import org.junit.Assert
-import org.junit.Test
+import org.junit.jupiter.api.Test
+import kotlin.test.assertEquals
 
 class Test {
     @Test
@@ -14,12 +14,12 @@ class Test {
         head.left!!.right = null
         head.right!!.left = TreeNode(15)
         head.right!!.right = TreeNode(7)
-        Assert.assertEquals(head.`val`, binaryTree.head?.`val`)
-        Assert.assertEquals(head.left?.`val`, binaryTree.head?.left?.`val`)
-        Assert.assertEquals(head.right?.`val`, binaryTree.head?.right?.`val`)
-        Assert.assertEquals(head.left?.left, binaryTree.head?.left?.left)
-        Assert.assertEquals(head.left?.right, binaryTree.head?.left?.right)
-        Assert.assertEquals(head.right?.left?.`val`, binaryTree.head?.right?.left?.`val`)
-        Assert.assertEquals(head.right?.right?.`val`, binaryTree.head?.right?.right?.`val`)
+        assertEquals(head.`val`, binaryTree.head?.`val`)
+        assertEquals(head.left?.`val`, binaryTree.head?.left?.`val`)
+        assertEquals(head.right?.`val`, binaryTree.head?.right?.`val`)
+        assertEquals(head.left?.left, binaryTree.head?.left?.left)
+        assertEquals(head.left?.right, binaryTree.head?.left?.right)
+        assertEquals(head.right?.left?.`val`, binaryTree.head?.right?.left?.`val`)
+        assertEquals(head.right?.right?.`val`, binaryTree.head?.right?.right?.`val`)
     }
 }

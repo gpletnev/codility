@@ -1,6 +1,6 @@
 package leetcode.challenge.`2020`.`11`.week3
 
-import java.util.*
+import kotlin.math.max
 
 
 fun merge(intervals: Array<IntArray>): Array<IntArray> {
@@ -11,7 +11,7 @@ fun merge(intervals: Array<IntArray>): Array<IntArray> {
     for (interval in intervals) {
         if (interval[0] <= newInterval[1]) {
             // Overlapping intervals, move the end if needed
-            newInterval[1] = Math.max(newInterval[1], interval[1])
+            newInterval[1] = max(newInterval[1], interval[1])
         } else {
             // Disjoint intervals, add the new interval to the list
             newInterval = interval

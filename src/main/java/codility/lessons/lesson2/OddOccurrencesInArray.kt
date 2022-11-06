@@ -1,7 +1,5 @@
 package codility.lessons.lesson2
 
-import java.util.*
-
 // https://app.codility.com/programmers/lessons/2-arrays/odd_occurrences_in_array/
 object OddOccurrencesInArray {
     @JvmStatic
@@ -9,6 +7,7 @@ object OddOccurrencesInArray {
         return A.reduce { res, i -> res.xor(i) }
     }
 
+    @Suppress("unused")
     @JvmStatic
     fun <T> solutionT(A: Array<T>): T? {
         var result: T? = null

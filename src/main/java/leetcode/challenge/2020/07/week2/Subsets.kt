@@ -1,6 +1,5 @@
 package leetcode.challenge.`2020`.`07`.week2
 
-import java.util.*
 import kotlin.math.pow
 
 // https://leetcode.com/problems/subsets/

@@ -1,7 +1,5 @@
 package leetcode.challenge.`2021`.`02`.week1
 
-import java.util.*
-
 // https://leetcode.com/problems/longest-harmonious-subsequence/
 fun findLHS(nums: IntArray): Int {
     val map = HashMap<Int, Int>()

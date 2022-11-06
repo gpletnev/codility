@@ -2,8 +2,10 @@ package leetcode.challenge.`2021`.`02`.week2
 
 import leetcode.BinaryTree
 import leetcode.joinToString
-import org.junit.Assert
-import org.junit.Test
+import org.junit.jupiter.api.Test
+import kotlin.test.assertEquals
+import kotlin.test.assertFalse
+import kotlin.test.assertTrue
 
 class Test {
     @Test
@@ -11,35 +13,35 @@ class Test {
         val iterator = listOf(1, 2, 3).iterator()
         val peekingIterator = PeekingIterator(iterator)
 
-        Assert.assertEquals(1, peekingIterator.next())
-        Assert.assertEquals(2, peekingIterator.peek())
-        Assert.assertEquals(2, peekingIterator.next())
-        Assert.assertEquals(3, peekingIterator.next())
-        Assert.assertEquals(false, peekingIterator.hasNext())
+        assertEquals(1, peekingIterator.next())
+        assertEquals(2, peekingIterator.peek())
+        assertEquals(2, peekingIterator.next())
+        assertEquals(3, peekingIterator.next())
+        assertEquals(false, peekingIterator.hasNext())
     }
 
     @Test
     fun convertBSTTest() {
         var root = BinaryTree(listOf(4, 1, 6, 0, 2, 5, 7, null, null, null, 3, null, null, null, 8)).head
-        Assert.assertEquals(
+        assertEquals(
             listOf(30, 36, 21, 36, 35, 26, 15, null, null, null, 33, null, null, null, 8).joinToString(),
             convertBST(root).joinToString()
         )
 
         root = BinaryTree(listOf(0, null, 1)).head
-        Assert.assertEquals(
+        assertEquals(
             listOf(1, null, 1).joinToString(),
             convertBST(root).joinToString()
         )
 
         root = BinaryTree(listOf(1, 0, 2)).head
-        Assert.assertEquals(
+        assertEquals(
             listOf(3, 3, 2).joinToString(),
             convertBST(root).joinToString()
         )
 
         root = BinaryTree(listOf(3, 2, 4, 1)).head
-        Assert.assertEquals(
+        assertEquals(
             listOf(7, 9, 4, 10).joinToString(),
             convertBST(root).joinToString()
         )
@@ -47,25 +49,25 @@ class Test {
 
     @Test
     fun isAnagramTest() {
-        Assert.assertTrue(isAnagram("anagram", "nagaram"))
-        Assert.assertFalse(isAnagram("rat", "car"))
-        Assert.assertTrue(isAnagram("aa", "aa"))
-        Assert.assertFalse(isAnagram("a", "ab"))
-        Assert.assertTrue(isAnagram("", ""))
+        assertTrue(isAnagram("anagram", "nagaram"))
+        assertFalse(isAnagram("rat", "car"))
+        assertTrue(isAnagram("aa", "aa"))
+        assertFalse(isAnagram("a", "ab"))
+        assertTrue(isAnagram("", ""))
     }
 
     @Test
     fun numberOfStepsTest() {
-        Assert.assertEquals(0, numberOfSteps(0))
-        Assert.assertEquals(6, numberOfSteps(14))
-        Assert.assertEquals(4, numberOfSteps(8))
-        Assert.assertEquals(1, numberOfSteps(1))
-        Assert.assertEquals(12, numberOfSteps(123))
+        assertEquals(0, numberOfSteps(0))
+        assertEquals(6, numberOfSteps(14))
+        assertEquals(4, numberOfSteps(8))
+        assertEquals(1, numberOfSteps(1))
+        assertEquals(12, numberOfSteps(123))
     }
 
     @Test
     fun shortestPathBinaryMatrixTest() {
-        Assert.assertEquals(
+        assertEquals(
             1,
             shortestPathBinaryMatrix(
                 arrayOf(
@@ -73,7 +75,7 @@ class Test {
                 )
             )
         )
-        Assert.assertEquals(
+        assertEquals(
             2,
             shortestPathBinaryMatrix(
                 arrayOf(
@@ -82,7 +84,7 @@ class Test {
                 )
             )
         )
-        Assert.assertEquals(
+        assertEquals(
             -1,
             shortestPathBinaryMatrix(
                 arrayOf(
@@ -92,7 +94,7 @@ class Test {
                 )
             )
         )
-        Assert.assertEquals(
+        assertEquals(
             4,
             shortestPathBinaryMatrix(
                 arrayOf(
@@ -102,7 +104,7 @@ class Test {
                 )
             )
         )
-        Assert.assertEquals(
+        assertEquals(
             13,
             shortestPathBinaryMatrix(
                 arrayOf(
@@ -118,8 +120,8 @@ class Test {
 
     @Test
     fun isBipartiteTest() {
-        Assert.assertTrue(isBipartite(arrayOf(intArrayOf(1, 3), intArrayOf(0, 2), intArrayOf(1, 3), intArrayOf(0, 2))))
-        Assert.assertFalse(
+        assertTrue(isBipartite(arrayOf(intArrayOf(1, 3), intArrayOf(0, 2), intArrayOf(1, 3), intArrayOf(0, 2))))
+        assertFalse(
             isBipartite(
                 arrayOf(
                     intArrayOf(1, 2, 3),

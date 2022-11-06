@@ -1,6 +1,6 @@
 package codility.lessons.lesson6;
 
-import java.util.*;
+import java.util.HashSet;
 
 public class Distinct {
     public static int solution(int[] A) {

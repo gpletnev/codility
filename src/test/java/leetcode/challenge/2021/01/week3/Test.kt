@@ -1,59 +1,62 @@
 package leetcode.challenge.`2021`.`01`.week3
 
-import org.junit.Assert
-import org.junit.Test
+import org.junit.jupiter.api.Test
+import kotlin.test.assertContentEquals
+import kotlin.test.assertEquals
+import kotlin.test.assertFalse
+import kotlin.test.assertTrue
 
 class Test {
     @Test
     fun getMaximumGeneratedTest() {
-        Assert.assertEquals(3, getMaximumGenerated(7))
-        Assert.assertEquals(1, getMaximumGenerated(2))
-        Assert.assertEquals(2, getMaximumGenerated(3))
+        assertEquals(3, getMaximumGenerated(7))
+        assertEquals(1, getMaximumGenerated(2))
+        assertEquals(2, getMaximumGenerated(3))
     }
 
     @Test
     fun findKthLargestTest() {
-        Assert.assertEquals(5, findKthLargest(intArrayOf(3, 2, 1, 5, 6, 4), 2))
-        Assert.assertEquals(4, findKthLargest(intArrayOf(3, 2, 3, 1, 2, 4, 5, 5, 6), 4))
+        assertEquals(5, findKthLargest(intArrayOf(3, 2, 1, 5, 6, 4), 2))
+        assertEquals(4, findKthLargest(intArrayOf(3, 2, 3, 1, 2, 4, 5, 5, 6), 4))
     }
 
     @Test
     fun countVowelStringsText() {
-        Assert.assertEquals(5, countVowelStrings(1))
-        Assert.assertEquals(15, countVowelStrings(2))
-        Assert.assertEquals(35, countVowelStrings(3))
-        Assert.assertEquals(70, countVowelStrings(4))
+        assertEquals(5, countVowelStrings(1))
+        assertEquals(15, countVowelStrings(2))
+        assertEquals(35, countVowelStrings(3))
+        assertEquals(70, countVowelStrings(4))
     }
 
     @Test
     fun maxOperationsTest() {
-        Assert.assertEquals(3, maxOperations(intArrayOf(1, 1, 1, 2, 2, 2, 4), 3))
-        Assert.assertEquals(2, maxOperations(intArrayOf(2, 1, 3, 4), 5))
-        Assert.assertEquals(2, maxOperations(intArrayOf(2, 1, 3, 3, 4), 6))
+        assertEquals(3, maxOperations(intArrayOf(1, 1, 1, 2, 2, 2, 4), 3))
+        assertEquals(2, maxOperations(intArrayOf(2, 1, 3, 4), 5))
+        assertEquals(2, maxOperations(intArrayOf(2, 1, 3, 3, 4), 6))
     }
 
     @Test
     fun longestPalindromeTest() {
-        Assert.assertEquals("a", longestPalindrome("a"))
-        Assert.assertTrue(longestPalindrome("ac") in listOf("a", "c"))
-        Assert.assertEquals("bb", longestPalindrome("cbbd"))
-        Assert.assertTrue(longestPalindrome("babad") in listOf("bab", "aba"))
-        Assert.assertTrue(longestPalindrome("aababccccd") in listOf("cccc"))
+        assertEquals("a", longestPalindrome("a"))
+        assertTrue(longestPalindrome("ac") in listOf("a", "c"))
+        assertEquals("bb", longestPalindrome("cbbd"))
+        assertTrue(longestPalindrome("babad") in listOf("bab", "aba"))
+        assertTrue(longestPalindrome("aababccccd") in listOf("cccc"))
     }
 
     @Test
     fun isValidTest() {
-        Assert.assertTrue(isValid("()"))
-        Assert.assertTrue(isValid("()[]{}"))
-        Assert.assertFalse(isValid("(]"))
-        Assert.assertFalse(isValid("([)]"))
-        Assert.assertTrue(isValid("{[]}"))
+        assertTrue(isValid("()"))
+        assertTrue(isValid("()[]{}"))
+        assertFalse(isValid("(]"))
+        assertFalse(isValid("([)]"))
+        assertTrue(isValid("{[]}"))
     }
 
     @Test
     fun mostCompetitiveTest() {
-        Assert.assertArrayEquals(intArrayOf(2, 2), mostCompetitive(intArrayOf(2, 2), 2))
-        Assert.assertArrayEquals(intArrayOf(2, 6), mostCompetitive(intArrayOf(3, 5, 2, 6), 2))
-        Assert.assertArrayEquals(intArrayOf(2, 3, 3, 4), mostCompetitive(intArrayOf(2, 4, 3, 3, 5, 4, 9, 6), 4))
+        assertContentEquals(intArrayOf(2, 2), mostCompetitive(intArrayOf(2, 2), 2))
+        assertContentEquals(intArrayOf(2, 6), mostCompetitive(intArrayOf(3, 5, 2, 6), 2))
+        assertContentEquals(intArrayOf(2, 3, 3, 4), mostCompetitive(intArrayOf(2, 4, 3, 3, 5, 4, 9, 6), 4))
     }
 }

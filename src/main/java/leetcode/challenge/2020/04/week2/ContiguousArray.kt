@@ -1,7 +1,5 @@
 package leetcode.challenge.`2020`.`04`.week2
 
-import java.util.*
-
 // https://leetcode.com/problems/contiguous-array/
 object ContiguousArray {
     fun findMaxLength(nums: IntArray): Int {

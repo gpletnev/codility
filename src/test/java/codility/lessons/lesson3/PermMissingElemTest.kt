@@ -1,12 +1,12 @@
 package codility.lessons.lesson3
 
-import org.junit.Assert
-import org.junit.Test
+import org.junit.jupiter.api.Test
+import kotlin.test.assertEquals
 
 class PermMissingElemTest {
 
     @Test
     fun solution() {
-        Assert.assertEquals(4, PermMissingElem.solution(intArrayOf(2, 3, 1, 5)))
+        assertEquals(4, PermMissingElem.solution(intArrayOf(2, 3, 1, 5)))
     }
 }

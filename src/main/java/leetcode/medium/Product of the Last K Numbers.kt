@@ -1,7 +1,5 @@
 package leetcode.medium
 
-import java.util.*
-
 // https://leetcode.com/problems/product-of-the-last-k-numbers/
 class ProductOfNumbers {
     private val products = ArrayList<Int>(1)

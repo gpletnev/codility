@@ -1,7 +1,5 @@
 package leetcode.challenge.`2020`.`04`.week4
 
-import java.util.*
-
 // https://leetcode.com/problems/subarray-sum-equals-k/solution/
 object SubarraySumEqualsK {
     // time O(n*n) space O(n)

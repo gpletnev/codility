@@ -1,7 +1,5 @@
 package leetcode.challenge.`2020`.`11`.week1
 
-import java.util.*
-
 // https://leetcode.com/problems/minimum-height-trees/
 fun findMinHeightTrees(n: Int, edges: Array<IntArray>): List<Int> {
     // base cases

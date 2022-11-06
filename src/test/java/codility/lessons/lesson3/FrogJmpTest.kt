@@ -1,12 +1,12 @@
 package codility.lessons.lesson3
 
-import org.junit.Assert
-import org.junit.Test
+import org.junit.jupiter.api.Test
+import kotlin.test.assertEquals
 
 class FrogJmpTest {
 
     @Test
     fun solution() {
-        Assert.assertEquals(3, FrogJmp.solution(10, 85, 30))
+        assertEquals(3, FrogJmp.solution(10, 85, 30))
     }
 }

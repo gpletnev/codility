@@ -1,7 +1,5 @@
 package leetcode.challenge.`2020`.`12`.week4
 
-import java.util.*
-
 // https://leetcode.com/problems/jump-game-iv/
 fun minJumps(arr: IntArray): Int {
     var res = 0

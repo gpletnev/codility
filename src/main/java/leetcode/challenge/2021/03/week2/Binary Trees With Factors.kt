@@ -1,7 +1,5 @@
 package leetcode.challenge.`2021`.`03`.week2
 
-import java.util.*
-
 
 // https://leetcode.com/problems/binary-trees-with-factors/
 fun numFactoredBinaryTrees(arr: IntArray): Int {

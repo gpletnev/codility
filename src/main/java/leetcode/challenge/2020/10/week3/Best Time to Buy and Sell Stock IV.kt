@@ -1,7 +1,5 @@
 package leetcode.challenge.`2020`.`10`.week3
 
-import java.util.*
-
 // https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iv/
 fun maxProfit(k: Int, prices: IntArray): Int {
     val n: Int = prices.size

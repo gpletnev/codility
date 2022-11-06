@@ -1,26 +1,28 @@
 package leetcode.challenge.`2021`.`03`.week3
 
-import org.junit.Assert
-import org.junit.Test
+import org.junit.jupiter.api.Test
+import kotlin.test.assertEquals
+import kotlin.test.assertFalse
+import kotlin.test.assertTrue
 
 class Test {
     @Test
     fun maxProfitTest() {
-        Assert.assertEquals(8, maxProfit(intArrayOf(1, 3, 2, 8, 4, 9), 2))
-        Assert.assertEquals(6, maxProfit(intArrayOf(1, 3, 7, 5, 10, 3), 3))
+        assertEquals(8, maxProfit(intArrayOf(1, 3, 2, 8, 4, 9), 2))
+        assertEquals(6, maxProfit(intArrayOf(1, 3, 7, 5, 10, 3), 3))
     }
 
     @Test
     fun wiggleMaxLengthTest() {
-        Assert.assertEquals(6, wiggleMaxLength(intArrayOf(1, 7, 4, 9, 2, 5)))
-        Assert.assertEquals(7, wiggleMaxLength(intArrayOf(1, 17, 5, 10, 13, 15, 10, 5, 16, 8)))
-        Assert.assertEquals(2, wiggleMaxLength(intArrayOf(1, 2, 3, 4, 5, 6, 7, 8, 9)))
+        assertEquals(6, wiggleMaxLength(intArrayOf(1, 7, 4, 9, 2, 5)))
+        assertEquals(7, wiggleMaxLength(intArrayOf(1, 17, 5, 10, 13, 15, 10, 5, 16, 8)))
+        assertEquals(2, wiggleMaxLength(intArrayOf(1, 2, 3, 4, 5, 6, 7, 8, 9)))
     }
 
     @Test
     fun canVisitAllRoomsTest() {
-        Assert.assertTrue(canVisitAllRooms(listOf(listOf(1), listOf(2), listOf(3), listOf())))
-        Assert.assertFalse(canVisitAllRooms(listOf(listOf(1, 3), listOf(3, 0, 1), listOf(2), listOf(0))))
+        assertTrue(canVisitAllRooms(listOf(listOf(1), listOf(2), listOf(3), listOf())))
+        assertFalse(canVisitAllRooms(listOf(listOf(1, 3), listOf(3, 0, 1), listOf(2), listOf(0))))
     }
 
     @Test
@@ -68,10 +70,10 @@ class Test {
 
     @Test
     fun reorderedPowerOf2Test() {
-        Assert.assertTrue(reorderedPowerOf2(1))
-        Assert.assertFalse(reorderedPowerOf2(10))
-        Assert.assertTrue(reorderedPowerOf2(16))
-        Assert.assertFalse(reorderedPowerOf2(24))
-        Assert.assertTrue(reorderedPowerOf2(46))
+        assertTrue(reorderedPowerOf2(1))
+        assertFalse(reorderedPowerOf2(10))
+        assertTrue(reorderedPowerOf2(16))
+        assertFalse(reorderedPowerOf2(24))
+        assertTrue(reorderedPowerOf2(46))
     }
 }

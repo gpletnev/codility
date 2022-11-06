@@ -1,7 +1,6 @@
 package leetcode
 
 import java.util.*
-import kotlin.collections.ArrayList
 
 class Node(var `val`: Int) {
     var neighbors: ArrayList<Node?> = ArrayList<Node?>()

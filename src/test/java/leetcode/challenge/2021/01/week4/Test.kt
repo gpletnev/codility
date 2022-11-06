@@ -1,22 +1,25 @@
 package leetcode.challenge.`2021`.`01`.week4
 
 import leetcode.toList
-import org.junit.Assert
-import org.junit.Test
+import org.junit.jupiter.api.Test
+import kotlin.test.assertEquals
+import kotlin.test.assertFalse
+import kotlin.test.assertNull
+import kotlin.test.assertTrue
 
 class Test {
     @Test
     fun mostCompetitiveTest() {
-        Assert.assertFalse(closeStrings("abbzzca", "babzzcz"))
-        Assert.assertTrue(closeStrings("abc", "bca"))
-        Assert.assertFalse(closeStrings("a", "aa"))
-        Assert.assertTrue(closeStrings(word1 = "cabbba", word2 = "abbccc"))
-        Assert.assertFalse(closeStrings(word1 = "cabbba", word2 = "aabbss"))
+        assertFalse(closeStrings("abbzzca", "babzzcz"))
+        assertTrue(closeStrings("abc", "bca"))
+        assertFalse(closeStrings("a", "aa"))
+        assertTrue(closeStrings(word1 = "cabbba", word2 = "abbccc"))
+        assertFalse(closeStrings(word1 = "cabbba", word2 = "aabbss"))
     }
 
     @Test
     fun diagonalSortTest() {
-        Assert.assertEquals(
+        assertEquals(
             arrayOf(
                 intArrayOf(1, 1, 1, 1),
                 intArrayOf(1, 2, 2, 2),
@@ -34,22 +37,22 @@ class Test {
 
     @Test
     fun mergeKListsTest() {
-        Assert.assertNull(mergeKLists(arrayOf(intArrayOf().toList())))
-        Assert.assertNull(mergeKLists(arrayOf(intArrayOf().toList())))
+        assertNull(mergeKLists(arrayOf(intArrayOf().toList())))
+        assertNull(mergeKLists(arrayOf(intArrayOf().toList())))
 
     }
 
     @Test
     fun kLengthApartTest() {
-        Assert.assertTrue(kLengthApart(intArrayOf(1, 0, 0, 0, 1, 0, 0, 1), 2))
-        Assert.assertFalse(kLengthApart(intArrayOf(1, 0, 0, 1, 0, 1), 2))
-        Assert.assertTrue(kLengthApart(intArrayOf(1, 1, 1, 1, 1), 0))
-        Assert.assertTrue(kLengthApart(intArrayOf(0, 1, 0, 1), 1))
+        assertTrue(kLengthApart(intArrayOf(1, 0, 0, 0, 1, 0, 0, 1), 2))
+        assertFalse(kLengthApart(intArrayOf(1, 0, 0, 1, 0, 1), 2))
+        assertTrue(kLengthApart(intArrayOf(1, 1, 1, 1, 1), 0))
+        assertTrue(kLengthApart(intArrayOf(0, 1, 0, 1), 1))
     }
 
     @Test
     fun minimumEffortPathTest() {
-        Assert.assertEquals(
+        assertEquals(
             2,
             minimumEffortPath(
                 arrayOf(
@@ -59,7 +62,7 @@ class Test {
                 )
             )
         )
-        Assert.assertEquals(
+        assertEquals(
             1,
             minimumEffortPath(
                 arrayOf(
@@ -69,7 +72,7 @@ class Test {
                 )
             )
         )
-        Assert.assertEquals(
+        assertEquals(
             0,
             minimumEffortPath(
                 arrayOf(
@@ -85,23 +88,23 @@ class Test {
 
     @Test
     fun concatenatedBinaryTest() {
-        Assert.assertEquals(1, concatenatedBinary(1))
-        Assert.assertEquals(6, concatenatedBinary(2))
-        Assert.assertEquals(27, concatenatedBinary(3))
-        Assert.assertEquals(220, concatenatedBinary(4))
-        Assert.assertEquals(1765, concatenatedBinary(5))
-        Assert.assertEquals(14126, concatenatedBinary(6))
-        Assert.assertEquals(113015, concatenatedBinary(7))
-        Assert.assertEquals(1808248, concatenatedBinary(8))
-        Assert.assertEquals(28931977, concatenatedBinary(9))
-        Assert.assertEquals(462911642, concatenatedBinary(10))
-        Assert.assertEquals(406586234, concatenatedBinary(11))
-        Assert.assertEquals(505379714, concatenatedBinary(12))
+        assertEquals(1, concatenatedBinary(1))
+        assertEquals(6, concatenatedBinary(2))
+        assertEquals(27, concatenatedBinary(3))
+        assertEquals(220, concatenatedBinary(4))
+        assertEquals(1765, concatenatedBinary(5))
+        assertEquals(14126, concatenatedBinary(6))
+        assertEquals(113015, concatenatedBinary(7))
+        assertEquals(1808248, concatenatedBinary(8))
+        assertEquals(28931977, concatenatedBinary(9))
+        assertEquals(462911642, concatenatedBinary(10))
+        assertEquals(406586234, concatenatedBinary(11))
+        assertEquals(505379714, concatenatedBinary(12))
     }
 
     @Test
     fun getSmallestStringTest() {
-        Assert.assertEquals("aay", getSmallestString(3, 27))
-        Assert.assertEquals("aaszz", getSmallestString(5, 73))
+        assertEquals("aay", getSmallestString(3, 27))
+        assertEquals("aaszz", getSmallestString(5, 73))
     }
 }

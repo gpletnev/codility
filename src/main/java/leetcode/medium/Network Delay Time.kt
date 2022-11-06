@@ -1,7 +1,6 @@
 package leetcode.medium
 
 import java.util.*
-import kotlin.collections.ArrayList
 
 // https://leetcode.com/problems/network-delay-time/
 fun networkDelayTime(times: Array<IntArray>, N: Int, K: Int): Int {
@@ -12,7 +11,7 @@ fun networkDelayTime(times: Array<IntArray>, N: Int, K: Int): Int {
         to.add(intArrayOf(time[1], time[2]))
         network[time[0]] = to
     }
-    val que = PriorityQueue<IntArray>(Comparator<IntArray> { e1, e2 -> e1[1] - e2[1] })
+    val que = PriorityQueue<IntArray> { e1, e2 -> e1[1] - e2[1] }
     que.add(intArrayOf(K, 0))
     val reached = HashSet<Int>()
     while (!que.isEmpty()) {

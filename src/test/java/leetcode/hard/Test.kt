@@ -1,14 +1,15 @@
 package leetcode.hard
 
-import org.junit.Assert
-import org.junit.Test
+import org.junit.jupiter.api.Test
+import kotlin.test.assertFalse
+import kotlin.test.assertTrue
 
 class Test {
     @Test
     fun isMatchTest() {
-        Assert.assertTrue(isMatch("", ""))
-        Assert.assertFalse(isMatch("aa", "a"))
-        Assert.assertTrue(isMatch("aa", "a*"))
-        Assert.assertTrue(isMatch("ab", ".*"))
+        assertTrue(isMatch("", ""))
+        assertFalse(isMatch("aa", "a"))
+        assertTrue(isMatch("aa", "a*"))
+        assertTrue(isMatch("ab", ".*"))
     }
 }
