@@ -65,6 +65,12 @@ class Test {
     }
 
     @Test
+    fun longestPalindromeTest() {
+        assertEquals(7, longestPalindrome("abccccdd"))
+        assertEquals(1, longestPalindrome("a"))
+    }
+
+    @Test
     fun testIsOneBitCharacter() {
         assertEquals(true, isOneBitCharacter(intArrayOf(1, 1, 0)))
         assertEquals(false, isOneBitCharacter(intArrayOf(1, 1, 1, 0)))
