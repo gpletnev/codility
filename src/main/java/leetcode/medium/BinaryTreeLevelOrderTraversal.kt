@@ -25,13 +25,13 @@ object BinaryTreeLevelOrderTraversal {
 
     fun levelOrder(root: TreeNode?): List<List<Int>> {
         val list: MutableList<List<Int>> = LinkedList()
-        val queue: Queue<TreeNode?> = LinkedList()
+        val queue: Queue<TreeNode> = LinkedList()
         if (root != null) queue.add(root)
         while (queue.isNotEmpty()) {
             val level = mutableListOf<Int>()
             repeat(queue.size) {
                 val node = queue.poll()
-                node!!.left?.let { queue.add(node.left) }
+                node.left?.let { queue.add(node.left) }
                 node.right?.let { queue.add(node.right) }
                 level.add(node.`val`)
             }
