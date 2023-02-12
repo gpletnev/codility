@@ -45,6 +45,12 @@ class Test {
     }
 
     @Test
+    fun characterReplacement() {
+        assertEquals(4, characterReplacement("ABAB", 2))
+        assertEquals(4, characterReplacement("AABABBA", 1))
+    }
+
+    @Test
     fun testBinaryTreeLevelOrderTraversal() {
         val root = TreeNode(3)
         root.left = TreeNode(9)
