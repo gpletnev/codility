@@ -147,6 +147,12 @@ class Test {
     }
 
     @Test
+    fun minCostClimbingStairs() {
+        assertEquals(15, minCostClimbingStairs(intArrayOf(10, 15, 20)))
+        assertEquals(6, minCostClimbingStairs(intArrayOf(1, 100, 1, 1, 1, 100, 1, 1, 100, 1)))
+    }
+
+    @Test
     fun matrixReshapeTest() {
         Assertions.assertArrayEquals(
             arrayOf(intArrayOf(1, 2, 3, 4)),
