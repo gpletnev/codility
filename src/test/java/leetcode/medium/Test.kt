@@ -18,6 +18,12 @@ class Test {
     }
 
     @Test
+    fun getHint() {
+        assertEquals("1A3B", getHint("1807", "7810"))
+        assertEquals("1A1B", getHint("1123", "0111"))
+    }
+
+    @Test
     fun testWordLadder() {
         assertEquals(5, WordLadder.ladderLength("hit", "cog", listOf("hot", "dot", "dog", "lot", "log", "cog")))
         assertEquals(0, WordLadder.ladderLength("hit", "cog", listOf("hot", "dot", "dog", "lot", "log")))
