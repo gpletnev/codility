@@ -14,16 +14,21 @@ fun decodeString(queue: Deque<Char>): String {
     var num = 0
     while (!queue.isEmpty()) {
         val c = queue.poll()
-        if (Character.isDigit(c)) {
-            num = num * 10 + (c - '0')
-        } else if (c == '[') {
-            val sub = decodeString(queue)
-            repeat(num) { sb.append(sub) }
-            num = 0
-        } else if (c == ']') {
-            break
-        } else {
-            sb.append(c)
+        when {
+            Character.isDigit(c) -> {
+                num = num * 10 + (c - '0')
+            }
+            c == '[' -> {
+                val sub = decodeString(queue)
+                repeat(num) { sb.append(sub) }
+                num = 0
+            }
+            c == ']' -> {
+                break
+            }
+            else -> {
+                sb.append(c)
+            }
         }
     }
     return sb.toString()

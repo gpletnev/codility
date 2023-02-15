@@ -287,6 +287,13 @@ class Test {
     }
 
     @Test
+    fun topKFrequent() {
+        assertContentEquals(listOf("i","love"), topKFrequent(arrayOf("i","love","leetcode","i","love","coding"), 2))
+        assertContentEquals(listOf("the","is","sunny","day"), topKFrequent(arrayOf("the","day","is","sunny","the","the","the","sunny","is","is"), 4))
+
+    }
+
+    @Test
     fun testReverseInteger() {
         assertEquals(123, reverse(321))
         assertEquals(0, reverse(0))
