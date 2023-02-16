@@ -265,6 +265,23 @@ class Test {
     }
 
     @Test
+    fun findBall() {
+        assertContentEquals(intArrayOf(-1), findBall(arrayOf(intArrayOf(-1))))
+        assertContentEquals(
+            intArrayOf(1, -1, -1, -1, -1),
+            findBall(
+                arrayOf(
+                    intArrayOf(1, 1, 1, -1, -1),
+                    intArrayOf(1, 1, 1, -1, -1),
+                    intArrayOf(-1, -1, -1, 1, 1),
+                    intArrayOf(1, 1, 1, 1, -1),
+                    intArrayOf(-1, -1, -1, -1, -1)
+                )
+            )
+        )
+    }
+
+    @Test
     fun findCircleNumTest() {
         assertEquals(
             2, findCircleNum(
