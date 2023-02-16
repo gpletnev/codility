@@ -2,8 +2,16 @@ package leetcode.challenge.`2020`.`04`.week1
 
 import org.junit.jupiter.api.Test
 import kotlin.test.assertEquals
+import kotlin.test.assertFalse
+import kotlin.test.assertTrue
 
 class Test {
+    @Test
+    fun isHappy() {
+        assertTrue(HappyNumber.isHappy(19))
+        assertFalse(HappyNumber.isHappy(2))
+    }
+
     @Test
     fun testSingleNumber() {
         assertEquals(1, SingleNumber.singleNumber(listOf(2, 2, 1).toIntArray()))
