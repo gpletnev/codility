@@ -287,9 +287,27 @@ class Test {
     }
 
     @Test
+    fun spiralOrder() {
+        assertContentEquals(
+            listOf(1, 2),
+            spiralOrder(arrayOf(intArrayOf(1, 2)))
+        )
+        assertContentEquals(
+            listOf(1, 2, 3, 6, 9, 8, 7, 4, 5),
+            spiralOrder(arrayOf(intArrayOf(1, 2, 3), intArrayOf(4, 5, 6), intArrayOf(7, 8, 9)))
+        )
+    }
+
+    @Test
     fun topKFrequent() {
-        assertContentEquals(listOf("i","love"), topKFrequent(arrayOf("i","love","leetcode","i","love","coding"), 2))
-        assertContentEquals(listOf("the","is","sunny","day"), topKFrequent(arrayOf("the","day","is","sunny","the","the","the","sunny","is","is"), 4))
+        assertContentEquals(
+            listOf("i", "love"),
+            topKFrequent(arrayOf("i", "love", "leetcode", "i", "love", "coding"), 2)
+        )
+        assertContentEquals(
+            listOf("the", "is", "sunny", "day"),
+            topKFrequent(arrayOf("the", "day", "is", "sunny", "the", "the", "the", "sunny", "is", "is"), 4)
+        )
 
     }
 
