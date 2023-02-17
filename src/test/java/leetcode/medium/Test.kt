@@ -304,6 +304,12 @@ class Test {
     }
 
     @Test
+    fun multiplyStrings() {
+        assertEquals("6", multiply("2", "3"))
+        assertEquals("56088", multiply("123", "456"))
+    }
+
+    @Test
     fun spiralOrder() {
         assertContentEquals(
             listOf(1, 2),

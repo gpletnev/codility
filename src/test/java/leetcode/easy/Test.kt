@@ -186,6 +186,16 @@ class Test {
     }
 
     @Test
+    fun longestCommonPrefix() {
+        assertEquals("a", longestCommonPrefix(arrayOf("a","a")))
+        assertEquals("", longestCommonPrefix(arrayOf("a","b")))
+        assertEquals("a", longestCommonPrefix(arrayOf("a","aa")))
+        assertEquals("a", longestCommonPrefix(arrayOf("ab","aa")))
+        assertEquals("fl", longestCommonPrefix(arrayOf("flower","flow","flight")))
+        assertEquals("", longestCommonPrefix(arrayOf("dog","racecar","car")))
+    }
+
+    @Test
     fun testMyQueue() {
         val myQueue = MyQueue()
         myQueue.push(1)
