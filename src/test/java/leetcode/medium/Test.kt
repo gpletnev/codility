@@ -304,8 +304,41 @@ class Test {
     }
 
     @Test
+    fun leastInterval() {
+        assertEquals(8, leastInterval(charArrayOf('A', 'A', 'A', 'B', 'B', 'B'), 2))
+        assertEquals(6, leastInterval(charArrayOf('A', 'A', 'A', 'B', 'B', 'B'), 0))
+        assertEquals(
+            16,
+            leastInterval(charArrayOf('A', 'A', 'A', 'A', 'A', 'A', 'B', 'C', 'D', 'E', 'F', 'G'), 2)
+        )
+
+    }
+
+    @Test
     fun longestPalindrome() {
-        assertEquals(14, longestPalindrome(arrayOf("qo","fo","fq","qf","fo","ff","qq","qf","of","of","oo","of","of","qf","qf","of")))
+        assertEquals(
+            14,
+            longestPalindrome(
+                arrayOf(
+                    "qo",
+                    "fo",
+                    "fq",
+                    "qf",
+                    "fo",
+                    "ff",
+                    "qq",
+                    "qf",
+                    "of",
+                    "of",
+                    "oo",
+                    "of",
+                    "of",
+                    "qf",
+                    "qf",
+                    "of"
+                )
+            )
+        )
         assertEquals(2, longestPalindrome(arrayOf("gg")))
         assertEquals(2, longestPalindrome(arrayOf("ll", "gg")))
         assertEquals(6, longestPalindrome(arrayOf("lc", "cl", "gg")))
