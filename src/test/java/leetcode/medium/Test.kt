@@ -304,6 +304,15 @@ class Test {
     }
 
     @Test
+    fun longestPalindrome() {
+        assertEquals(14, longestPalindrome(arrayOf("qo","fo","fq","qf","fo","ff","qq","qf","of","of","oo","of","of","qf","qf","of")))
+        assertEquals(2, longestPalindrome(arrayOf("gg")))
+        assertEquals(2, longestPalindrome(arrayOf("ll", "gg")))
+        assertEquals(6, longestPalindrome(arrayOf("lc", "cl", "gg")))
+        assertEquals(8, longestPalindrome(arrayOf("ab", "ty", "yt", "lc", "cl", "ab")))
+    }
+
+    @Test
     fun multiplyStrings() {
         assertEquals("6", multiply("2", "3"))
         assertEquals("56088", multiply("123", "456"))
