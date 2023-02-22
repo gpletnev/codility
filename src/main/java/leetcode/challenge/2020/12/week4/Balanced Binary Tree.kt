@@ -1,6 +1,7 @@
 package leetcode.challenge.`2020`.`12`.week4
 
 import leetcode.TreeNode
+import kotlin.math.abs
 
 // https://leetcode.com/problems/balanced-binary-tree/
 fun isBalanced(root: TreeNode?): Boolean {
@@ -12,5 +13,5 @@ private fun height(node: TreeNode?): Int {
 
     val left = height(node.left)
     val right = height(node.right)
-    return if (left == -1 || right == -1 || Math.abs(left - right) > 1) -1 else Math.max(left, right) + 1
+    return if (left == -1 || right == -1 || abs(left - right) > 1) -1 else maxOf(left, right) + 1
 }

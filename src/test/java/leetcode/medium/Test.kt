@@ -1,9 +1,6 @@
 package leetcode.medium
 
-import leetcode.ListNode
-import leetcode.TreeNode
-import leetcode.toIntArray
-import leetcode.toList
+import leetcode.*
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Test
 import kotlin.test.assertContentEquals
@@ -349,6 +346,17 @@ class Test {
     fun multiplyStrings() {
         assertEquals("6", multiply("2", "3"))
         assertEquals("56088", multiply("123", "456"))
+    }
+
+    @Test
+    fun pathSumIII() {
+        assertEquals(
+            3,
+            PathSumIII.pathSum(BinaryTree(listOf(10, 5, -3, 3, 2, null, 11, 3, -2, null, 1)).head, 8))
+        assertEquals(
+            3,
+            PathSumIII.pathSum(BinaryTree(listOf(5, 4, 8, 11, null, 13, 4, 7, 2, null, null, 5, 1)).head, 22)
+        )
     }
 
     @Test
