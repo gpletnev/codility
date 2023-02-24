@@ -2,6 +2,7 @@ package leetcode.easy.tree
 
 import leetcode.BinaryTree
 import leetcode.TreeNode
+import leetcode.joinToString
 import org.junit.jupiter.api.Test
 import kotlin.test.assertContentEquals
 import kotlin.test.assertEquals
@@ -77,5 +78,17 @@ class Test {
         assertFalse(findTarget(BinaryTree(listOf(2, 1, 3)).head, 1))
         assertTrue(findTarget(BinaryTree(listOf(5, 3, 6, 2, 4, null, 7)).head, 9))
         assertFalse(findTarget(BinaryTree(listOf(5, 3, 6, 2, 4, null, 7)).head, 28))
+    }
+
+    @Test
+    fun sortedArrayToBST() {
+        assertEquals(
+            listOf(0, -10, 5, null, -3, null, 9).joinToString(),
+            sortedArrayToBST(intArrayOf(-10, -3, 0, 5, 9)).joinToString()
+        )
+        assertEquals(
+            listOf(1, null, 3).joinToString(),
+            sortedArrayToBST(intArrayOf(1, 3)).joinToString()
+        )
     }
 }
