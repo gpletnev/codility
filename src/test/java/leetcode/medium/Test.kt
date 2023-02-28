@@ -67,6 +67,12 @@ class Test {
     }
 
     @Test
+    fun maxProduct() {
+        assertEquals(6, maxProduct(intArrayOf(2, 3, -2, 4)))
+        assertEquals(0, maxProduct(intArrayOf(-2, 0, -1)))
+    }
+
+    @Test
     fun testBinaryTreeLevelOrderTraversal() {
         val root = TreeNode(3)
         root.left = TreeNode(9)
