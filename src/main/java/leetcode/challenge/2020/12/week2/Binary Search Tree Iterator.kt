@@ -22,7 +22,7 @@ class BSTIterator(_root: TreeNode?) {
     }
 
     fun hasNext(): Boolean {
-        return stack.size > 0
+        return stack.isNotEmpty()
     }
 
     private fun leftMostInorder(_root: TreeNode?) {

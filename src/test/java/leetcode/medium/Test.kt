@@ -54,6 +54,19 @@ class Test {
     }
 
     @Test
+    fun findOrder() {
+        assertContentEquals(intArrayOf(0), findOrder(1, arrayOf()))
+        assertContentEquals(intArrayOf(0, 1), findOrder(2, arrayOf(intArrayOf(1, 0))))
+        assertContentEquals(
+            intArrayOf(0, 1, 2, 3),
+            findOrder(
+                4,
+                arrayOf(intArrayOf(1, 0), intArrayOf(2, 0), intArrayOf(3, 1), intArrayOf(3, 2))
+            )
+        )
+    }
+
+    @Test
     fun testBinaryTreeLevelOrderTraversal() {
         val root = TreeNode(3)
         root.left = TreeNode(9)
@@ -352,7 +365,8 @@ class Test {
     fun pathSumIII() {
         assertEquals(
             3,
-            PathSumIII.pathSum(BinaryTree(listOf(10, 5, -3, 3, 2, null, 11, 3, -2, null, 1)).head, 8))
+            PathSumIII.pathSum(BinaryTree(listOf(10, 5, -3, 3, 2, null, 11, 3, -2, null, 1)).head, 8)
+        )
         assertEquals(
             3,
             PathSumIII.pathSum(BinaryTree(listOf(5, 4, 8, 11, null, 13, 4, 7, 2, null, null, 5, 1)).head, 22)
