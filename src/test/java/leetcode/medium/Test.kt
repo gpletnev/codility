@@ -392,6 +392,20 @@ class Test {
     }
 
     @Test
+    fun testReverseInteger() {
+        assertEquals(123, reverse(321))
+        assertEquals(0, reverse(0))
+        assertEquals(0, reverse(Int.MAX_VALUE))
+        assertEquals(0, reverse(Int.MIN_VALUE))
+    }
+
+    @Test
+    fun threeSumClosest() {
+        assertEquals(2, threeSumClosest(intArrayOf(-1, 2, 1, -4), 1))
+        assertEquals(0, threeSumClosest(intArrayOf(0, 0, 0), 1))
+    }
+
+    @Test
     fun topKFrequent() {
         assertContentEquals(
             listOf("i", "love"),
@@ -402,13 +416,5 @@ class Test {
             topKFrequent(arrayOf("the", "day", "is", "sunny", "the", "the", "the", "sunny", "is", "is"), 4)
         )
 
-    }
-
-    @Test
-    fun testReverseInteger() {
-        assertEquals(123, reverse(321))
-        assertEquals(0, reverse(0))
-        assertEquals(0, reverse(Int.MAX_VALUE))
-        assertEquals(0, reverse(Int.MIN_VALUE))
     }
 }

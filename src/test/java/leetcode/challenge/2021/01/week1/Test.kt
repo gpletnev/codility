@@ -61,6 +61,8 @@ class Test {
     @Test
     fun lengthOfLongestSubstringTest() {
         assertEquals(0, lengthOfLongestSubstring(""))
+        assertEquals(3, lengthOfLongestSubstring("abc"))
+        assertEquals(2, lengthOfLongestSubstring("au"))
         assertEquals(3, lengthOfLongestSubstring("pwwkew"))
         assertEquals(3, lengthOfLongestSubstring("abcabcbb"))
         assertEquals(1, lengthOfLongestSubstring("bbbbb"))
