@@ -15,6 +15,13 @@ class Test {
     }
 
     @Test
+    fun minWindow() {
+        assertEquals("A", minWindow("A", "A"))
+        assertEquals("", minWindow("a", "aa"))
+        assertEquals("BANC", minWindow("ADOBECODEBANC", "ABC"))
+    }
+
+    @Test
     fun numBusesToDestination() {
         assertEquals(2, numBusesToDestination(arrayOf(intArrayOf(1, 2, 7), intArrayOf(3, 6, 7)), 1, 6))
         assertEquals(
