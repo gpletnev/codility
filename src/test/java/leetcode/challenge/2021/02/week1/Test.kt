@@ -52,8 +52,8 @@ class Test {
     @Test
     fun rightSideViewTest() {
         assertContentEquals(
-            intArrayOf(1, 3, 4),
-            rightSideView(BinaryTree(listOf(1, 2, 3, null, 5, null, 4)).head).toIntArray()
+            intArrayOf(1, 3, 5),
+            rightSideView(BinaryTree(listOf(1, 2, 3, null, 5)).head).toIntArray()
         )
     }
 
