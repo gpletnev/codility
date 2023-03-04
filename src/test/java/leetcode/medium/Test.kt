@@ -231,6 +231,14 @@ class Test {
     }
 
     @Test
+    fun insertInterval() {
+        assertEquals(
+            arrayOf(intArrayOf(1, 5), intArrayOf(6, 9)).joinToString { it.joinToString()},
+            insert(arrayOf(intArrayOf(1, 3), intArrayOf(6, 9)), intArrayOf(2, 5)).joinToString { it.joinToString() }
+        )
+    }
+
+    @Test
     fun intervalIntersectionTest() {
         assertEquals(
             "[[1,2],[5,5],[8,10],[15,23],[24,24],[25,25]]",
