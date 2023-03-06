@@ -233,7 +233,7 @@ class Test {
     @Test
     fun insertInterval() {
         assertEquals(
-            arrayOf(intArrayOf(1, 5), intArrayOf(6, 9)).joinToString { it.joinToString()},
+            arrayOf(intArrayOf(1, 5), intArrayOf(6, 9)).joinToString { it.joinToString() },
             insert(arrayOf(intArrayOf(1, 3), intArrayOf(6, 9)), intArrayOf(2, 5)).joinToString { it.joinToString() }
         )
     }
@@ -307,6 +307,24 @@ class Test {
 
     @Test
     fun findCircleNumTest() {
+        assertEquals(
+            1, findCircleNum(
+                arrayOf(
+                    intArrayOf(1, 1),
+                    intArrayOf(1, 1)
+                )
+            )
+        )
+        assertEquals(
+            1, findCircleNum(
+                arrayOf(
+                    intArrayOf(1, 0, 0, 1),
+                    intArrayOf(0, 1, 1, 0),
+                    intArrayOf(0, 1, 1, 1),
+                    intArrayOf(1, 0, 1, 1)
+                )
+            )
+        )
         assertEquals(
             2, findCircleNum(
                 arrayOf(
@@ -384,6 +402,53 @@ class Test {
         assertEquals(
             3,
             PathSumIII.pathSum(BinaryTree(listOf(5, 4, 8, 11, null, 13, 4, 7, 2, null, null, 5, 1)).head, 22)
+        )
+    }
+
+    @Test
+    fun removeStones() {
+        assertEquals(
+            2,
+            removeStones(
+                arrayOf(
+                    intArrayOf(0, 1),
+                    intArrayOf(1, 0),
+                    intArrayOf(1, 1)
+                )
+            )
+        )
+        assertEquals(
+            5,
+            removeStones(
+                arrayOf(
+                    intArrayOf(0, 0),
+                    intArrayOf(0, 1),
+                    intArrayOf(1, 0),
+                    intArrayOf(1, 2),
+                    intArrayOf(2, 1),
+                    intArrayOf(2, 2)
+                )
+            )
+        )
+        assertEquals(
+            3,
+            removeStones(
+                arrayOf(
+                    intArrayOf(0, 0),
+                    intArrayOf(0, 2),
+                    intArrayOf(1, 1),
+                    intArrayOf(2, 0),
+                    intArrayOf(2, 2)
+                )
+            )
+        )
+        assertEquals(
+            0,
+            removeStones(
+                arrayOf(
+                    intArrayOf(0, 0)
+                )
+            )
         )
     }
 

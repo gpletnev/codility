@@ -12,10 +12,10 @@ fun calculate(s: String): Int {
     val iterator = s.iterator()
     while (iterator.hasNext()) {
         val currentChar = iterator.nextChar()
-        if (Character.isDigit(currentChar)) {
+        if (currentChar.isDigit()) {
             currentNumber = currentNumber * 10 + (currentChar - '0')
         }
-        if (!Character.isDigit(currentChar) && !Character.isWhitespace(currentChar) || !iterator.hasNext()) {
+        if (!currentChar.isDigit() && !currentChar.isWhitespace() || !iterator.hasNext()) {
             when (operation) {
                 '+', '-' -> {
                     result += lastNumber
